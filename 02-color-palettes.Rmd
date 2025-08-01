@@ -1,0 +1,62 @@
+# How to choose colors in BetterVis {#colors}
+
+## Written at the beginning
+
+The BetterVis philosophy for color selection is based on simplicity and consistency. This is particularly suitable for researchers who do not want to spend excessive time on color coordination. 
+
+To use these features, the BetterVis functions must be loaded beforehand (which is done in the `index.Rmd` setup chunk for this book). In a real session, you would load the package:
+
+```r
+# library(BetterVis)
+```
+
+## Usage example
+
+### Discrete And Unpaired color selection
+
+This is for when you have distinct categories that are not related.
+
+```r
+unpaired_colors <- BetterVis_Color(type = "discrete", odd_or_even = "even",  n = 10, style = "Science", option = 1)
+scales::show_col(unpaired_colors)
+```
+
+### Discrete And paired color selection
+
+This is useful when you have grouped data, for example, "before" and "after" measurements for several groups.
+
+```r
+paired_colors <- BetterVis_Color(type = "discrete", odd_or_even = "even",  n = 6, style = "Science", option = 2, paired = TRUE, pair_num = 2)
+scales::show_col(paired_colors)
+```
+
+### Continuous color extraction
+
+This generates a color gradient, perfect for heatmaps or variables that change along a spectrum.
+
+```r
+continuous_colors <- BetterVis_Color(type = "continuous", n = 9, style = "Nature", option = 1)
+scales::show_col(continuous_colors)
+```
+
+Each of these function calls will return a vector of color hex codes based on your specifications. For example, the `unpaired_colors` object contains:
+```
+#> [1] "#377eb8" "#4daf4a" "#984ea3" "#ff7f00" "#ffff33" "#a65628" "#f781bf"
+#> [8] "#999999" "#e41a1c" "#d7191c"
+```
+
+## Parameter explanation
+
+**`type`**: The type of color scale. Accepts `"discrete"` for categorical data or `"continuous"` for numerical data. Default: `NULL`.
+
+**`odd_or_even`**: Specifies whether the total number of colors to be generated should be odd or even. Accepts `"odd"` or `"even"`. Default: `NULL`.
+
+**`n`**: A numeric value specifying the total number of colors to retrieve.
+
+**`style`**: The color theme to use. Available options are `"Science"`, `"Nature"`, `"Cell"`, and `"Lancet"`.
+
+**`option`**: A numeric value (1, 2, or 3) specifying the color scheme variation within the selected `style`.
+
+**`paired`**: A logical value (`TRUE` or `FALSE`) indicating whether to generate colors for paired/grouped data. If `TRUE`, colors are repeated in groups (e.g., `c("#984ea3", "#984ea3", "#ff7f00", "#ff7f00")`).
+
+**`pair_num`**: If `paired = TRUE`, this sets the number of items within each color group. For example, if `n=6` and `pair_num=3`, the result would be three instances of the first color followed by three instances of the second. Default: `3`.

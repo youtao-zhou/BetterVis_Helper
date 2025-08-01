@@ -1,0 +1,185 @@
+# Boxplot {#boxplots}
+
+## At the Beginning
+
+To use these features, the BetterVis functions must be loaded beforehand (which is done in the `index.Rmd` setup chunk for this book). In a real session, you would load the package:
+
+```r
+# library(BetterVis)
+```
+
+## BetterVis_Boxplot_Experiment
+
+In `BetterVis_Boxplot_Experiment`, we have streamlined the method for presenting multi-group boxplots and for visualizing significance comparisons across facets, allowing for rapid comparisons between multiple groups.
+
+### Data Input
+
+The examples below will use a sample dataset. In your own project, you would load it from the package like this:
+```r
+# For this book, the data is created in the code chunk below.
+# In your own analysis, you would use:
+# data("Boxplot_Experiment_example", package = "BetterVis")
+
+# Create the sample data for demonstration
+Boxplot_Experiment_example <- data.frame(
+  len = c(rnorm(30, 10, 2), rnorm(30, 20, 3), rnorm(30, 25, 4), 
+          rnorm(30, 12, 2), rnorm(30, 22, 3), rnorm(30, 28, 4)),
+  supp = factor(rep(c("OJ", "VC"), each = 90)),
+  dose = factor(rep(c("dose_1", "dose_2", "dose_3"), each = 30, times = 2))
+)
+```
+
+### Simple Example
+
+```r
+BetterVis_Boxplot_Experiment(
+  data = Boxplot_Experiment_example, 
+  x_var = "supp", y_var = "len", fill_var = "dose", 
+  use_facet = TRUE, 
+  custom_colors = c("#FC5D5C", "#4B6A9D", "#167D7D"),
+  comparison_col = "dose",
+  comparison = list(c("dose_1","dose_2"),c("dose_1","dose_3"),c("dose_2","dose_3")),
+  ylim = c(0,40)
+)
+```
+![](images/boxplot_experiment_simple.png)
+
+
+### Advanced Example
+
+```r
+BetterVis_Boxplot_Experiment(
+  data = Boxplot_Experiment_example, x_var = "supp", y_var = "len", fill_var = "dose", 
+  use_facet = TRUE, title = "Effect of Supplement and Dose on Length",
+  x_label_angle = 45, x_label_bold = TRUE, 
+  y_label_bold = TRUE, axis_titles = c("Supplement Type", "Length"), 
+  axis_title_bold = TRUE, 
+  custom_colors = c("#FC5D5C", "#4B6A9D", "#167D7D"), 
+  jitter = TRUE, 
+  jitter_color = c("black", "black", "black"),
+  jitter_width = 0.2, jitter_alpha = 0.5, jitter_size = 2,
+  legend_show = FALSE, legend_title = "", 
+  box_width = 0.6, 
+  comparison_col = "dose",
+  comparison = list(c("dose_1","dose_2"),c("dose_1","dose_3"),c("dose_2","dose_3")),
+  comparison_method = "wilcox", 
+  box_background = TRUE, background_color = "white", background_border = TRUE, sig_type = "SYMBOL", violin = FALSE, ylim = c(0,40)
+)
+```
+![](images/boxplot_experiment_advanced.png)
+
+
+### We have modified the iris dataset to create these boxplots
+
+```r
+# Prepare iris data with a new grouping variable
+iris_mod <- iris
+iris_mod$Group <- as.factor(rep(rep(paste0("Group", 1:5), each = 10),3))
+
+BetterVis_Boxplot_Experiment(
+  data = iris_mod, x_var = "Group", y_var = "Petal.Width", fill_var = "Species", 
+  use_facet = TRUE, 
+  title = "Petal Width Across Groups and Species",
+  x_label_angle = 45, 
+  x_label_bold = TRUE, 
+  y_label_bold = TRUE, 
+  axis_titles = c("Group", "Petal Width"), 
+  axis_title_bold = TRUE, 
+  custom_colors = c("#FC5D5C", "#4B6A9D", "#167D7D"), 
+  jitter = TRUE, 
+  jitter_color = c("black", "black", "black"),
+  jitter_width = 0.1,
+  jitter_alpha = 0.6,
+  jitter_size = 2,
+  legend_show = TRUE, 
+  legend_title = "Species", 
+  box_width = 0.6, 
+  comparison_col = "Species",
+  comparison = list(c("setosa", "versicolor"),c("setosa", "virginica"),c("versicolor", "virginica")), 
+  comparison_method = "wilcox", 
+  box_background = TRUE, background_color = "white", background_border = TRUE, sig_type = "NUMBER", violin = FALSE, ylim = c(0,3.5)
+)
+```
+![](images/boxplot_iris_example.png)
+
+
+### Parameter explanation for `BetterVis_Boxplot_Experiment`
+
+**`data`**: The input dataset.
+**`x_var`**: The grouping variable for the x-axis (should be a factor).
+**`y_var`**: The numerical variable for the y-axis.
+**`fill_var`**: The variable used for the fill color (should be a factor).
+**`use_facet`**: A logical value (`TRUE`/`FALSE`) indicating whether to use faceting. Default: `FALSE`.
+**`title`**: The title of the plot.
+... *(and so on for all other parameters)*
+
+---
+
+## BetterVis_Boxplot_MixViolin
+
+### Data Input
+```r
+# Prepare iris data with another grouping variable
+iris_mix <- iris
+iris_mix$Group2 <- as.factor(sample(rep(paste0("Color", 1:5), 30)))
+
+# Define a color palette
+colors <- c("#e97257","#72c5d9","#58ae9a","#646e9a","#efa78e","#f3a9c4", "#ffbf69", "#b4d33e","#ed7d31","#6b83b3","#b7d3ff", "#ff72cc", "#d4a4ff")
+```
+
+### Simple Example
+
+```r
+BetterVis_Boxplot_MixViolin(
+  data = iris, x_var = "Species", y_var = "Sepal.Length", 
+  fill_color = colors,
+  y_max_adjust = 2, y_min_adjust = 1
+)
+```
+
+### Advanced Example
+
+```r
+BetterVis_Boxplot_MixViolin(
+  data = iris, x_var ="Species", y_var = "Sepal.Length", fill_color = colors,
+  y_max_adjust = 2, y_min_adjust = 1,
+  title = "Mixed Violin and Boxplot of Sepal Length", title_size = 20, title_bold = TRUE,
+  xlab = "Species", ylab = "Sepal Length (cm)",
+  border = TRUE, panel_background_color = "#f3f6f6",
+  axis_x_title = element_text(size = 18, color = "#b35959", face = "bold"),
+  axis_y_title = element_text(size = 18, color = "#b35959", face = "bold"),
+  legend_show = FALSE,
+  stat_compare_means = TRUE, compare_symbol = "SYMBOL"
+)
+```
+
+### Adjusting variables and redrawing the plot
+
+```r
+BetterVis_Boxplot_MixViolin(
+  data = iris_mix, x_var = "Group2", y_var = "Sepal.Length", fill_color = colors,
+  y_max_adjust = 2, y_min_adjust = 1,
+  title = "Distribution by Custom Grouping",
+  xlab = "Custom Group", ylab = "Sepal Length (cm)",
+  border = TRUE, panel_background_color = "#f3f6f6",
+  axis_x_title = element_text(size = 18, color = "#b35959", face = "bold"),
+  axis_y_title = element_text(size = 18, color = "#b35959", face = "bold"),
+  legend_show = TRUE, legend_title = "Group2",
+  stat_compare_means = TRUE, compare_symbol = "SYMBOL"
+)
+```
+
+### Parameter explanation for `BetterVis_Boxplot_MixViolin`
+**`data`**: The input dataset.
+**`x_var`**: The grouping variable for the x-axis (should be a factor).
+**`y_var`**: The numerical variable for the y-axis.
+**`fill_color`**: A vector of colors for the plot fills.
+... *(and so on for all other parameters)*
+
+### Important Notes
+
+Properly setting `ylim` is important to ensure that the entire boxplot, including any significance indicators, is fully visible.
+
+When using `comparison_col` and `comparison`, the `comparison` list should specify pairs of groups found within the `comparison_col` variable. This feature is best visualized when `use_facet = TRUE`.
+
+You can further customize elements like fonts, borders, etc., by adding standard `ggplot2` `theme()` or `guide()` functions to the plot object afterwards.
