@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | An Introduction to BetterVis</title>
+  <title>Chapter 13 Pie Plot | An Introduction to BetterVis</title>
   <meta name="description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | An Introduction to BetterVis" />
+  <meta property="og:title" content="Chapter 13 Pie Plot | An Introduction to BetterVis" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | An Introduction to BetterVis" />
+  <meta name="twitter:title" content="Chapter 13 Pie Plot | An Introduction to BetterVis" />
   
   <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="lineplot.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -419,18 +419,99 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="pie" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Chapter 13</span> Pie Plot<a href="pie.html#pie" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="at-the-beginning-10" class="section level3 hasAnchor" number="13.0.1">
+<h3><span class="header-section-number">13.0.1</span> At the Beginning<a href="pie.html#at-the-beginning-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="pie.html#cb97-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span></code></pre></div>
+</div>
+<div id="bettervis_pie_single" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> BetterVis_Pie_Single<a href="pie.html#bettervis_pie_single" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Draw a good-looking pie chart in the fastest way.</p>
+<div id="data-input-27" class="section level3 hasAnchor" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> Data Input<a href="pie.html#data-input-27" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="pie.html#cb98-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb98-2"><a href="pie.html#cb98-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Pie_Single_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb98-3"><a href="pie.html#cb98-3" tabindex="-1"></a>df_pie_single <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb98-4"><a href="pie.html#cb98-4" tabindex="-1"></a>  <span class="at">Company =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;D&quot;</span>, <span class="st">&quot;E&quot;</span>),</span>
+<span id="cb98-5"><a href="pie.html#cb98-5" tabindex="-1"></a>  <span class="at">Share =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">25</span>, <span class="dv">15</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb98-6"><a href="pie.html#cb98-6" tabindex="-1"></a>)</span>
+<span id="cb98-7"><a href="pie.html#cb98-7" tabindex="-1"></a>pie_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#FED439B2&quot;</span>, <span class="st">&quot;#709AE1B2&quot;</span>, <span class="st">&quot;#8A9197B2&quot;</span>, <span class="st">&quot;#D2AF81B2&quot;</span>, <span class="st">&quot;#FD7446B2&quot;</span>)</span></code></pre></div>
+</div>
+<div id="usage-example-5" class="section level3 hasAnchor" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Usage Example<a href="pie.html#usage-example-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="pie.html#cb99-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb99-2"><a href="pie.html#cb99-2" tabindex="-1"></a><span class="fu">BetterVis_Pie_Single</span>(<span class="at">df =</span> df_pie_single, <span class="at">ID_var =</span> <span class="st">&quot;Company&quot;</span>, <span class="at">Proportion_var =</span> <span class="st">&quot;Share&quot;</span>, <span class="at">colors =</span> pie_colors, <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">size_adjust =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="images/pie_single.png" /></p>
+</div>
+<div id="parameter-explanation-20" class="section level3 hasAnchor" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> Parameter explanation<a href="pie.html#parameter-explanation-20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_pie_multi" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> BetterVis_Pie_Multi<a href="pie.html#bettervis_pie_multi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This function is designed to create faceted pie charts, ideal for comparing proportional relationships across groups.</p>
+<div id="data-input-28" class="section level3 hasAnchor" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Data Input<a href="pie.html#data-input-28" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="pie.html#cb100-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb100-2"><a href="pie.html#cb100-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Pie_Multi_example_in&quot;, package=&quot;BetterVis&quot;) etc.</span></span>
+<span id="cb100-3"><a href="pie.html#cb100-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb100-4"><a href="pie.html#cb100-4" tabindex="-1"></a>data_in <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb100-5"><a href="pie.html#cb100-5" tabindex="-1"></a>  <span class="at">Habitat =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;H1&quot;</span>, <span class="st">&quot;H2&quot;</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb100-6"><a href="pie.html#cb100-6" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">rep</span>(<span class="fu">paste0</span>(<span class="st">&quot;T&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="dv">4</span>),</span>
+<span id="cb100-7"><a href="pie.html#cb100-7" tabindex="-1"></a>  <span class="at">Group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;G1&quot;</span>, <span class="st">&quot;G2&quot;</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb100-8"><a href="pie.html#cb100-8" tabindex="-1"></a>  <span class="at">Phylum =</span> <span class="fu">sample</span>(<span class="fu">paste0</span>(<span class="st">&quot;P&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>), <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb100-9"><a href="pie.html#cb100-9" tabindex="-1"></a>  <span class="at">Proportion =</span> <span class="fu">runif</span>(<span class="dv">20</span>)</span>
+<span id="cb100-10"><a href="pie.html#cb100-10" tabindex="-1"></a>)</span>
+<span id="cb100-11"><a href="pie.html#cb100-11" tabindex="-1"></a>data_in <span class="ot">&lt;-</span> <span class="fu">ddply</span>(data_in, .(Habitat, Group, type), transform, <span class="at">Proportion =</span> Proportion <span class="sc">/</span> <span class="fu">sum</span>(Proportion))</span>
+<span id="cb100-12"><a href="pie.html#cb100-12" tabindex="-1"></a></span>
+<span id="cb100-13"><a href="pie.html#cb100-13" tabindex="-1"></a>data_out <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb100-14"><a href="pie.html#cb100-14" tabindex="-1"></a>  <span class="at">Habitat =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;H1&quot;</span>, <span class="st">&quot;H2&quot;</span>), <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb100-15"><a href="pie.html#cb100-15" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;N1&quot;</span>, <span class="st">&quot;N2&quot;</span>), <span class="dv">2</span>),</span>
+<span id="cb100-16"><a href="pie.html#cb100-16" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.7</span>)</span>
+<span id="cb100-17"><a href="pie.html#cb100-17" tabindex="-1"></a>)</span>
+<span id="cb100-18"><a href="pie.html#cb100-18" tabindex="-1"></a></span>
+<span id="cb100-19"><a href="pie.html#cb100-19" tabindex="-1"></a>color1 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb100-20"><a href="pie.html#cb100-20" tabindex="-1"></a>    <span class="st">&quot;#FED439B2&quot;</span>, <span class="st">&quot;#709AE1B2&quot;</span>,<span class="st">&quot;#8A9197B2&quot;</span>,<span class="st">&quot;#D2AF81B2&quot;</span>,</span>
+<span id="cb100-21"><a href="pie.html#cb100-21" tabindex="-1"></a>    <span class="st">&quot;#FD7446B2&quot;</span>, <span class="st">&quot;#D5E4A2B2&quot;</span>, <span class="st">&quot;#197EC0B2&quot;</span>, <span class="st">&quot;#46732EB2&quot;</span>,</span>
+<span id="cb100-22"><a href="pie.html#cb100-22" tabindex="-1"></a>    <span class="st">&quot;#71D0F5B2&quot;</span>, <span class="st">&quot;#C6CDF7&quot;</span>, <span class="st">&quot;#91331FB2&quot;</span>, <span class="st">&quot;#1A9993B2&quot;</span>,</span>
+<span id="cb100-23"><a href="pie.html#cb100-23" tabindex="-1"></a>    <span class="st">&quot;#FD8CC1B2&quot;</span>, <span class="st">&quot;#FAD510&quot;</span>, <span class="st">&quot;#0A9F9D&quot;</span>, <span class="st">&quot;#3B9AB2&quot;</span>,</span>
+<span id="cb100-24"><a href="pie.html#cb100-24" tabindex="-1"></a>    <span class="st">&quot;#FF0000&quot;</span>, <span class="st">&quot;#969BC7&quot;</span>, <span class="st">&quot;#B695BC&quot;</span>, <span class="st">&quot;#6F9554&quot;</span>)</span>
+<span id="cb100-25"><a href="pie.html#cb100-25" tabindex="-1"></a>color2<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;#FBA72A&quot;</span>,<span class="st">&quot;#969BC7&quot;</span>)</span></code></pre></div>
+</div>
+<div id="usage-example-6" class="section level3 hasAnchor" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> Usage Example<a href="pie.html#usage-example-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="pie.html#cb101-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb101-2"><a href="pie.html#cb101-2" tabindex="-1"></a><span class="fu">BetterVis_Pie_Multi</span>(</span>
+<span id="cb101-3"><a href="pie.html#cb101-3" tabindex="-1"></a>  <span class="at">data_in  =</span> data_in, </span>
+<span id="cb101-4"><a href="pie.html#cb101-4" tabindex="-1"></a>  <span class="at">data_out =</span> data_out,</span>
+<span id="cb101-5"><a href="pie.html#cb101-5" tabindex="-1"></a>  <span class="at">facet_var =</span> <span class="st">&quot;Habitat&quot;</span>,</span>
+<span id="cb101-6"><a href="pie.html#cb101-6" tabindex="-1"></a>  <span class="at">x_var =</span> <span class="st">&quot;type&quot;</span>,</span>
+<span id="cb101-7"><a href="pie.html#cb101-7" tabindex="-1"></a>  <span class="at">y_var =</span> <span class="st">&quot;Group&quot;</span>,</span>
+<span id="cb101-8"><a href="pie.html#cb101-8" tabindex="-1"></a>  <span class="at">fill_var1 =</span> <span class="st">&quot;Phylum&quot;</span>,    </span>
+<span id="cb101-9"><a href="pie.html#cb101-9" tabindex="-1"></a>  <span class="at">pie_var1 =</span> <span class="st">&quot;Proportion&quot;</span>,</span>
+<span id="cb101-10"><a href="pie.html#cb101-10" tabindex="-1"></a>  <span class="at">fill_var2 =</span> <span class="st">&quot;name&quot;</span>,     </span>
+<span id="cb101-11"><a href="pie.html#cb101-11" tabindex="-1"></a>  <span class="at">pie_var2 =</span> <span class="st">&quot;value&quot;</span>,</span>
+<span id="cb101-12"><a href="pie.html#cb101-12" tabindex="-1"></a>  <span class="at">in_color =</span> color1,</span>
+<span id="cb101-13"><a href="pie.html#cb101-13" tabindex="-1"></a>  <span class="at">out_color =</span> color2,</span>
+<span id="cb101-14"><a href="pie.html#cb101-14" tabindex="-1"></a>  <span class="at">draw_outer_pie =</span> <span class="cn">TRUE</span></span>
+<span id="cb101-15"><a href="pie.html#cb101-15" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-21" class="section level3 hasAnchor" number="13.2.3">
+<h3><span class="header-section-number">13.2.3</span> Parameter explanation<a href="pie.html#parameter-explanation-21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="lineplot.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

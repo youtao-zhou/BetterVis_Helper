@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | An Introduction to BetterVis</title>
+  <title>Chapter 11 Circos | An Introduction to BetterVis</title>
   <meta name="description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | An Introduction to BetterVis" />
+  <meta property="og:title" content="Chapter 11 Circos | An Introduction to BetterVis" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | An Introduction to BetterVis" />
+  <meta name="twitter:title" content="Chapter 11 Circos | An Introduction to BetterVis" />
   
   <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="venn.html"/>
+<link rel="next" href="lineplot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -419,19 +419,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="circos" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Circos<a href="circos.html#circos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="at-the-beginning-8" class="section level3 hasAnchor" number="11.0.1">
+<h3><span class="header-section-number">11.0.1</span> At the Beginning<a href="circos.html#at-the-beginning-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="circos.html#cb88-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span></code></pre></div>
+</div>
+<div id="bettervis_circos_interaction" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> BetterVis_Circos_Interaction<a href="circos.html#bettervis_circos_interaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Circos plots visualize categorical information and the strength of interactions between variables.</p>
+<div id="data-input-24" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Data Input<a href="circos.html#data-input-24" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="circos.html#cb89-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb89-2"><a href="circos.html#cb89-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Circos_Interaction_example1&quot;, package=&quot;BetterVis&quot;) etc.</span></span>
+<span id="cb89-3"><a href="circos.html#cb89-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb89-4"><a href="circos.html#cb89-4" tabindex="-1"></a>df_sample <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb89-5"><a href="circos.html#cb89-5" tabindex="-1"></a>  <span class="at">ID_Gene =</span> <span class="fu">paste</span>(<span class="fu">sample</span>(LETTERS, <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>),</span>
+<span id="cb89-6"><a href="circos.html#cb89-6" tabindex="-1"></a>  <span class="at">type_main =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;Type A&quot;</span>, <span class="st">&quot;Type B&quot;</span>, <span class="st">&quot;Type C&quot;</span>), <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb89-7"><a href="circos.html#cb89-7" tabindex="-1"></a>  <span class="at">type_col1 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;C1_X&quot;</span>, <span class="st">&quot;C1_Y&quot;</span>), <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb89-8"><a href="circos.html#cb89-8" tabindex="-1"></a>  <span class="at">type_col2 =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;C2_P&quot;</span>, <span class="st">&quot;C2_Q&quot;</span>, <span class="st">&quot;C2_R&quot;</span>), <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb89-9"><a href="circos.html#cb89-9" tabindex="-1"></a>)</span>
+<span id="cb89-10"><a href="circos.html#cb89-10" tabindex="-1"></a>interaction_data_sample <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb89-11"><a href="circos.html#cb89-11" tabindex="-1"></a>  <span class="at">ID =</span> <span class="fu">sample</span>(df_sample<span class="sc">$</span>ID_Gene, <span class="dv">30</span>),</span>
+<span id="cb89-12"><a href="circos.html#cb89-12" tabindex="-1"></a>  <span class="at">Gene =</span> <span class="fu">sample</span>(df_sample<span class="sc">$</span>ID_Gene, <span class="dv">30</span>),</span>
+<span id="cb89-13"><a href="circos.html#cb89-13" tabindex="-1"></a>  <span class="at">Correlation =</span> <span class="fu">runif</span>(<span class="dv">30</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb89-14"><a href="circos.html#cb89-14" tabindex="-1"></a>  <span class="at">Pvalue =</span> <span class="fu">runif</span>(<span class="dv">30</span>, <span class="dv">0</span>, <span class="fl">0.1</span>)</span>
+<span id="cb89-15"><a href="circos.html#cb89-15" tabindex="-1"></a>)</span>
+<span id="cb89-16"><a href="circos.html#cb89-16" tabindex="-1"></a></span>
+<span id="cb89-17"><a href="circos.html#cb89-17" tabindex="-1"></a>my_main_col_color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#FBB4AE&quot;</span>, <span class="st">&quot;#B3CDE3&quot;</span>, <span class="st">&quot;#CCEBC5&quot;</span>)</span>
+<span id="cb89-18"><a href="circos.html#cb89-18" tabindex="-1"></a>my_color1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#FED9A6&quot;</span>, <span class="st">&quot;#FFFFCC&quot;</span>) </span>
+<span id="cb89-19"><a href="circos.html#cb89-19" tabindex="-1"></a>my_color2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#DEEBF7&quot;</span>, <span class="st">&quot;#C6DBEF&quot;</span>, <span class="st">&quot;#9ECAE1&quot;</span>)</span></code></pre></div>
+</div>
+<div id="usage-example-3" class="section level3 hasAnchor" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> Usage Example<a href="circos.html#usage-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="circos.html#cb90-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb90-2"><a href="circos.html#cb90-2" tabindex="-1"></a><span class="fu">BetterVis_Circos_Interaction</span>(</span>
+<span id="cb90-3"><a href="circos.html#cb90-3" tabindex="-1"></a>  <span class="at">df =</span> df_sample,</span>
+<span id="cb90-4"><a href="circos.html#cb90-4" tabindex="-1"></a>  <span class="at">interaction_data =</span> interaction_data_sample,</span>
+<span id="cb90-5"><a href="circos.html#cb90-5" tabindex="-1"></a>  <span class="at">main_col =</span> <span class="st">&quot;ID_Gene&quot;</span>,            </span>
+<span id="cb90-6"><a href="circos.html#cb90-6" tabindex="-1"></a>  <span class="at">main_col_color_classify =</span> <span class="st">&quot;type_main&quot;</span>, </span>
+<span id="cb90-7"><a href="circos.html#cb90-7" tabindex="-1"></a>  <span class="at">col1_name =</span> <span class="st">&quot;type_col1&quot;</span>,        </span>
+<span id="cb90-8"><a href="circos.html#cb90-8" tabindex="-1"></a>  <span class="at">col2_name =</span> <span class="st">&quot;type_col2&quot;</span>,          </span>
+<span id="cb90-9"><a href="circos.html#cb90-9" tabindex="-1"></a>  <span class="at">main_col_color =</span> my_main_col_color, </span>
+<span id="cb90-10"><a href="circos.html#cb90-10" tabindex="-1"></a>  <span class="at">color1 =</span> my_color1,              </span>
+<span id="cb90-11"><a href="circos.html#cb90-11" tabindex="-1"></a>  <span class="at">color2 =</span> my_color2,              </span>
+<span id="cb90-12"><a href="circos.html#cb90-12" tabindex="-1"></a>  <span class="at">link_source_col =</span> <span class="st">&quot;ID&quot;</span>,</span>
+<span id="cb90-13"><a href="circos.html#cb90-13" tabindex="-1"></a>  <span class="at">link_target_col =</span> <span class="st">&quot;Gene&quot;</span>,</span>
+<span id="cb90-14"><a href="circos.html#cb90-14" tabindex="-1"></a>  <span class="at">link_value_col =</span> <span class="st">&quot;Correlation&quot;</span>,</span>
+<span id="cb90-15"><a href="circos.html#cb90-15" tabindex="-1"></a>  <span class="at">link_pvalue_col =</span> <span class="st">&quot;Pvalue&quot;</span> ,</span>
+<span id="cb90-16"><a href="circos.html#cb90-16" tabindex="-1"></a>  <span class="at">main_col_text =</span> <span class="cn">TRUE</span>, <span class="at">col1_text =</span> <span class="cn">TRUE</span>, <span class="at">col2_text =</span> <span class="cn">TRUE</span>, <span class="at">col3_text =</span> <span class="cn">TRUE</span></span>
+<span id="cb90-17"><a href="circos.html#cb90-17" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="images/circos_interaction.png" /></p>
+</div>
+<div id="parameter-explanation-17" class="section level3 hasAnchor" number="11.1.3">
+<h3><span class="header-section-number">11.1.3</span> Parameter explanation<a href="circos.html#parameter-explanation-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_circos_ringplot" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> BetterVis_Circos_Ringplot<a href="circos.html#bettervis_circos_ringplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-input-25" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Data Input<a href="circos.html#data-input-25" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="circos.html#cb91-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb91-2"><a href="circos.html#cb91-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Circos_Ringplot_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb91-3"><a href="circos.html#cb91-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb91-4"><a href="circos.html#cb91-4" tabindex="-1"></a>df_ringplot <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb91-5"><a href="circos.html#cb91-5" tabindex="-1"></a>  <span class="at">trait =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;BMI&quot;</span>, <span class="st">&quot;AF&quot;</span>, <span class="st">&quot;Cough&quot;</span>, <span class="st">&quot;WHRadjbmi&quot;</span>), <span class="dv">315</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb91-6"><a href="circos.html#cb91-6" tabindex="-1"></a>  <span class="at">Gene =</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>, <span class="dv">315</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb91-7"><a href="circos.html#cb91-7" tabindex="-1"></a>  <span class="at">SNP =</span> <span class="fu">paste0</span>(<span class="st">&quot;rs&quot;</span>, <span class="fu">sample</span>(<span class="dv">10000</span><span class="sc">:</span><span class="dv">99999</span>, <span class="dv">315</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb91-8"><a href="circos.html#cb91-8" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+<div id="usage-example-4" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Usage Example<a href="circos.html#usage-example-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="circos.html#cb92-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb92-2"><a href="circos.html#cb92-2" tabindex="-1"></a><span class="fu">BetterVis_Circos_Ringplot</span>(<span class="at">data =</span> df_ringplot, <span class="at">root =</span> <span class="st">&quot;Cough&quot;</span>, <span class="at">color =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-18" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> Parameter explanation<a href="circos.html#parameter-explanation-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="venn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lineplot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

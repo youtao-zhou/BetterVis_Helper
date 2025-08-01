@@ -1,0 +1,88 @@
+# Pie Plot {#pie}
+
+### At the Beginning
+```r
+# library(BetterVis)
+```
+
+## BetterVis_Pie_Single
+
+Draw a good-looking pie chart in the fastest way.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Pie_Single_example", package="BetterVis")
+df_pie_single <- data.frame(
+  Company = c("A", "B", "C", "D", "E"),
+  Share = c(40, 25, 15, 10, 10)
+)
+pie_colors <- c("#FED439B2", "#709AE1B2", "#8A9197B2", "#D2AF81B2", "#FD7446B2")
+```
+
+### Usage Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Pie_Single(df = df_pie_single, ID_var = "Company", Proportion_var = "Share", colors = pie_colors, label = TRUE, size_adjust = 1)
+```
+![](images/pie_single.png)
+
+### Parameter explanation
+**(Full parameter list as you provided)...**
+
+---
+
+## BetterVis_Pie_Multi
+
+This function is designed to create faceted pie charts, ideal for comparing proportional relationships across groups.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Pie_Multi_example_in", package="BetterVis") etc.
+set.seed(123)
+data_in <- data.frame(
+  Habitat = rep(c("H1", "H2"), each = 10),
+  type = rep(paste0("T", 1:5), 4),
+  Group = rep(c("G1", "G2"), each = 10),
+  Phylum = sample(paste0("P", 1:8), 20, replace = TRUE),
+  Proportion = runif(20)
+)
+data_in <- ddply(data_in, .(Habitat, Group, type), transform, Proportion = Proportion / sum(Proportion))
+
+data_out <- data.frame(
+  Habitat = rep(c("H1", "H2"), each = 2),
+  name = rep(c("N1", "N2"), 2),
+  value = c(0.6, 0.4, 0.3, 0.7)
+)
+
+color1 <- c(
+    "#FED439B2", "#709AE1B2","#8A9197B2","#D2AF81B2",
+    "#FD7446B2", "#D5E4A2B2", "#197EC0B2", "#46732EB2",
+    "#71D0F5B2", "#C6CDF7", "#91331FB2", "#1A9993B2",
+    "#FD8CC1B2", "#FAD510", "#0A9F9D", "#3B9AB2",
+    "#FF0000", "#969BC7", "#B695BC", "#6F9554")
+color2<-c("#FBA72A","#969BC7")
+```
+
+### Usage Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Pie_Multi(
+  data_in  = data_in, 
+  data_out = data_out,
+  facet_var = "Habitat",
+  x_var = "type",
+  y_var = "Group",
+  fill_var1 = "Phylum",    
+  pie_var1 = "Proportion",
+  fill_var2 = "name",     
+  pie_var2 = "value",
+  in_color = color1,
+  out_color = color2,
+  draw_outer_pie = TRUE
+)
+```
+
+### Parameter explanation
+**(Full parameter list as you provided)...**

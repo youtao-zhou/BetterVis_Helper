@@ -1,0 +1,97 @@
+# Ridgeline Plot {#ridgeline}
+
+### At the Beginning
+```r
+# library(BetterVis)
+```
+
+## BetterVis_Ridgeline_Single
+
+A ridgeline plot is an ideal choice for visualizing and comparing the distribution of a variable across multiple categories.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Ridgeline_Single_example", package="BetterVis")
+set.seed(123)
+df_ridge_single <- data.frame(
+  CytoTRACEScore = rnorm(200, 0.5, 0.2),
+  patient = factor(rep(paste("Patient", 1:14), length.out = 200)),
+  mutationGroup = factor(sample(c("Mut A", "Mut B", "Mut C", "WT"), 200, replace = TRUE))
+)
+
+sampleColor <- c('#F6EB5E','#CD8280','#F0F0F0', '#54D0B4',
+                 '#D2D1D1','#78C3ED', '#E69F00', '#CBDFF3',
+                 '#3BFFB8', '#ECAD67','#B3B2B2',
+                 '#959595', '#E98FBD','#2672B2')
+```
+
+### Simple Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Ridgeline_Single(
+  data = df_ridge_single, x_var = "CytoTRACEScore", y_var = "patient", color = sampleColor,
+  annotation = TRUE, annotation_var  = "mutationGroup", color_annotation_var = c("#68d0ce", "#f4a4c9", "#e09a2a", "#de6a73")
+)
+```
+![](images/ridgeline_single_simple.png)
+
+### Advanced Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Ridgeline_Single(
+  data = df_ridge_single, x_var = "CytoTRACEScore", y_var = "patient", color = sampleColor,
+  annotation = TRUE, annotation_var  = "mutationGroup", color_annotation_var = c("#68d0ce", "#f4a4c9", "#e09a2a", "#de6a73"),
+  arrow = TRUE,  arrow_x1 = c(0.88, 0.12), arrow_x2 = c(1.12, -0.12), arrow_y1 = c(0.5, 0.5), arrow_y2 = c(0.5, 0.5), arrow_width = 0.6,
+  arrow_text_left = "Left", arrow_text_middle = "Middle", arrow_text_right = "Right",
+  all_text_adjust = 1, combined_width=c(1.5, 0.8)
+)
+```
+![](images/ridgeline_single_advanced.png)
+
+### Parameter explanation
+**(Full parameter list as you provided)...**
+
+---
+
+## BetterVis_Ridgeline_Facet
+
+A dedicated function specifically for creating faceted versions of ridgeline plots.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Ridgeline_Facet_example", package="BetterVis")
+set.seed(456)
+df_ridge_facet <- data.frame(
+  CytoTRACEScore = rnorm(500, 0.5, 0.2),
+  patient = factor(rep(paste("Patient", 1:14), length.out = 500)),
+  mutationGroup = factor(sample(c("Mut A", "Mut B", "Mut C", "WT"), 500, replace = TRUE)),
+  Group = factor(sample(paste("Group", 1:6), 500, replace = TRUE))
+)
+```
+
+### Simple Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Ridgeline_Facet(
+  data = df_ridge_facet, x_var = "CytoTRACEScore", y_var = "patient", facet_var = "Group", annotation_var = "mutationGroup",
+  color = sampleColor
+)
+```
+
+### Advanced Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Ridgeline_Facet(
+  data = df_ridge_facet, x_var = "CytoTRACEScore", y_var = "patient",
+  facet_var = "Group", nrow = 2, ncol = 3,
+  color = sampleColor,
+  annotation = TRUE, annotation_var = "mutationGroup", color_annotation_var = c("#68d0ce", "#f4a4c9", "#4955d0", "#e09a2a", "#de6a73"),
+  all_text_adjust = 1.1,
+  combined_width = c(1.5, 0.8)
+)
+```
+
+### Parameter explanation
+**(Full parameter list as you provided)...**

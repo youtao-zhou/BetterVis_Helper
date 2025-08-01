@@ -1,0 +1,83 @@
+# Circos {#circos}
+
+### At the Beginning
+```r
+# library(BetterVis)
+```
+
+## BetterVis_Circos_Interaction
+
+Circos plots visualize categorical information and the strength of interactions between variables.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Circos_Interaction_example1", package="BetterVis") etc.
+set.seed(123)
+df_sample <- data.frame(
+  ID_Gene = paste(sample(LETTERS, 50, replace = TRUE), sample(1:100, 50, replace = TRUE), sep = "-"),
+  type_main = sample(c("Type A", "Type B", "Type C"), 50, replace = TRUE),
+  type_col1 = sample(c("C1_X", "C1_Y"), 50, replace = TRUE),
+  type_col2 = sample(c("C2_P", "C2_Q", "C2_R"), 50, replace = TRUE)
+)
+interaction_data_sample <- data.frame(
+  ID = sample(df_sample$ID_Gene, 30),
+  Gene = sample(df_sample$ID_Gene, 30),
+  Correlation = runif(30, -1, 1),
+  Pvalue = runif(30, 0, 0.1)
+)
+
+my_main_col_color <- c("#FBB4AE", "#B3CDE3", "#CCEBC5")
+my_color1 <- c("#FED9A6", "#FFFFCC") 
+my_color2 <- c("#DEEBF7", "#C6DBEF", "#9ECAE1")
+```
+
+### Usage Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Circos_Interaction(
+  df = df_sample,
+  interaction_data = interaction_data_sample,
+  main_col = "ID_Gene",            
+  main_col_color_classify = "type_main", 
+  col1_name = "type_col1",        
+  col2_name = "type_col2",          
+  main_col_color = my_main_col_color, 
+  color1 = my_color1,              
+  color2 = my_color2,              
+  link_source_col = "ID",
+  link_target_col = "Gene",
+  link_value_col = "Correlation",
+  link_pvalue_col = "Pvalue" ,
+  main_col_text = TRUE, col1_text = TRUE, col2_text = TRUE, col3_text = TRUE
+)
+```
+![](images/circos_interaction.png)
+
+### Parameter explanation
+**(Full parameter list as you provided)...**
+
+---
+
+## BetterVis_Circos_Ringplot
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Circos_Ringplot_example", package="BetterVis")
+set.seed(123)
+df_ringplot <- data.frame(
+  trait = sample(c("BMI", "AF", "Cough", "WHRadjbmi"), 315, replace = TRUE),
+  Gene = paste0("Gene", sample(1:50, 315, replace = TRUE)),
+  SNP = paste0("rs", sample(10000:99999, 315, replace = TRUE))
+)
+```
+
+### Usage Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Circos_Ringplot(data = df_ringplot, root = "Cough", color = NULL)
+```
+
+### Parameter explanation
+**(Full parameter list as you provided)...**

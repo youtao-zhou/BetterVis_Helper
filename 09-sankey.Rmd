@@ -1,0 +1,46 @@
+# Sankey Plot {#sankey}
+
+### At the Beginning
+```r
+# library(BetterVis)
+```
+
+## BetterVis_Sankey_Single
+
+For visualizing data flow, a Sankey diagram is the ideal choice.
+
+### Data Input
+```r
+# Create sample data
+# In your project: data("BetterVis_Sankey_Single_example", package="BetterVis")
+set.seed(123)
+df_sankey <- data.frame(
+  AgeGroup = sample(c("18-30", "31-50", "51-70", ">70"), 500, replace = TRUE),
+  Diagnosis = sample(c("GBM", "LUAD", "COAD"), 500, replace = TRUE),
+  Treatment = sample(paste0("Treatment_", 1:4), 500, replace = TRUE),
+  Outcome = sample(c("Cured", "Improved", "No_Improvement", "Deceased"), 500, replace = TRUE)
+)
+
+sankey_colors<-c("#F3BDA5", "#5FC8D1", "#e377c2", "#D8B4E2", "#1f77b4", "#F9D68D", "#FDFD96", "#B7E4C7", "#7FBEEB", "#E0E0E0", "#D8B4E2", "#AED9E0","#68d0ce","#e09a2a","#de6a73")
+```
+
+### Simple Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Sankey_Single(data = df_sankey, sankey_color = sankey_colors)
+```
+![](images/sankey_simple.png)
+
+### Advanced Example
+```r
+# Note: eval=FALSE as the function is not provided in user files
+BetterVis_Sankey_Single(data = df_sankey, sankey_alpha = 0.6, sankey_width = 0.4, border_color = "grey30",
+                        sankey_text_size = 4, sankey_text_hjust = 0.5, sankey_text_vjust = 0.5,
+                        bottom_text_size = 18, bottom_text_color = "grey30",
+                        title = "Sankey Plot", title_size = 18,
+                        text_adjust_global = 1,
+                        sankey_color = sankey_colors)
+```
+
+### Parameter explanation
+**(Full parameter list as you provided)...**

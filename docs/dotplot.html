@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Dotplot | An Introduction to BetterVis</title>
+  <meta name="description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Dotplot | An Introduction to BetterVis" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Dotplot | An Introduction to BetterVis" />
+  
+  <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
+  
+
+<meta name="author" content="Your Name" />
+
+
+<meta name="date" content="2025-08-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="heatmap.html"/>
+<link rel="next" href="ridgeline.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> An Introduction to BetterVis</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#how-to-use-this-guide"><i class="fa fa-check"></i><b>1.2</b> How to Use This Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#the-core-philosophy-of-bettervis"><i class="fa fa-check"></i><b>1.3</b> The Core Philosophy of BetterVis</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#simple-example"><i class="fa fa-check"></i><b>1.3.1</b> Simple Example</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#advanced-example"><i class="fa fa-check"></i><b>1.3.2</b> Advanced Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>2</b> How to choose colors in BetterVis</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="colors.html"><a href="colors.html#written-at-the-beginning"><i class="fa fa-check"></i><b>2.1</b> Written at the beginning</a></li>
+<li class="chapter" data-level="2.2" data-path="colors.html"><a href="colors.html#usage-example"><i class="fa fa-check"></i><b>2.2</b> Usage example</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="colors.html"><a href="colors.html#discrete-and-unpaired-color-selection"><i class="fa fa-check"></i><b>2.2.1</b> Discrete And Unpaired color selection</a></li>
+<li class="chapter" data-level="2.2.2" data-path="colors.html"><a href="colors.html#discrete-and-paired-color-selection"><i class="fa fa-check"></i><b>2.2.2</b> Discrete And paired color selection</a></li>
+<li class="chapter" data-level="2.2.3" data-path="colors.html"><a href="colors.html#continuous-color-extraction"><i class="fa fa-check"></i><b>2.2.3</b> Continuous color extraction</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="colors.html"><a href="colors.html#parameter-explanation"><i class="fa fa-check"></i><b>2.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>3</b> Boxplot</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="boxplots.html"><a href="boxplots.html#at-the-beginning"><i class="fa fa-check"></i><b>3.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="3.2" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2</b> BetterVis_Boxplot_Experiment</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="boxplots.html"><a href="boxplots.html#data-input"><i class="fa fa-check"></i><b>3.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="3.2.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-1"><i class="fa fa-check"></i><b>3.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="3.2.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-1"><i class="fa fa-check"></i><b>3.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="3.2.4" data-path="boxplots.html"><a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots"><i class="fa fa-check"></i><b>3.2.4</b> We have modified the iris dataset to create these boxplots</a></li>
+<li class="chapter" data-level="3.2.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2.5</b> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3</b> BetterVis_Boxplot_MixViolin</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="boxplots.html"><a href="boxplots.html#data-input-1"><i class="fa fa-check"></i><b>3.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="3.3.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-2"><i class="fa fa-check"></i><b>3.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="3.3.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-2"><i class="fa fa-check"></i><b>3.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="3.3.4" data-path="boxplots.html"><a href="boxplots.html#adjusting-variables-and-redrawing-the-plot"><i class="fa fa-check"></i><b>3.3.4</b> Adjusting variables and redrawing the plot</a></li>
+<li class="chapter" data-level="3.3.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3.5</b> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code></a></li>
+<li class="chapter" data-level="3.3.6" data-path="boxplots.html"><a href="boxplots.html#important-notes"><i class="fa fa-check"></i><b>3.3.6</b> Important Notes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>4</b> Barplot</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="barplots.html"><a href="barplots.html#at-the-beginning-1"><i class="fa fa-check"></i><b>4.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="4.1" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1</b> BetterVis_Barplot_Accumulative</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="barplots.html"><a href="barplots.html#data-input-2"><i class="fa fa-check"></i><b>4.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.1.2" data-path="barplots.html"><a href="barplots.html#simple-example-3"><i class="fa fa-check"></i><b>4.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.1.3" data-path="barplots.html"><a href="barplots.html#advanced-example-3"><i class="fa fa-check"></i><b>4.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.1.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1.4</b> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2</b> BetterVis_Barplot_Bidirectional</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="barplots.html"><a href="barplots.html#data-input-3"><i class="fa fa-check"></i><b>4.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.2.2" data-path="barplots.html"><a href="barplots.html#simple-example-4"><i class="fa fa-check"></i><b>4.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.2.3" data-path="barplots.html"><a href="barplots.html#advanced-example-4"><i class="fa fa-check"></i><b>4.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2.4</b> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3</b> BetterVis_Barplot_Circle</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="barplots.html"><a href="barplots.html#data-input-4"><i class="fa fa-check"></i><b>4.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.3.2" data-path="barplots.html"><a href="barplots.html#simple-example-5"><i class="fa fa-check"></i><b>4.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.3.3" data-path="barplots.html"><a href="barplots.html#advanced-example-5"><i class="fa fa-check"></i><b>4.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.3.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3.4</b> Parameter explanation for <code>BetterVis_Barplot_Circle</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4</b> BetterVis_Barplot_Experiment</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="barplots.html"><a href="barplots.html#data-input-5"><i class="fa fa-check"></i><b>4.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.4.2" data-path="barplots.html"><a href="barplots.html#simple-example-6"><i class="fa fa-check"></i><b>4.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.4.3" data-path="barplots.html"><a href="barplots.html#advanced-example-6"><i class="fa fa-check"></i><b>4.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.4.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4.4</b> Parameter explanation for <code>BetterVis_Barplot_Experiment</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5</b> BetterVis_Barplot_Horizontal</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="barplots.html"><a href="barplots.html#data-input-6"><i class="fa fa-check"></i><b>4.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.5.2" data-path="barplots.html"><a href="barplots.html#simple-example-7"><i class="fa fa-check"></i><b>4.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.5.3" data-path="barplots.html"><a href="barplots.html#advanced-example-7"><i class="fa fa-check"></i><b>4.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.5.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6</b> BetterVis_Barplot_Horizontal2</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="barplots.html"><a href="barplots.html#data-input-7"><i class="fa fa-check"></i><b>4.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.6.2" data-path="barplots.html"><a href="barplots.html#simple-example-8"><i class="fa fa-check"></i><b>4.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.6.3" data-path="barplots.html"><a href="barplots.html#advanced-example-8"><i class="fa fa-check"></i><b>4.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.6.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>5</b> Network Plot</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="network.html"><a href="network.html#at-the-beginning-2"><i class="fa fa-check"></i><b>5.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="5.1" data-path="network.html"><a href="network.html#bettervis_network_ppi"><i class="fa fa-check"></i><b>5.1</b> BetterVis_Network_PPI</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="network.html"><a href="network.html#data-input-8"><i class="fa fa-check"></i><b>5.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.1.2" data-path="network.html"><a href="network.html#usage-example-1"><i class="fa fa-check"></i><b>5.1.2</b> Usage Example</a></li>
+<li class="chapter" data-level="5.1.3" data-path="network.html"><a href="network.html#parameter-explanation-1"><i class="fa fa-check"></i><b>5.1.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="5.1.4" data-path="network.html"><a href="network.html#important-note"><i class="fa fa-check"></i><b>5.1.4</b> Important Note</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>6</b> Heatmap</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="heatmap.html"><a href="heatmap.html#at-the-beginning-3"><i class="fa fa-check"></i><b>6.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="6.1" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_bicontinuous"><i class="fa fa-check"></i><b>6.1</b> BetterVis_Heatmap_Bicontinuous</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="heatmap.html"><a href="heatmap.html#data-input-9"><i class="fa fa-check"></i><b>6.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.1.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-9"><i class="fa fa-check"></i><b>6.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="6.1.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-9"><i class="fa fa-check"></i><b>6.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="6.1.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-2"><i class="fa fa-check"></i><b>6.1.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_circle"><i class="fa fa-check"></i><b>6.2</b> BetterVis_Heatmap_Circle</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="heatmap.html"><a href="heatmap.html#data-input-10"><i class="fa fa-check"></i><b>6.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.2.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-10"><i class="fa fa-check"></i><b>6.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="6.2.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-10"><i class="fa fa-check"></i><b>6.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="6.2.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-3"><i class="fa fa-check"></i><b>6.2.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_common"><i class="fa fa-check"></i><b>6.3</b> BetterVis_Heatmap_Common</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="heatmap.html"><a href="heatmap.html#data-input-11"><i class="fa fa-check"></i><b>6.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.3.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-11"><i class="fa fa-check"></i><b>6.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="6.3.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-11"><i class="fa fa-check"></i><b>6.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="6.3.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-4"><i class="fa fa-check"></i><b>6.3.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_mantel"><i class="fa fa-check"></i><b>6.4</b> BetterVis_Heatmap_Mantel</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="heatmap.html"><a href="heatmap.html#data-input-12"><i class="fa fa-check"></i><b>6.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.4.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-12"><i class="fa fa-check"></i><b>6.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="6.4.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-12"><i class="fa fa-check"></i><b>6.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="6.4.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-5"><i class="fa fa-check"></i><b>6.4.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_multi"><i class="fa fa-check"></i><b>6.5</b> BetterVis_Heatmap_Multi</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="heatmap.html"><a href="heatmap.html#data-input-13"><i class="fa fa-check"></i><b>6.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.5.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-13"><i class="fa fa-check"></i><b>6.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="6.5.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-13"><i class="fa fa-check"></i><b>6.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="6.5.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-6"><i class="fa fa-check"></i><b>6.5.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dotplot.html"><a href="dotplot.html"><i class="fa fa-check"></i><b>7</b> Dotplot</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="dotplot.html"><a href="dotplot.html#at-the-beginning-4"><i class="fa fa-check"></i><b>7.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="7.1" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_heatmap"><i class="fa fa-check"></i><b>7.1</b> BetterVis_DotPlot_Heatmap</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="dotplot.html"><a href="dotplot.html#data-input-14"><i class="fa fa-check"></i><b>7.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.1.2" data-path="dotplot.html"><a href="dotplot.html#usage-example-2"><i class="fa fa-check"></i><b>7.1.2</b> Usage Example</a></li>
+<li class="chapter" data-level="7.1.3" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-7"><i class="fa fa-check"></i><b>7.1.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_beeswarm"><i class="fa fa-check"></i><b>7.2</b> BetterVis_Dotplot_Beeswarm</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="dotplot.html"><a href="dotplot.html#data-input-15"><i class="fa fa-check"></i><b>7.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.2.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-14"><i class="fa fa-check"></i><b>7.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.2.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-14"><i class="fa fa-check"></i><b>7.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.2.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-8"><i class="fa fa-check"></i><b>7.2.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_mixbar"><i class="fa fa-check"></i><b>7.3</b> BetterVis_Dotplot_Mixbar</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="dotplot.html"><a href="dotplot.html#data-input-16"><i class="fa fa-check"></i><b>7.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.3.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-15"><i class="fa fa-check"></i><b>7.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.3.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-15"><i class="fa fa-check"></i><b>7.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.3.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-9"><i class="fa fa-check"></i><b>7.3.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_multifacet"><i class="fa fa-check"></i><b>7.4</b> BetterVis_Dotplot_Multifacet</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="dotplot.html"><a href="dotplot.html#data-input-17"><i class="fa fa-check"></i><b>7.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.4.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-16"><i class="fa fa-check"></i><b>7.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.4.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-16"><i class="fa fa-check"></i><b>7.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.4.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-10"><i class="fa fa-check"></i><b>7.4.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_smoothline"><i class="fa fa-check"></i><b>7.5</b> BetterVis_Dotplot_Smoothline</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="dotplot.html"><a href="dotplot.html#data-input-18"><i class="fa fa-check"></i><b>7.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.5.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-17"><i class="fa fa-check"></i><b>7.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.5.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-17"><i class="fa fa-check"></i><b>7.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.5.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-11"><i class="fa fa-check"></i><b>7.5.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_ternary"><i class="fa fa-check"></i><b>7.6</b> BetterVis_Dotplot_Ternary</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="dotplot.html"><a href="dotplot.html#data-input-19"><i class="fa fa-check"></i><b>7.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.6.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-18"><i class="fa fa-check"></i><b>7.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.6.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-18"><i class="fa fa-check"></i><b>7.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.6.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-12"><i class="fa fa-check"></i><b>7.6.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>8</b> Ridgeline Plot</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="ridgeline.html"><a href="ridgeline.html#at-the-beginning-5"><i class="fa fa-check"></i><b>8.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="8.1" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_single"><i class="fa fa-check"></i><b>8.1</b> BetterVis_Ridgeline_Single</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-20"><i class="fa fa-check"></i><b>8.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.1.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-19"><i class="fa fa-check"></i><b>8.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.1.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-19"><i class="fa fa-check"></i><b>8.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.1.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-13"><i class="fa fa-check"></i><b>8.1.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_facet"><i class="fa fa-check"></i><b>8.2</b> BetterVis_Ridgeline_Facet</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-21"><i class="fa fa-check"></i><b>8.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.2.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-20"><i class="fa fa-check"></i><b>8.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.2.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-20"><i class="fa fa-check"></i><b>8.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.2.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-14"><i class="fa fa-check"></i><b>8.2.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sankey.html"><a href="sankey.html"><i class="fa fa-check"></i><b>9</b> Sankey Plot</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="sankey.html"><a href="sankey.html#at-the-beginning-6"><i class="fa fa-check"></i><b>9.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="9.1" data-path="sankey.html"><a href="sankey.html#bettervis_sankey_single"><i class="fa fa-check"></i><b>9.1</b> BetterVis_Sankey_Single</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="sankey.html"><a href="sankey.html#data-input-22"><i class="fa fa-check"></i><b>9.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="9.1.2" data-path="sankey.html"><a href="sankey.html#simple-example-21"><i class="fa fa-check"></i><b>9.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="9.1.3" data-path="sankey.html"><a href="sankey.html#advanced-example-21"><i class="fa fa-check"></i><b>9.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="9.1.4" data-path="sankey.html"><a href="sankey.html#parameter-explanation-15"><i class="fa fa-check"></i><b>9.1.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="venn.html"><a href="venn.html"><i class="fa fa-check"></i><b>10</b> Venn and Upset Plots</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="venn.html"><a href="venn.html#at-the-beginning-7"><i class="fa fa-check"></i><b>10.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="10.1" data-path="venn.html"><a href="venn.html#bettervis_venn_upsetr"><i class="fa fa-check"></i><b>10.1</b> BetterVis_Venn_UpsetR</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="venn.html"><a href="venn.html#data-input-23"><i class="fa fa-check"></i><b>10.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="10.1.2" data-path="venn.html"><a href="venn.html#simple-example-22"><i class="fa fa-check"></i><b>10.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="10.1.3" data-path="venn.html"><a href="venn.html#advanced-example-22"><i class="fa fa-check"></i><b>10.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="10.1.4" data-path="venn.html"><a href="venn.html#parameter-explanation-16"><i class="fa fa-check"></i><b>10.1.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="circos.html"><a href="circos.html"><i class="fa fa-check"></i><b>11</b> Circos</a>
+<ul>
+<li class="chapter" data-level="11.0.1" data-path="circos.html"><a href="circos.html#at-the-beginning-8"><i class="fa fa-check"></i><b>11.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="11.1" data-path="circos.html"><a href="circos.html#bettervis_circos_interaction"><i class="fa fa-check"></i><b>11.1</b> BetterVis_Circos_Interaction</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="circos.html"><a href="circos.html#data-input-24"><i class="fa fa-check"></i><b>11.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="11.1.2" data-path="circos.html"><a href="circos.html#usage-example-3"><i class="fa fa-check"></i><b>11.1.2</b> Usage Example</a></li>
+<li class="chapter" data-level="11.1.3" data-path="circos.html"><a href="circos.html#parameter-explanation-17"><i class="fa fa-check"></i><b>11.1.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="circos.html"><a href="circos.html#bettervis_circos_ringplot"><i class="fa fa-check"></i><b>11.2</b> BetterVis_Circos_Ringplot</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="circos.html"><a href="circos.html#data-input-25"><i class="fa fa-check"></i><b>11.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="11.2.2" data-path="circos.html"><a href="circos.html#usage-example-4"><i class="fa fa-check"></i><b>11.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="11.2.3" data-path="circos.html"><a href="circos.html#parameter-explanation-18"><i class="fa fa-check"></i><b>11.2.3</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lineplot.html"><a href="lineplot.html"><i class="fa fa-check"></i><b>12</b> Line Plot</a>
+<ul>
+<li class="chapter" data-level="12.0.1" data-path="lineplot.html"><a href="lineplot.html#at-the-beginning-9"><i class="fa fa-check"></i><b>12.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="12.1" data-path="lineplot.html"><a href="lineplot.html#bettervis_lineplot_chart"><i class="fa fa-check"></i><b>12.1</b> BetterVis_LinePlot_Chart</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="lineplot.html"><a href="lineplot.html#data-input-26"><i class="fa fa-check"></i><b>12.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="12.1.2" data-path="lineplot.html"><a href="lineplot.html#simple-example-23"><i class="fa fa-check"></i><b>12.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="12.1.3" data-path="lineplot.html"><a href="lineplot.html#advanced-example-23"><i class="fa fa-check"></i><b>12.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="12.1.4" data-path="lineplot.html"><a href="lineplot.html#parameter-explanation-19"><i class="fa fa-check"></i><b>12.1.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="pie.html"><a href="pie.html"><i class="fa fa-check"></i><b>13</b> Pie Plot</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="pie.html"><a href="pie.html#at-the-beginning-10"><i class="fa fa-check"></i><b>13.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="13.1" data-path="pie.html"><a href="pie.html#bettervis_pie_single"><i class="fa fa-check"></i><b>13.1</b> BetterVis_Pie_Single</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="pie.html"><a href="pie.html#data-input-27"><i class="fa fa-check"></i><b>13.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="13.1.2" data-path="pie.html"><a href="pie.html#usage-example-5"><i class="fa fa-check"></i><b>13.1.2</b> Usage Example</a></li>
+<li class="chapter" data-level="13.1.3" data-path="pie.html"><a href="pie.html#parameter-explanation-20"><i class="fa fa-check"></i><b>13.1.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="pie.html"><a href="pie.html#bettervis_pie_multi"><i class="fa fa-check"></i><b>13.2</b> BetterVis_Pie_Multi</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="pie.html"><a href="pie.html#data-input-28"><i class="fa fa-check"></i><b>13.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="13.2.2" data-path="pie.html"><a href="pie.html#usage-example-6"><i class="fa fa-check"></i><b>13.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="13.2.3" data-path="pie.html"><a href="pie.html#parameter-explanation-21"><i class="fa fa-check"></i><b>13.2.3</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Introduction to BetterVis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dotplot" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Dotplot<a href="dotplot.html#dotplot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="at-the-beginning-4" class="section level3 hasAnchor" number="7.0.1">
+<h3><span class="header-section-number">7.0.1</span> At the Beginning<a href="dotplot.html#at-the-beginning-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="dotplot.html#cb55-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span>
+<span id="cb55-2"><a href="dotplot.html#cb55-2" tabindex="-1"></a><span class="fu">library</span>(MetBrewer)</span>
+<span id="cb55-3"><a href="dotplot.html#cb55-3" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb55-4"><a href="dotplot.html#cb55-4" tabindex="-1"></a><span class="fu">library</span>(MASS)</span></code></pre></div>
+</div>
+<div id="bettervis_dotplot_heatmap" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> BetterVis_DotPlot_Heatmap<a href="dotplot.html#bettervis_dotplot_heatmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This function combines a dot plot with elements of a heatmap.</p>
+<div id="data-input-14" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Data Input<a href="dotplot.html#data-input-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="dotplot.html#cb56-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb56-2"><a href="dotplot.html#cb56-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_DotPlot_Heatmap_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb56-3"><a href="dotplot.html#cb56-3" tabindex="-1"></a>df_dot_heatmap <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">17</span> <span class="sc">*</span> <span class="dv">13</span>, <span class="dv">1</span>, <span class="fl">0.8</span>), <span class="at">nrow =</span> <span class="dv">17</span>, <span class="at">ncol =</span> <span class="dv">13</span>)</span>
+<span id="cb56-4"><a href="dotplot.html#cb56-4" tabindex="-1"></a><span class="fu">rownames</span>(df_dot_heatmap) <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">17</span>)</span>
+<span id="cb56-5"><a href="dotplot.html#cb56-5" tabindex="-1"></a><span class="fu">colnames</span>(df_dot_heatmap) <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">&quot;CellType&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">13</span>)</span>
+<span id="cb56-6"><a href="dotplot.html#cb56-6" tabindex="-1"></a></span>
+<span id="cb56-7"><a href="dotplot.html#cb56-7" tabindex="-1"></a>row_colors<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">brewer.pal</span>(<span class="dv">9</span>,<span class="st">&quot;Set3&quot;</span>),<span class="fu">brewer.pal</span>(<span class="dv">8</span>,<span class="st">&quot;Set2&quot;</span>))</span>
+<span id="cb56-8"><a href="dotplot.html#cb56-8" tabindex="-1"></a>col_colors<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">brewer.pal</span>(<span class="dv">8</span>,<span class="st">&quot;Set1&quot;</span>),<span class="fu">brewer.pal</span>(<span class="dv">5</span>,<span class="st">&quot;Set2&quot;</span>))</span></code></pre></div>
+</div>
+<div id="usage-example-2" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Usage Example<a href="dotplot.html#usage-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="dotplot.html#cb57-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb57-2"><a href="dotplot.html#cb57-2" tabindex="-1"></a><span class="fu">BetterVis_DotPlot_Heatmap</span>(df_dot_heatmap, <span class="at">scale =</span> <span class="cn">FALSE</span>, <span class="at">col.min=</span><span class="dv">0</span>, <span class="at">col.max =</span> <span class="dv">2</span>, <span class="at">show.noexpr.dots =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb57-3"><a href="dotplot.html#cb57-3" tabindex="-1"></a>  <span class="at">data.colors =</span> <span class="fu">c</span>(<span class="st">&quot;#1289B2&quot;</span>,<span class="st">&quot;#FCF6AF&quot;</span>,<span class="st">&quot;#E53849&quot;</span>),</span>
+<span id="cb57-4"><a href="dotplot.html#cb57-4" tabindex="-1"></a>  <span class="at">dots.size =</span> <span class="dv">3</span>, <span class="at">dots.type =</span> <span class="st">&quot;square root&quot;</span>, <span class="at">inner.border =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb57-5"><a href="dotplot.html#cb57-5" tabindex="-1"></a>  <span class="at">cluster.features=</span><span class="cn">FALSE</span>, <span class="at">cluster.idents =</span> <span class="cn">FALSE</span>, <span class="at">idents.kmeans =</span> <span class="dv">1</span>, <span class="at">features.kmeans =</span> <span class="dv">1</span>,</span>
+<span id="cb57-6"><a href="dotplot.html#cb57-6" tabindex="-1"></a>  <span class="at">row.names.side =</span> <span class="st">&quot;right&quot;</span>, <span class="at">idents.names.size =</span> <span class="dv">10</span>,</span>
+<span id="cb57-7"><a href="dotplot.html#cb57-7" tabindex="-1"></a>  <span class="at">column.names.side =</span> <span class="st">&quot;top&quot;</span>, <span class="at">column.names.angle=</span><span class="dv">45</span>, <span class="at">features.names.size =</span> <span class="dv">10</span>,</span>
+<span id="cb57-8"><a href="dotplot.html#cb57-8" tabindex="-1"></a>  <span class="at">right.annotation =</span> <span class="cn">FALSE</span>, <span class="at">bottom.annotation =</span> <span class="cn">FALSE</span>, <span class="at">top.annotation =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb57-9"><a href="dotplot.html#cb57-9" tabindex="-1"></a>  <span class="at">row_annotation_color =</span> row_colors, <span class="at">col_annotation_color =</span> col_colors,</span>
+<span id="cb57-10"><a href="dotplot.html#cb57-10" tabindex="-1"></a>  <span class="at">show.data.legend =</span> <span class="cn">TRUE</span>, <span class="at">row_annotation_legend =</span> <span class="cn">TRUE</span>, <span class="at">row_annotation_legend_title =</span> <span class="st">&quot;Rows&quot;</span>,</span>
+<span id="cb57-11"><a href="dotplot.html#cb57-11" tabindex="-1"></a>  <span class="at">col_annotation_legend =</span> <span class="cn">TRUE</span>, <span class="at">col_annotation_legend_title =</span> <span class="st">&quot;Cols&quot;</span>,</span>
+<span id="cb57-12"><a href="dotplot.html#cb57-12" tabindex="-1"></a>  <span class="at">zscore.legend =</span> <span class="cn">TRUE</span>, <span class="at">zscore.legend.side =</span> <span class="st">&quot;bottom&quot;</span>,</span>
+<span id="cb57-13"><a href="dotplot.html#cb57-13" tabindex="-1"></a>  <span class="at">legend.title.size =</span> <span class="dv">10</span>, <span class="at">legend.text.size =</span> <span class="dv">10</span>,</span>
+<span id="cb57-14"><a href="dotplot.html#cb57-14" tabindex="-1"></a>  <span class="at">row.split =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>),</span>
+<span id="cb57-15"><a href="dotplot.html#cb57-15" tabindex="-1"></a>  <span class="at">col.split =</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">2</span>),</span>
+<span id="cb57-16"><a href="dotplot.html#cb57-16" tabindex="-1"></a>  <span class="at">keep_rownames_order =</span> <span class="cn">TRUE</span>, <span class="at">border_gp_control =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="images/dotplot_heatmap.png" /></p>
+</div>
+<div id="parameter-explanation-7" class="section level3 hasAnchor" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Parameter explanation<a href="dotplot.html#parameter-explanation-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_dotplot_beeswarm" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> BetterVis_Dotplot_Beeswarm<a href="dotplot.html#bettervis_dotplot_beeswarm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This function provides a convenient way to create beeswarm plots.</p>
+<div id="data-input-15" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Data Input<a href="dotplot.html#data-input-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="dotplot.html#cb58-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb58-2"><a href="dotplot.html#cb58-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Dotplot_Beeswarm_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb58-3"><a href="dotplot.html#cb58-3" tabindex="-1"></a>df_beeswarm <span class="ot">&lt;-</span> Cars93[, <span class="fu">c</span>(<span class="st">&quot;Type&quot;</span>, <span class="st">&quot;MPG.city&quot;</span>)]</span></code></pre></div>
+</div>
+<div id="simple-example-14" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Simple Example<a href="dotplot.html#simple-example-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="dotplot.html#cb59-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb59-2"><a href="dotplot.html#cb59-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Beeswarm</span>(<span class="at">data =</span> df_beeswarm, <span class="at">x_var =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;MPG.city&quot;</span>,</span>
+<span id="cb59-3"><a href="dotplot.html#cb59-3" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#68d0ce&quot;</span>, <span class="st">&quot;#f4a4c9&quot;</span>, <span class="st">&quot;#4955d0&quot;</span>, <span class="st">&quot;#e09a2a&quot;</span>, <span class="st">&quot;#de6a73&quot;</span>,<span class="st">&quot;firebrick&quot;</span>),</span>
+<span id="cb59-4"><a href="dotplot.html#cb59-4" tabindex="-1"></a>  <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">60</span>), <span class="at">y_break =</span> <span class="dv">10</span>,</span>
+<span id="cb59-5"><a href="dotplot.html#cb59-5" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">comparison_group =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;Compact&quot;</span>,<span class="st">&quot;Large&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;Midsize&quot;</span>,<span class="st">&quot;Large&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;Small&quot;</span>,<span class="st">&quot;Van&quot;</span>)), <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>)</span></code></pre></div>
+</div>
+<div id="advanced-example-14" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Advanced Example<a href="dotplot.html#advanced-example-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="dotplot.html#cb60-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb60-2"><a href="dotplot.html#cb60-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Beeswarm</span>(<span class="at">data =</span> df_beeswarm, <span class="at">x_var =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;MPG.city&quot;</span>,</span>
+<span id="cb60-3"><a href="dotplot.html#cb60-3" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#68d0ce&quot;</span>, <span class="st">&quot;#f4a4c9&quot;</span>, <span class="st">&quot;#4955d0&quot;</span>, <span class="st">&quot;#e09a2a&quot;</span>, <span class="st">&quot;#de6a73&quot;</span>,<span class="st">&quot;firebrick&quot;</span>),</span>
+<span id="cb60-4"><a href="dotplot.html#cb60-4" tabindex="-1"></a>  <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">60</span>), <span class="at">y_break =</span> <span class="dv">10</span>,</span>
+<span id="cb60-5"><a href="dotplot.html#cb60-5" tabindex="-1"></a>  <span class="at">point_size =</span> <span class="dv">2</span>, <span class="at">point_alpha =</span> <span class="fl">0.6</span>,</span>
+<span id="cb60-6"><a href="dotplot.html#cb60-6" tabindex="-1"></a>  <span class="at">median_bar =</span> <span class="cn">TRUE</span>, <span class="at">border=</span><span class="cn">TRUE</span>,</span>
+<span id="cb60-7"><a href="dotplot.html#cb60-7" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Title&quot;</span>, <span class="at">x_title =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">y_title =</span> <span class="st">&quot;MPG.city&quot;</span>,</span>
+<span id="cb60-8"><a href="dotplot.html#cb60-8" tabindex="-1"></a>  <span class="at">sig_symbol =</span> <span class="cn">TRUE</span>, <span class="at">sig_type=</span><span class="st">&quot;SYMBOL&quot;</span>,</span>
+<span id="cb60-9"><a href="dotplot.html#cb60-9" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;Type&quot;</span>, <span class="at">comparison_group =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;Compact&quot;</span>,<span class="st">&quot;Large&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;Midsize&quot;</span>,<span class="st">&quot;Large&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;Small&quot;</span>,<span class="st">&quot;Van&quot;</span>)), <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-8" class="section level3 hasAnchor" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Parameter explanation<a href="dotplot.html#parameter-explanation-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_dotplot_mixbar" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> BetterVis_Dotplot_Mixbar<a href="dotplot.html#bettervis_dotplot_mixbar" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This function enhances a standard grouped dot plot by adding marginal bar charts.</p>
+<div id="data-input-16" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Data Input<a href="dotplot.html#data-input-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="dotplot.html#cb61-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb61-2"><a href="dotplot.html#cb61-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Dotplot_Mixbar_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb61-3"><a href="dotplot.html#cb61-3" tabindex="-1"></a>df_mixbar <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb61-4"><a href="dotplot.html#cb61-4" tabindex="-1"></a>  <span class="at">bill_length_mm =</span> <span class="fu">rnorm</span>(<span class="dv">150</span>, <span class="dv">43</span>, <span class="dv">5</span>),</span>
+<span id="cb61-5"><a href="dotplot.html#cb61-5" tabindex="-1"></a>  <span class="at">bill_depth_mm =</span> <span class="fu">rnorm</span>(<span class="dv">150</span>, <span class="dv">17</span>, <span class="dv">2</span>),</span>
+<span id="cb61-6"><a href="dotplot.html#cb61-6" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Adelie&quot;</span>, <span class="st">&quot;Chinstrap&quot;</span>, <span class="st">&quot;Gentoo&quot;</span>), <span class="at">each=</span><span class="dv">50</span>),</span>
+<span id="cb61-7"><a href="dotplot.html#cb61-7" tabindex="-1"></a>  <span class="at">body_mass_g =</span> <span class="fu">rnorm</span>(<span class="dv">150</span>, <span class="dv">4200</span>, <span class="dv">800</span>)</span>
+<span id="cb61-8"><a href="dotplot.html#cb61-8" tabindex="-1"></a>)</span></code></pre></div>
+</div>
+<div id="simple-example-15" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Simple Example<a href="dotplot.html#simple-example-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="dotplot.html#cb62-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb62-2"><a href="dotplot.html#cb62-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Mixbar</span>(<span class="at">df =</span> df_mixbar, <span class="at">x_var =</span> <span class="st">&quot;bill_length_mm&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;bill_depth_mm&quot;</span>, <span class="at">classified_var =</span> <span class="st">&quot;species&quot;</span>, <span class="at">size_var =</span> <span class="st">&quot;body_mass_g&quot;</span>,</span>
+<span id="cb62-3"><a href="dotplot.html#cb62-3" tabindex="-1"></a>  <span class="at">color =</span>  <span class="fu">c</span>(<span class="st">&quot;#FBA72A&quot;</span>, <span class="st">&quot;#78B7C5&quot;</span>, <span class="st">&quot;#7294D4&quot;</span>),</span>
+<span id="cb62-4"><a href="dotplot.html#cb62-4" tabindex="-1"></a>  <span class="at">x_title =</span> <span class="st">&quot;Bill Length&quot;</span>, <span class="at">y_title =</span> <span class="st">&quot;Bill Depth&quot;</span>)</span></code></pre></div>
+</div>
+<div id="advanced-example-15" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Advanced Example<a href="dotplot.html#advanced-example-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="dotplot.html#cb63-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb63-2"><a href="dotplot.html#cb63-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Mixbar</span>(<span class="at">df =</span> df_mixbar, <span class="at">x_var =</span> <span class="st">&quot;bill_length_mm&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;bill_depth_mm&quot;</span>, </span>
+<span id="cb63-3"><a href="dotplot.html#cb63-3" tabindex="-1"></a>  <span class="at">classified_var =</span> <span class="st">&quot;species&quot;</span>, <span class="at">size_var =</span> <span class="st">&quot;body_mass_g&quot;</span>, <span class="at">color =</span><span class="fu">c</span>(<span class="st">&quot;#FBA72A&quot;</span>, <span class="st">&quot;#78B7C5&quot;</span>, <span class="st">&quot;#7294D4&quot;</span>),</span>
+<span id="cb63-4"><a href="dotplot.html#cb63-4" tabindex="-1"></a>  <span class="at">point_shape =</span> <span class="dv">16</span>, <span class="at">point_size =</span> <span class="dv">4</span>, </span>
+<span id="cb63-5"><a href="dotplot.html#cb63-5" tabindex="-1"></a>  <span class="at">error_bar =</span> <span class="cn">TRUE</span>, <span class="at">errorbar_width =</span> <span class="fl">0.6</span>, <span class="at">errorbar_size =</span> <span class="dv">1</span>, </span>
+<span id="cb63-6"><a href="dotplot.html#cb63-6" tabindex="-1"></a>  <span class="at">legend =</span> <span class="cn">FALSE</span>, <span class="at">title =</span> <span class="st">&quot;&quot;</span>, <span class="at">x_title =</span> <span class="st">&quot;Bill Length&quot;</span>, </span>
+<span id="cb63-7"><a href="dotplot.html#cb63-7" tabindex="-1"></a>  <span class="at">y_title =</span> <span class="st">&quot;Bill Depth&quot;</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species&quot;</span>,</span>
+<span id="cb63-8"><a href="dotplot.html#cb63-8" tabindex="-1"></a>  <span class="at">theme_custom =</span> <span class="fu">theme</span>(<span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>)), <span class="at">guides_custom=</span><span class="fu">guides</span>(<span class="at">color=</span><span class="st">&quot;none&quot;</span>,<span class="at">fill=</span><span class="st">&quot;none&quot;</span>), <span class="at">Mixbar =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-9" class="section level3 hasAnchor" number="7.3.4">
+<h3><span class="header-section-number">7.3.4</span> Parameter explanation<a href="dotplot.html#parameter-explanation-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_dotplot_multifacet" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> BetterVis_Dotplot_Multifacet<a href="dotplot.html#bettervis_dotplot_multifacet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Streamlines the creation of advanced visualizations for both standard and faceted dot plots.</p>
+<div id="data-input-17" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Data Input<a href="dotplot.html#data-input-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="dotplot.html#cb64-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb64-2"><a href="dotplot.html#cb64-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Dotplot_Multifacet_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb64-3"><a href="dotplot.html#cb64-3" tabindex="-1"></a>df_multifacet <span class="ot">&lt;-</span> iris</span></code></pre></div>
+</div>
+<div id="simple-example-16" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Simple Example<a href="dotplot.html#simple-example-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="dotplot.html#cb65-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb65-2"><a href="dotplot.html#cb65-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Multifacet</span>(<span class="at">df =</span> df_multifacet, <span class="at">classified_var =</span> <span class="st">&quot;Species&quot;</span>, <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#BEBADA&quot;</span>, <span class="st">&quot;#80B1D3&quot;</span>, <span class="st">&quot;#FDB462&quot;</span>), <span class="at">ncol =</span> <span class="dv">4</span>)</span></code></pre></div>
+</div>
+<div id="advanced-example-16" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Advanced Example<a href="dotplot.html#advanced-example-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="dotplot.html#cb66-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb66-2"><a href="dotplot.html#cb66-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Multifacet</span>(</span>
+<span id="cb66-3"><a href="dotplot.html#cb66-3" tabindex="-1"></a>  <span class="at">df =</span> df_multifacet, <span class="at">classified_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
+<span id="cb66-4"><a href="dotplot.html#cb66-4" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#BEBADA&quot;</span>, <span class="st">&quot;#80B1D3&quot;</span>, <span class="st">&quot;#FDB462&quot;</span>),</span>
+<span id="cb66-5"><a href="dotplot.html#cb66-5" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">4</span>,</span>
+<span id="cb66-6"><a href="dotplot.html#cb66-6" tabindex="-1"></a>  <span class="at">strokeSize =</span> <span class="fl">0.2</span>, <span class="at">pointSize =</span> <span class="dv">3</span>, <span class="at">strokeColor =</span> <span class="st">&#39;gray30&#39;</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>,</span>
+<span id="cb66-7"><a href="dotplot.html#cb66-7" tabindex="-1"></a>  <span class="at">legend_title  =</span> <span class="st">&quot;Species&quot;</span>, <span class="at">legend_title_size =</span> <span class="dv">12</span>, <span class="at">legend_text_size =</span> <span class="dv">12</span>,</span>
+<span id="cb66-8"><a href="dotplot.html#cb66-8" tabindex="-1"></a>  <span class="at">x_text_angle =</span> <span class="dv">0</span>, <span class="at">x_text_size =</span> <span class="dv">12</span>, <span class="at">x_title_size =</span> <span class="dv">12</span>,</span>
+<span id="cb66-9"><a href="dotplot.html#cb66-9" tabindex="-1"></a>  <span class="at">y_text_size =</span> <span class="dv">12</span>, <span class="at">y_title_size =</span> <span class="dv">12</span>,</span>
+<span id="cb66-10"><a href="dotplot.html#cb66-10" tabindex="-1"></a>  <span class="at">theme_custom =</span> <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">&quot;bold&quot;</span>)),</span>
+<span id="cb66-11"><a href="dotplot.html#cb66-11" tabindex="-1"></a>  <span class="at">guides_custom =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-10" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Parameter explanation<a href="dotplot.html#parameter-explanation-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_dotplot_smoothline" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> BetterVis_Dotplot_Smoothline<a href="dotplot.html#bettervis_dotplot_smoothline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For correlation and regression analyses, a scatter plot with a fitted line is essential.</p>
+<div id="data-input-18" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Data Input<a href="dotplot.html#data-input-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="dotplot.html#cb67-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb67-2"><a href="dotplot.html#cb67-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Dotplot_Smoothline_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb67-3"><a href="dotplot.html#cb67-3" tabindex="-1"></a>df_smoothline <span class="ot">&lt;-</span> iris</span></code></pre></div>
+</div>
+<div id="simple-example-17" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Simple Example<a href="dotplot.html#simple-example-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="dotplot.html#cb68-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb68-2"><a href="dotplot.html#cb68-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Smoothline</span>(<span class="at">data =</span> df_smoothline, <span class="at">x_var =</span> <span class="st">&quot;Sepal.Width&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Sepal.Length&quot;</span>, <span class="at">classified_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
+<span id="cb68-3"><a href="dotplot.html#cb68-3" tabindex="-1"></a>  <span class="at">size_var =</span> <span class="st">&quot;Petal.Length&quot;</span>, <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#FBA72A&quot;</span>, <span class="st">&quot;#78B7C5&quot;</span>, <span class="st">&quot;#7294D4&quot;</span>), <span class="at">cor_position =</span> <span class="fu">c</span>(<span class="fl">3.8</span>, <span class="dv">8</span>))</span></code></pre></div>
+</div>
+<div id="advanced-example-17" class="section level3 hasAnchor" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Advanced Example<a href="dotplot.html#advanced-example-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="dotplot.html#cb69-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb69-2"><a href="dotplot.html#cb69-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Smoothline</span>(<span class="at">data =</span> df_smoothline, <span class="at">x_var =</span> <span class="st">&quot;Sepal.Width&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Sepal.Length&quot;</span>, <span class="at">classified_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
+<span id="cb69-3"><a href="dotplot.html#cb69-3" tabindex="-1"></a>  <span class="at">size_var =</span> <span class="st">&quot;Petal.Length&quot;</span>, <span class="at">color =</span> <span class="fu">c</span>(<span class="st">&quot;#BEBADA&quot;</span>, <span class="st">&quot;#80B1D3&quot;</span>, <span class="st">&quot;#FDB462&quot;</span>),  <span class="at">point_size =</span> <span class="dv">5</span>,</span>
+<span id="cb69-4"><a href="dotplot.html#cb69-4" tabindex="-1"></a>  <span class="at">smoothline =</span> <span class="cn">TRUE</span>, <span class="at">smoothline_width =</span> <span class="dv">2</span>, <span class="at">smoothline_color =</span> <span class="st">&quot;#FB8072&quot;</span>, </span>
+<span id="cb69-5"><a href="dotplot.html#cb69-5" tabindex="-1"></a>  <span class="at">cor_test =</span> <span class="cn">TRUE</span>, <span class="at">cor_method =</span> <span class="st">&quot;spearman&quot;</span>, <span class="at">cor_color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">cor_position =</span> <span class="fu">c</span>(<span class="fl">2.2</span>, <span class="dv">8</span>),</span>
+<span id="cb69-6"><a href="dotplot.html#cb69-6" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Title&quot;</span>, <span class="at">x_title =</span> <span class="st">&quot;Sepal.Width &quot;</span>, <span class="at">y_title =</span> <span class="st">&quot;Sepal.Length&quot;</span>, </span>
+<span id="cb69-7"><a href="dotplot.html#cb69-7" tabindex="-1"></a>  <span class="at">legend =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species&quot;</span>, <span class="at">legend_position =</span> <span class="st">&quot;right&quot;</span>,</span>
+<span id="cb69-8"><a href="dotplot.html#cb69-8" tabindex="-1"></a>  <span class="at">global_size_adjust =</span> <span class="dv">1</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-11" class="section level3 hasAnchor" number="7.5.4">
+<h3><span class="header-section-number">7.5.4</span> Parameter explanation<a href="dotplot.html#parameter-explanation-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+<hr />
+</div>
+</div>
+<div id="bettervis_dotplot_ternary" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> BetterVis_Dotplot_Ternary<a href="dotplot.html#bettervis_dotplot_ternary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The ternary plot is the ideal choice for visualizing the proportional relationship between three variables.</p>
+<div id="data-input-19" class="section level3 hasAnchor" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Data Input<a href="dotplot.html#data-input-19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="dotplot.html#cb70-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb70-2"><a href="dotplot.html#cb70-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Dotplot_Ternary_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb70-3"><a href="dotplot.html#cb70-3" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb70-4"><a href="dotplot.html#cb70-4" tabindex="-1"></a>df_ternary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb70-5"><a href="dotplot.html#cb70-5" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">runif</span>(<span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb70-6"><a href="dotplot.html#cb70-6" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">runif</span>(<span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb70-7"><a href="dotplot.html#cb70-7" tabindex="-1"></a>  <span class="at">z =</span> <span class="fu">runif</span>(<span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb70-8"><a href="dotplot.html#cb70-8" tabindex="-1"></a>  <span class="at">size =</span> <span class="fu">runif</span>(<span class="dv">50</span>, <span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb70-9"><a href="dotplot.html#cb70-9" tabindex="-1"></a>)</span>
+<span id="cb70-10"><a href="dotplot.html#cb70-10" tabindex="-1"></a><span class="co"># Normalize to sum to 1</span></span>
+<span id="cb70-11"><a href="dotplot.html#cb70-11" tabindex="-1"></a>df_ternary <span class="ot">&lt;-</span> df_ternary <span class="sc">/</span> <span class="fu">rowSums</span>(df_ternary[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb70-12"><a href="dotplot.html#cb70-12" tabindex="-1"></a>df_ternary<span class="sc">$</span>size <span class="ot">&lt;-</span> df_ternary<span class="sc">$</span>size <span class="sc">*</span> <span class="dv">10</span></span></code></pre></div>
+</div>
+<div id="simple-example-18" class="section level3 hasAnchor" number="7.6.2">
+<h3><span class="header-section-number">7.6.2</span> Simple Example<a href="dotplot.html#simple-example-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="dotplot.html#cb71-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb71-2"><a href="dotplot.html#cb71-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Ternary</span>(<span class="at">data =</span> df_ternary, <span class="at">x_var =</span> <span class="st">&quot;x&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;y&quot;</span>, <span class="at">z_var =</span> <span class="st">&quot;z&quot;</span>, <span class="at">size_var =</span> <span class="st">&quot;size&quot;</span>,</span>
+<span id="cb71-3"><a href="dotplot.html#cb71-3" tabindex="-1"></a>  <span class="at">color =</span> MetBrewer<span class="sc">::</span><span class="fu">met.brewer</span>(<span class="st">&quot;Hiroshige&quot;</span>), <span class="at">all_text_adjust =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+</div>
+<div id="advanced-example-18" class="section level3 hasAnchor" number="7.6.3">
+<h3><span class="header-section-number">7.6.3</span> Advanced Example<a href="dotplot.html#advanced-example-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="dotplot.html#cb72-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE as the function is not provided in user files</span></span>
+<span id="cb72-2"><a href="dotplot.html#cb72-2" tabindex="-1"></a><span class="fu">BetterVis_Dotplot_Ternary</span>(<span class="at">data =</span> df_ternary, <span class="at">x_var =</span> <span class="st">&quot;x&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;y&quot;</span>, <span class="at">z_var =</span> <span class="st">&quot;z&quot;</span>, <span class="at">size_var =</span> <span class="st">&quot;size&quot;</span>,</span>
+<span id="cb72-3"><a href="dotplot.html#cb72-3" tabindex="-1"></a>  <span class="at">color =</span> MetBrewer<span class="sc">::</span><span class="fu">met.brewer</span>(<span class="st">&quot;Hiroshige&quot;</span>),</span>
+<span id="cb72-4"><a href="dotplot.html#cb72-4" tabindex="-1"></a>  <span class="at">point_size =</span> <span class="dv">3</span>, <span class="at">point_alpha =</span> <span class="fl">0.6</span>, </span>
+<span id="cb72-5"><a href="dotplot.html#cb72-5" tabindex="-1"></a>  <span class="at">border_size =</span> <span class="fl">1.2</span>, <span class="at">border_color =</span> <span class="fu">c</span>(<span class="st">&quot;#68d0ce&quot;</span>, <span class="st">&quot;#e09a2a&quot;</span>, <span class="st">&quot;#de6a73&quot;</span>),</span>
+<span id="cb72-6"><a href="dotplot.html#cb72-6" tabindex="-1"></a>  <span class="at">legend =</span> <span class="cn">TRUE</span>, <span class="at">all_text_adjust =</span> <span class="fl">1.3</span>,</span>
+<span id="cb72-7"><a href="dotplot.html#cb72-7" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Title&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;Sub_Title&quot;</span>, <span class="at">x_title =</span> <span class="st">&quot;X_Title&quot;</span>, <span class="at">y_title =</span> <span class="st">&quot;Y_Title&quot;</span>, <span class="at">z_title =</span> <span class="st">&quot;Z_Title&quot;</span>)</span></code></pre></div>
+</div>
+<div id="parameter-explanation-12" class="section level3 hasAnchor" number="7.6.4">
+<h3><span class="header-section-number">7.6.4</span> Parameter explanation<a href="dotplot.html#parameter-explanation-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>(Full parameter list as you provided)…</strong></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="heatmap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ridgeline.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
