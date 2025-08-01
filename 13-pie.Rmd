@@ -1,6 +1,6 @@
 # Pie Plot {#pie}
 
-### At the Beginning
+## At the Beginning
 ```r
 # library(BetterVis)
 ```

@@ -1,3 +1,5 @@
+introduction
+install-of-bettervis
 an-introduction-to-bettervis
 prerequisites
 how-to-use-this-guide

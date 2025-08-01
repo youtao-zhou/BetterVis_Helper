@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Barplot | An Introduction to BetterVis</title>
+  <title>Chapter 5 Barplot | An Introduction to BetterVis</title>
   <meta name="description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Barplot | An Introduction to BetterVis" />
+  <meta property="og:title" content="Chapter 5 Barplot | An Introduction to BetterVis" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Barplot | An Introduction to BetterVis" />
+  <meta name="twitter:title" content="Chapter 5 Barplot | An Introduction to BetterVis" />
   
   <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
-<meta name="author" content="Your Name" />
+<meta name="author" content="Youtao Zhou, Zikai Lin" />
 
 
 <meta name="date" content="2025-08-01" />
@@ -136,270 +136,274 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> An Introduction to BetterVis</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> BetterVis Visualization Tutorial and Parameter Explanation</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#how-to-use-this-guide"><i class="fa fa-check"></i><b>1.2</b> How to Use This Guide</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#the-core-philosophy-of-bettervis"><i class="fa fa-check"></i><b>1.3</b> The Core Philosophy of BetterVis</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#install-of-bettervis"><i class="fa fa-check"></i><b>1.1</b> Install of BetterVis</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html"><i class="fa fa-check"></i><b>2</b> An Introduction to BetterVis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#simple-example"><i class="fa fa-check"></i><b>1.3.1</b> Simple Example</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#advanced-example"><i class="fa fa-check"></i><b>1.3.2</b> Advanced Example</a></li>
+<li class="chapter" data-level="2.1" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#prerequisites"><i class="fa fa-check"></i><b>2.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2.2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#how-to-use-this-guide"><i class="fa fa-check"></i><b>2.2</b> How to Use This Guide</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#the-core-philosophy-of-bettervis"><i class="fa fa-check"></i><b>2.3</b> The Core Philosophy of BetterVis</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#simple-example"><i class="fa fa-check"></i><b>2.3.1</b> Simple Example</a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#advanced-example"><i class="fa fa-check"></i><b>2.3.2</b> Advanced Example</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>2</b> How to choose colors in BetterVis</a>
+<li class="chapter" data-level="3" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>3</b> How to choose colors in BetterVis</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="colors.html"><a href="colors.html#written-at-the-beginning"><i class="fa fa-check"></i><b>2.1</b> Written at the beginning</a></li>
-<li class="chapter" data-level="2.2" data-path="colors.html"><a href="colors.html#usage-example"><i class="fa fa-check"></i><b>2.2</b> Usage example</a>
+<li class="chapter" data-level="3.1" data-path="colors.html"><a href="colors.html#written-at-the-beginning"><i class="fa fa-check"></i><b>3.1</b> Written at the beginning</a></li>
+<li class="chapter" data-level="3.2" data-path="colors.html"><a href="colors.html#usage-example"><i class="fa fa-check"></i><b>3.2</b> Usage example</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="colors.html"><a href="colors.html#discrete-and-unpaired-color-selection"><i class="fa fa-check"></i><b>2.2.1</b> Discrete And Unpaired color selection</a></li>
-<li class="chapter" data-level="2.2.2" data-path="colors.html"><a href="colors.html#discrete-and-paired-color-selection"><i class="fa fa-check"></i><b>2.2.2</b> Discrete And paired color selection</a></li>
-<li class="chapter" data-level="2.2.3" data-path="colors.html"><a href="colors.html#continuous-color-extraction"><i class="fa fa-check"></i><b>2.2.3</b> Continuous color extraction</a></li>
+<li class="chapter" data-level="3.2.1" data-path="colors.html"><a href="colors.html#discrete-and-unpaired-color-selection"><i class="fa fa-check"></i><b>3.2.1</b> Discrete And Unpaired color selection</a></li>
+<li class="chapter" data-level="3.2.2" data-path="colors.html"><a href="colors.html#discrete-and-paired-color-selection"><i class="fa fa-check"></i><b>3.2.2</b> Discrete And paired color selection</a></li>
+<li class="chapter" data-level="3.2.3" data-path="colors.html"><a href="colors.html#continuous-color-extraction"><i class="fa fa-check"></i><b>3.2.3</b> Continuous color extraction</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="colors.html"><a href="colors.html#parameter-explanation"><i class="fa fa-check"></i><b>2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="3.3" data-path="colors.html"><a href="colors.html#parameter-explanation"><i class="fa fa-check"></i><b>3.3</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>3</b> Boxplot</a>
+<li class="chapter" data-level="4" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>4</b> Boxplot</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="boxplots.html"><a href="boxplots.html#at-the-beginning"><i class="fa fa-check"></i><b>3.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="3.2" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2</b> BetterVis_Boxplot_Experiment</a>
+<li class="chapter" data-level="4.1" data-path="boxplots.html"><a href="boxplots.html#at-the-beginning"><i class="fa fa-check"></i><b>4.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="4.2" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>4.2</b> BetterVis_Boxplot_Experiment</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="boxplots.html"><a href="boxplots.html#data-input"><i class="fa fa-check"></i><b>3.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="3.2.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-1"><i class="fa fa-check"></i><b>3.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="3.2.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-1"><i class="fa fa-check"></i><b>3.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="3.2.4" data-path="boxplots.html"><a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots"><i class="fa fa-check"></i><b>3.2.4</b> We have modified the iris dataset to create these boxplots</a></li>
-<li class="chapter" data-level="3.2.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2.5</b> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code></a></li>
+<li class="chapter" data-level="4.2.1" data-path="boxplots.html"><a href="boxplots.html#data-input"><i class="fa fa-check"></i><b>4.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.2.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-1"><i class="fa fa-check"></i><b>4.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.2.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-1"><i class="fa fa-check"></i><b>4.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="boxplots.html"><a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots"><i class="fa fa-check"></i><b>4.2.4</b> We have modified the iris dataset to create these boxplots</a></li>
+<li class="chapter" data-level="4.2.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>4.2.5</b> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code></a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3</b> BetterVis_Boxplot_MixViolin</a>
+<li class="chapter" data-level="4.3" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>4.3</b> BetterVis_Boxplot_MixViolin</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="boxplots.html"><a href="boxplots.html#data-input-1"><i class="fa fa-check"></i><b>3.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="3.3.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-2"><i class="fa fa-check"></i><b>3.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="3.3.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-2"><i class="fa fa-check"></i><b>3.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="3.3.4" data-path="boxplots.html"><a href="boxplots.html#adjusting-variables-and-redrawing-the-plot"><i class="fa fa-check"></i><b>3.3.4</b> Adjusting variables and redrawing the plot</a></li>
-<li class="chapter" data-level="3.3.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3.5</b> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code></a></li>
-<li class="chapter" data-level="3.3.6" data-path="boxplots.html"><a href="boxplots.html#important-notes"><i class="fa fa-check"></i><b>3.3.6</b> Important Notes</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>4</b> Barplot</a>
-<ul>
-<li class="chapter" data-level="4.0.1" data-path="barplots.html"><a href="barplots.html#at-the-beginning-1"><i class="fa fa-check"></i><b>4.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="4.1" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1</b> BetterVis_Barplot_Accumulative</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="barplots.html"><a href="barplots.html#data-input-2"><i class="fa fa-check"></i><b>4.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.1.2" data-path="barplots.html"><a href="barplots.html#simple-example-3"><i class="fa fa-check"></i><b>4.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.1.3" data-path="barplots.html"><a href="barplots.html#advanced-example-3"><i class="fa fa-check"></i><b>4.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.1.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1.4</b> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2</b> BetterVis_Barplot_Bidirectional</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="barplots.html"><a href="barplots.html#data-input-3"><i class="fa fa-check"></i><b>4.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.2.2" data-path="barplots.html"><a href="barplots.html#simple-example-4"><i class="fa fa-check"></i><b>4.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.2.3" data-path="barplots.html"><a href="barplots.html#advanced-example-4"><i class="fa fa-check"></i><b>4.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.2.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2.4</b> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3</b> BetterVis_Barplot_Circle</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="barplots.html"><a href="barplots.html#data-input-4"><i class="fa fa-check"></i><b>4.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.3.2" data-path="barplots.html"><a href="barplots.html#simple-example-5"><i class="fa fa-check"></i><b>4.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.3.3" data-path="barplots.html"><a href="barplots.html#advanced-example-5"><i class="fa fa-check"></i><b>4.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.3.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3.4</b> Parameter explanation for <code>BetterVis_Barplot_Circle</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4</b> BetterVis_Barplot_Experiment</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="barplots.html"><a href="barplots.html#data-input-5"><i class="fa fa-check"></i><b>4.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.4.2" data-path="barplots.html"><a href="barplots.html#simple-example-6"><i class="fa fa-check"></i><b>4.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.4.3" data-path="barplots.html"><a href="barplots.html#advanced-example-6"><i class="fa fa-check"></i><b>4.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.4.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4.4</b> Parameter explanation for <code>BetterVis_Barplot_Experiment</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5</b> BetterVis_Barplot_Horizontal</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="barplots.html"><a href="barplots.html#data-input-6"><i class="fa fa-check"></i><b>4.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.5.2" data-path="barplots.html"><a href="barplots.html#simple-example-7"><i class="fa fa-check"></i><b>4.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.5.3" data-path="barplots.html"><a href="barplots.html#advanced-example-7"><i class="fa fa-check"></i><b>4.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.5.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6</b> BetterVis_Barplot_Horizontal2</a>
-<ul>
-<li class="chapter" data-level="4.6.1" data-path="barplots.html"><a href="barplots.html#data-input-7"><i class="fa fa-check"></i><b>4.6.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.6.2" data-path="barplots.html"><a href="barplots.html#simple-example-8"><i class="fa fa-check"></i><b>4.6.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.6.3" data-path="barplots.html"><a href="barplots.html#advanced-example-8"><i class="fa fa-check"></i><b>4.6.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.6.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code></a></li>
+<li class="chapter" data-level="4.3.1" data-path="boxplots.html"><a href="boxplots.html#data-input-1"><i class="fa fa-check"></i><b>4.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.3.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-2"><i class="fa fa-check"></i><b>4.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.3.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-2"><i class="fa fa-check"></i><b>4.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.3.4" data-path="boxplots.html"><a href="boxplots.html#adjusting-variables-and-redrawing-the-plot"><i class="fa fa-check"></i><b>4.3.4</b> Adjusting variables and redrawing the plot</a></li>
+<li class="chapter" data-level="4.3.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>4.3.5</b> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code></a></li>
+<li class="chapter" data-level="4.3.6" data-path="boxplots.html"><a href="boxplots.html#important-notes"><i class="fa fa-check"></i><b>4.3.6</b> Important Notes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>5</b> Network Plot</a>
+<li class="chapter" data-level="5" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>5</b> Barplot</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="network.html"><a href="network.html#at-the-beginning-2"><i class="fa fa-check"></i><b>5.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="5.1" data-path="network.html"><a href="network.html#bettervis_network_ppi"><i class="fa fa-check"></i><b>5.1</b> BetterVis_Network_PPI</a>
+<li class="chapter" data-level="5.0.1" data-path="barplots.html"><a href="barplots.html#at-the-beginning-1"><i class="fa fa-check"></i><b>5.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="5.1" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>5.1</b> BetterVis_Barplot_Accumulative</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="network.html"><a href="network.html#data-input-8"><i class="fa fa-check"></i><b>5.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="5.1.2" data-path="network.html"><a href="network.html#usage-example-1"><i class="fa fa-check"></i><b>5.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="5.1.3" data-path="network.html"><a href="network.html#parameter-explanation-1"><i class="fa fa-check"></i><b>5.1.3</b> Parameter explanation</a></li>
-<li class="chapter" data-level="5.1.4" data-path="network.html"><a href="network.html#important-note"><i class="fa fa-check"></i><b>5.1.4</b> Important Note</a></li>
+<li class="chapter" data-level="5.1.1" data-path="barplots.html"><a href="barplots.html#data-input-2"><i class="fa fa-check"></i><b>5.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.1.2" data-path="barplots.html"><a href="barplots.html#simple-example-3"><i class="fa fa-check"></i><b>5.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.1.3" data-path="barplots.html"><a href="barplots.html#advanced-example-3"><i class="fa fa-check"></i><b>5.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.1.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>5.1.4</b> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>5.2</b> BetterVis_Barplot_Bidirectional</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="barplots.html"><a href="barplots.html#data-input-3"><i class="fa fa-check"></i><b>5.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.2.2" data-path="barplots.html"><a href="barplots.html#simple-example-4"><i class="fa fa-check"></i><b>5.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.2.3" data-path="barplots.html"><a href="barplots.html#advanced-example-4"><i class="fa fa-check"></i><b>5.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.2.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>5.2.4</b> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_circle"><i class="fa fa-check"></i><b>5.3</b> BetterVis_Barplot_Circle</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="barplots.html"><a href="barplots.html#data-input-4"><i class="fa fa-check"></i><b>5.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.3.2" data-path="barplots.html"><a href="barplots.html#simple-example-5"><i class="fa fa-check"></i><b>5.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.3.3" data-path="barplots.html"><a href="barplots.html#advanced-example-5"><i class="fa fa-check"></i><b>5.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.3.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle"><i class="fa fa-check"></i><b>5.3.4</b> Parameter explanation for <code>BetterVis_Barplot_Circle</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_experiment"><i class="fa fa-check"></i><b>5.4</b> BetterVis_Barplot_Experiment</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="barplots.html"><a href="barplots.html#data-input-5"><i class="fa fa-check"></i><b>5.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.4.2" data-path="barplots.html"><a href="barplots.html#simple-example-6"><i class="fa fa-check"></i><b>5.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.4.3" data-path="barplots.html"><a href="barplots.html#advanced-example-6"><i class="fa fa-check"></i><b>5.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.4.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment"><i class="fa fa-check"></i><b>5.4.4</b> Parameter explanation for <code>BetterVis_Barplot_Experiment</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>5.5</b> BetterVis_Barplot_Horizontal</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="barplots.html"><a href="barplots.html#data-input-6"><i class="fa fa-check"></i><b>5.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.5.2" data-path="barplots.html"><a href="barplots.html#simple-example-7"><i class="fa fa-check"></i><b>5.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.5.3" data-path="barplots.html"><a href="barplots.html#advanced-example-7"><i class="fa fa-check"></i><b>5.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.5.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>5.5.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>5.6</b> BetterVis_Barplot_Horizontal2</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="barplots.html"><a href="barplots.html#data-input-7"><i class="fa fa-check"></i><b>5.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.6.2" data-path="barplots.html"><a href="barplots.html#simple-example-8"><i class="fa fa-check"></i><b>5.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.6.3" data-path="barplots.html"><a href="barplots.html#advanced-example-8"><i class="fa fa-check"></i><b>5.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.6.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>5.6.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>6</b> Heatmap</a>
+<li class="chapter" data-level="6" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>6</b> Network Plot</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="heatmap.html"><a href="heatmap.html#at-the-beginning-3"><i class="fa fa-check"></i><b>6.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="6.1" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_bicontinuous"><i class="fa fa-check"></i><b>6.1</b> BetterVis_Heatmap_Bicontinuous</a>
+<li class="chapter" data-level="6.1" data-path="network.html"><a href="network.html#at-the-beginning-2"><i class="fa fa-check"></i><b>6.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="6.2" data-path="network.html"><a href="network.html#bettervis_network_ppi"><i class="fa fa-check"></i><b>6.2</b> BetterVis_Network_PPI</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="heatmap.html"><a href="heatmap.html#data-input-9"><i class="fa fa-check"></i><b>6.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.1.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-9"><i class="fa fa-check"></i><b>6.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.1.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-9"><i class="fa fa-check"></i><b>6.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.1.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-2"><i class="fa fa-check"></i><b>6.1.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_circle"><i class="fa fa-check"></i><b>6.2</b> BetterVis_Heatmap_Circle</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="heatmap.html"><a href="heatmap.html#data-input-10"><i class="fa fa-check"></i><b>6.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.2.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-10"><i class="fa fa-check"></i><b>6.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.2.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-10"><i class="fa fa-check"></i><b>6.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.2.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-3"><i class="fa fa-check"></i><b>6.2.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_common"><i class="fa fa-check"></i><b>6.3</b> BetterVis_Heatmap_Common</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="heatmap.html"><a href="heatmap.html#data-input-11"><i class="fa fa-check"></i><b>6.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.3.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-11"><i class="fa fa-check"></i><b>6.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.3.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-11"><i class="fa fa-check"></i><b>6.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.3.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-4"><i class="fa fa-check"></i><b>6.3.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_mantel"><i class="fa fa-check"></i><b>6.4</b> BetterVis_Heatmap_Mantel</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="heatmap.html"><a href="heatmap.html#data-input-12"><i class="fa fa-check"></i><b>6.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.4.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-12"><i class="fa fa-check"></i><b>6.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.4.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-12"><i class="fa fa-check"></i><b>6.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.4.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-5"><i class="fa fa-check"></i><b>6.4.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_multi"><i class="fa fa-check"></i><b>6.5</b> BetterVis_Heatmap_Multi</a>
-<ul>
-<li class="chapter" data-level="6.5.1" data-path="heatmap.html"><a href="heatmap.html#data-input-13"><i class="fa fa-check"></i><b>6.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.5.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-13"><i class="fa fa-check"></i><b>6.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.5.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-13"><i class="fa fa-check"></i><b>6.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.5.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-6"><i class="fa fa-check"></i><b>6.5.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="6.2.1" data-path="network.html"><a href="network.html#data-input-8"><i class="fa fa-check"></i><b>6.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.2.2" data-path="network.html"><a href="network.html#usage-example-1"><i class="fa fa-check"></i><b>6.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="6.2.3" data-path="network.html"><a href="network.html#parameter-explanation-1"><i class="fa fa-check"></i><b>6.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="6.2.4" data-path="network.html"><a href="network.html#important-note"><i class="fa fa-check"></i><b>6.2.4</b> Important Note</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dotplot.html"><a href="dotplot.html"><i class="fa fa-check"></i><b>7</b> Dotplot</a>
+<li class="chapter" data-level="7" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>7</b> Heatmap</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="dotplot.html"><a href="dotplot.html#at-the-beginning-4"><i class="fa fa-check"></i><b>7.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="7.1" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_heatmap"><i class="fa fa-check"></i><b>7.1</b> BetterVis_DotPlot_Heatmap</a>
+<li class="chapter" data-level="7.1" data-path="heatmap.html"><a href="heatmap.html#at-the-beginning-3"><i class="fa fa-check"></i><b>7.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="7.2" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_bicontinuous"><i class="fa fa-check"></i><b>7.2</b> BetterVis_Heatmap_Bicontinuous</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="dotplot.html"><a href="dotplot.html#data-input-14"><i class="fa fa-check"></i><b>7.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.1.2" data-path="dotplot.html"><a href="dotplot.html#usage-example-2"><i class="fa fa-check"></i><b>7.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="7.1.3" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-7"><i class="fa fa-check"></i><b>7.1.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.2.1" data-path="heatmap.html"><a href="heatmap.html#data-input-9"><i class="fa fa-check"></i><b>7.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.2.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-9"><i class="fa fa-check"></i><b>7.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.2.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-9"><i class="fa fa-check"></i><b>7.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.2.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-2"><i class="fa fa-check"></i><b>7.2.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_beeswarm"><i class="fa fa-check"></i><b>7.2</b> BetterVis_Dotplot_Beeswarm</a>
+<li class="chapter" data-level="7.3" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_circle"><i class="fa fa-check"></i><b>7.3</b> BetterVis_Heatmap_Circle</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="dotplot.html"><a href="dotplot.html#data-input-15"><i class="fa fa-check"></i><b>7.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.2.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-14"><i class="fa fa-check"></i><b>7.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.2.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-14"><i class="fa fa-check"></i><b>7.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.2.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-8"><i class="fa fa-check"></i><b>7.2.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.3.1" data-path="heatmap.html"><a href="heatmap.html#data-input-10"><i class="fa fa-check"></i><b>7.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.3.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-10"><i class="fa fa-check"></i><b>7.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.3.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-10"><i class="fa fa-check"></i><b>7.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.3.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-3"><i class="fa fa-check"></i><b>7.3.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_mixbar"><i class="fa fa-check"></i><b>7.3</b> BetterVis_Dotplot_Mixbar</a>
+<li class="chapter" data-level="7.4" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_common"><i class="fa fa-check"></i><b>7.4</b> BetterVis_Heatmap_Common</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="dotplot.html"><a href="dotplot.html#data-input-16"><i class="fa fa-check"></i><b>7.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.3.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-15"><i class="fa fa-check"></i><b>7.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.3.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-15"><i class="fa fa-check"></i><b>7.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.3.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-9"><i class="fa fa-check"></i><b>7.3.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.4.1" data-path="heatmap.html"><a href="heatmap.html#data-input-11"><i class="fa fa-check"></i><b>7.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.4.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-11"><i class="fa fa-check"></i><b>7.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.4.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-11"><i class="fa fa-check"></i><b>7.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.4.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-4"><i class="fa fa-check"></i><b>7.4.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_multifacet"><i class="fa fa-check"></i><b>7.4</b> BetterVis_Dotplot_Multifacet</a>
+<li class="chapter" data-level="7.5" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_mantel"><i class="fa fa-check"></i><b>7.5</b> BetterVis_Heatmap_Mantel</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="dotplot.html"><a href="dotplot.html#data-input-17"><i class="fa fa-check"></i><b>7.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.4.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-16"><i class="fa fa-check"></i><b>7.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.4.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-16"><i class="fa fa-check"></i><b>7.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.4.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-10"><i class="fa fa-check"></i><b>7.4.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.5.1" data-path="heatmap.html"><a href="heatmap.html#data-input-12"><i class="fa fa-check"></i><b>7.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.5.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-12"><i class="fa fa-check"></i><b>7.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.5.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-12"><i class="fa fa-check"></i><b>7.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.5.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-5"><i class="fa fa-check"></i><b>7.5.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_smoothline"><i class="fa fa-check"></i><b>7.5</b> BetterVis_Dotplot_Smoothline</a>
+<li class="chapter" data-level="7.6" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_multi"><i class="fa fa-check"></i><b>7.6</b> BetterVis_Heatmap_Multi</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="dotplot.html"><a href="dotplot.html#data-input-18"><i class="fa fa-check"></i><b>7.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.5.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-17"><i class="fa fa-check"></i><b>7.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.5.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-17"><i class="fa fa-check"></i><b>7.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.5.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-11"><i class="fa fa-check"></i><b>7.5.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="7.6" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_ternary"><i class="fa fa-check"></i><b>7.6</b> BetterVis_Dotplot_Ternary</a>
-<ul>
-<li class="chapter" data-level="7.6.1" data-path="dotplot.html"><a href="dotplot.html#data-input-19"><i class="fa fa-check"></i><b>7.6.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.6.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-18"><i class="fa fa-check"></i><b>7.6.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.6.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-18"><i class="fa fa-check"></i><b>7.6.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.6.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-12"><i class="fa fa-check"></i><b>7.6.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.6.1" data-path="heatmap.html"><a href="heatmap.html#data-input-13"><i class="fa fa-check"></i><b>7.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.6.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-13"><i class="fa fa-check"></i><b>7.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.6.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-13"><i class="fa fa-check"></i><b>7.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.6.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-6"><i class="fa fa-check"></i><b>7.6.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>8</b> Ridgeline Plot</a>
+<li class="chapter" data-level="8" data-path="dotplot.html"><a href="dotplot.html"><i class="fa fa-check"></i><b>8</b> Dotplot</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="ridgeline.html"><a href="ridgeline.html#at-the-beginning-5"><i class="fa fa-check"></i><b>8.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="8.1" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_single"><i class="fa fa-check"></i><b>8.1</b> BetterVis_Ridgeline_Single</a>
+<li class="chapter" data-level="8.1" data-path="dotplot.html"><a href="dotplot.html#at-the-beginning-4"><i class="fa fa-check"></i><b>8.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="8.2" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_heatmap"><i class="fa fa-check"></i><b>8.2</b> BetterVis_DotPlot_Heatmap</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-20"><i class="fa fa-check"></i><b>8.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="8.1.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-19"><i class="fa fa-check"></i><b>8.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="8.1.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-19"><i class="fa fa-check"></i><b>8.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="8.1.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-13"><i class="fa fa-check"></i><b>8.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.2.1" data-path="dotplot.html"><a href="dotplot.html#data-input-14"><i class="fa fa-check"></i><b>8.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dotplot.html"><a href="dotplot.html#usage-example-2"><i class="fa fa-check"></i><b>8.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="8.2.3" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-7"><i class="fa fa-check"></i><b>8.2.3</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_facet"><i class="fa fa-check"></i><b>8.2</b> BetterVis_Ridgeline_Facet</a>
+<li class="chapter" data-level="8.3" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_beeswarm"><i class="fa fa-check"></i><b>8.3</b> BetterVis_Dotplot_Beeswarm</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-21"><i class="fa fa-check"></i><b>8.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="8.2.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-20"><i class="fa fa-check"></i><b>8.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="8.2.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-20"><i class="fa fa-check"></i><b>8.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="8.2.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-14"><i class="fa fa-check"></i><b>8.2.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.3.1" data-path="dotplot.html"><a href="dotplot.html#data-input-15"><i class="fa fa-check"></i><b>8.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.3.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-14"><i class="fa fa-check"></i><b>8.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.3.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-14"><i class="fa fa-check"></i><b>8.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.3.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-8"><i class="fa fa-check"></i><b>8.3.4</b> Parameter explanation</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_mixbar"><i class="fa fa-check"></i><b>8.4</b> BetterVis_Dotplot_Mixbar</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="dotplot.html"><a href="dotplot.html#data-input-16"><i class="fa fa-check"></i><b>8.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.4.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-15"><i class="fa fa-check"></i><b>8.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.4.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-15"><i class="fa fa-check"></i><b>8.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.4.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-9"><i class="fa fa-check"></i><b>8.4.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="sankey.html"><a href="sankey.html"><i class="fa fa-check"></i><b>9</b> Sankey Plot</a>
+<li class="chapter" data-level="8.5" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_multifacet"><i class="fa fa-check"></i><b>8.5</b> BetterVis_Dotplot_Multifacet</a>
 <ul>
-<li class="chapter" data-level="9.0.1" data-path="sankey.html"><a href="sankey.html#at-the-beginning-6"><i class="fa fa-check"></i><b>9.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="9.1" data-path="sankey.html"><a href="sankey.html#bettervis_sankey_single"><i class="fa fa-check"></i><b>9.1</b> BetterVis_Sankey_Single</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="sankey.html"><a href="sankey.html#data-input-22"><i class="fa fa-check"></i><b>9.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="9.1.2" data-path="sankey.html"><a href="sankey.html#simple-example-21"><i class="fa fa-check"></i><b>9.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="9.1.3" data-path="sankey.html"><a href="sankey.html#advanced-example-21"><i class="fa fa-check"></i><b>9.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="9.1.4" data-path="sankey.html"><a href="sankey.html#parameter-explanation-15"><i class="fa fa-check"></i><b>9.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.5.1" data-path="dotplot.html"><a href="dotplot.html#data-input-17"><i class="fa fa-check"></i><b>8.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.5.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-16"><i class="fa fa-check"></i><b>8.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.5.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-16"><i class="fa fa-check"></i><b>8.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.5.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-10"><i class="fa fa-check"></i><b>8.5.4</b> Parameter explanation</a></li>
 </ul></li>
+<li class="chapter" data-level="8.6" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_smoothline"><i class="fa fa-check"></i><b>8.6</b> BetterVis_Dotplot_Smoothline</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="dotplot.html"><a href="dotplot.html#data-input-18"><i class="fa fa-check"></i><b>8.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.6.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-17"><i class="fa fa-check"></i><b>8.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.6.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-17"><i class="fa fa-check"></i><b>8.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.6.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-11"><i class="fa fa-check"></i><b>8.6.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="venn.html"><a href="venn.html"><i class="fa fa-check"></i><b>10</b> Venn and Upset Plots</a>
+<li class="chapter" data-level="8.7" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_ternary"><i class="fa fa-check"></i><b>8.7</b> BetterVis_Dotplot_Ternary</a>
 <ul>
-<li class="chapter" data-level="10.0.1" data-path="venn.html"><a href="venn.html#at-the-beginning-7"><i class="fa fa-check"></i><b>10.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="10.1" data-path="venn.html"><a href="venn.html#bettervis_venn_upsetr"><i class="fa fa-check"></i><b>10.1</b> BetterVis_Venn_UpsetR</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="venn.html"><a href="venn.html#data-input-23"><i class="fa fa-check"></i><b>10.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="10.1.2" data-path="venn.html"><a href="venn.html#simple-example-22"><i class="fa fa-check"></i><b>10.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="10.1.3" data-path="venn.html"><a href="venn.html#advanced-example-22"><i class="fa fa-check"></i><b>10.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="10.1.4" data-path="venn.html"><a href="venn.html#parameter-explanation-16"><i class="fa fa-check"></i><b>10.1.4</b> Parameter explanation</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="circos.html"><a href="circos.html"><i class="fa fa-check"></i><b>11</b> Circos</a>
-<ul>
-<li class="chapter" data-level="11.0.1" data-path="circos.html"><a href="circos.html#at-the-beginning-8"><i class="fa fa-check"></i><b>11.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="11.1" data-path="circos.html"><a href="circos.html#bettervis_circos_interaction"><i class="fa fa-check"></i><b>11.1</b> BetterVis_Circos_Interaction</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="circos.html"><a href="circos.html#data-input-24"><i class="fa fa-check"></i><b>11.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="11.1.2" data-path="circos.html"><a href="circos.html#usage-example-3"><i class="fa fa-check"></i><b>11.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="11.1.3" data-path="circos.html"><a href="circos.html#parameter-explanation-17"><i class="fa fa-check"></i><b>11.1.3</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="circos.html"><a href="circos.html#bettervis_circos_ringplot"><i class="fa fa-check"></i><b>11.2</b> BetterVis_Circos_Ringplot</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="circos.html"><a href="circos.html#data-input-25"><i class="fa fa-check"></i><b>11.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="11.2.2" data-path="circos.html"><a href="circos.html#usage-example-4"><i class="fa fa-check"></i><b>11.2.2</b> Usage Example</a></li>
-<li class="chapter" data-level="11.2.3" data-path="circos.html"><a href="circos.html#parameter-explanation-18"><i class="fa fa-check"></i><b>11.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.7.1" data-path="dotplot.html"><a href="dotplot.html#data-input-19"><i class="fa fa-check"></i><b>8.7.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.7.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-18"><i class="fa fa-check"></i><b>8.7.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.7.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-18"><i class="fa fa-check"></i><b>8.7.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.7.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-12"><i class="fa fa-check"></i><b>8.7.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="lineplot.html"><a href="lineplot.html"><i class="fa fa-check"></i><b>12</b> Line Plot</a>
+<li class="chapter" data-level="9" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>9</b> Ridgeline Plot</a>
 <ul>
-<li class="chapter" data-level="12.0.1" data-path="lineplot.html"><a href="lineplot.html#at-the-beginning-9"><i class="fa fa-check"></i><b>12.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="12.1" data-path="lineplot.html"><a href="lineplot.html#bettervis_lineplot_chart"><i class="fa fa-check"></i><b>12.1</b> BetterVis_LinePlot_Chart</a>
+<li class="chapter" data-level="9.1" data-path="ridgeline.html"><a href="ridgeline.html#at-the-beginning-5"><i class="fa fa-check"></i><b>9.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="9.2" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_single"><i class="fa fa-check"></i><b>9.2</b> BetterVis_Ridgeline_Single</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="lineplot.html"><a href="lineplot.html#data-input-26"><i class="fa fa-check"></i><b>12.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="12.1.2" data-path="lineplot.html"><a href="lineplot.html#simple-example-23"><i class="fa fa-check"></i><b>12.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="12.1.3" data-path="lineplot.html"><a href="lineplot.html#advanced-example-23"><i class="fa fa-check"></i><b>12.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="12.1.4" data-path="lineplot.html"><a href="lineplot.html#parameter-explanation-19"><i class="fa fa-check"></i><b>12.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="9.2.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-20"><i class="fa fa-check"></i><b>9.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="9.2.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-19"><i class="fa fa-check"></i><b>9.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="9.2.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-19"><i class="fa fa-check"></i><b>9.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="9.2.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-13"><i class="fa fa-check"></i><b>9.2.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_facet"><i class="fa fa-check"></i><b>9.3</b> BetterVis_Ridgeline_Facet</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-21"><i class="fa fa-check"></i><b>9.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="9.3.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-20"><i class="fa fa-check"></i><b>9.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="9.3.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-20"><i class="fa fa-check"></i><b>9.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="9.3.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-14"><i class="fa fa-check"></i><b>9.3.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="pie.html"><a href="pie.html"><i class="fa fa-check"></i><b>13</b> Pie Plot</a>
+<li class="chapter" data-level="10" data-path="sankey.html"><a href="sankey.html"><i class="fa fa-check"></i><b>10</b> Sankey Plot</a>
 <ul>
-<li class="chapter" data-level="13.0.1" data-path="pie.html"><a href="pie.html#at-the-beginning-10"><i class="fa fa-check"></i><b>13.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="13.1" data-path="pie.html"><a href="pie.html#bettervis_pie_single"><i class="fa fa-check"></i><b>13.1</b> BetterVis_Pie_Single</a>
+<li class="chapter" data-level="10.1" data-path="sankey.html"><a href="sankey.html#at-the-beginning-6"><i class="fa fa-check"></i><b>10.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="10.2" data-path="sankey.html"><a href="sankey.html#bettervis_sankey_single"><i class="fa fa-check"></i><b>10.2</b> BetterVis_Sankey_Single</a>
 <ul>
-<li class="chapter" data-level="13.1.1" data-path="pie.html"><a href="pie.html#data-input-27"><i class="fa fa-check"></i><b>13.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="13.1.2" data-path="pie.html"><a href="pie.html#usage-example-5"><i class="fa fa-check"></i><b>13.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="13.1.3" data-path="pie.html"><a href="pie.html#parameter-explanation-20"><i class="fa fa-check"></i><b>13.1.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="10.2.1" data-path="sankey.html"><a href="sankey.html#data-input-22"><i class="fa fa-check"></i><b>10.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="10.2.2" data-path="sankey.html"><a href="sankey.html#simple-example-21"><i class="fa fa-check"></i><b>10.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="10.2.3" data-path="sankey.html"><a href="sankey.html#advanced-example-21"><i class="fa fa-check"></i><b>10.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="10.2.4" data-path="sankey.html"><a href="sankey.html#parameter-explanation-15"><i class="fa fa-check"></i><b>10.2.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="pie.html"><a href="pie.html#bettervis_pie_multi"><i class="fa fa-check"></i><b>13.2</b> BetterVis_Pie_Multi</a>
+</ul></li>
+<li class="chapter" data-level="11" data-path="venn.html"><a href="venn.html"><i class="fa fa-check"></i><b>11</b> Venn and Upset Plots</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="pie.html"><a href="pie.html#data-input-28"><i class="fa fa-check"></i><b>13.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="13.2.2" data-path="pie.html"><a href="pie.html#usage-example-6"><i class="fa fa-check"></i><b>13.2.2</b> Usage Example</a></li>
-<li class="chapter" data-level="13.2.3" data-path="pie.html"><a href="pie.html#parameter-explanation-21"><i class="fa fa-check"></i><b>13.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="11.1" data-path="venn.html"><a href="venn.html#at-the-beginning-7"><i class="fa fa-check"></i><b>11.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="11.2" data-path="venn.html"><a href="venn.html#bettervis_venn_upsetr"><i class="fa fa-check"></i><b>11.2</b> BetterVis_Venn_UpsetR</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="venn.html"><a href="venn.html#data-input-23"><i class="fa fa-check"></i><b>11.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="11.2.2" data-path="venn.html"><a href="venn.html#simple-example-22"><i class="fa fa-check"></i><b>11.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="11.2.3" data-path="venn.html"><a href="venn.html#advanced-example-22"><i class="fa fa-check"></i><b>11.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="11.2.4" data-path="venn.html"><a href="venn.html#parameter-explanation-16"><i class="fa fa-check"></i><b>11.2.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="circos.html"><a href="circos.html"><i class="fa fa-check"></i><b>12</b> Circos</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="circos.html"><a href="circos.html#at-the-beginning-8"><i class="fa fa-check"></i><b>12.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="12.2" data-path="circos.html"><a href="circos.html#bettervis_circos_interaction"><i class="fa fa-check"></i><b>12.2</b> BetterVis_Circos_Interaction</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="circos.html"><a href="circos.html#data-input-24"><i class="fa fa-check"></i><b>12.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="12.2.2" data-path="circos.html"><a href="circos.html#usage-example-3"><i class="fa fa-check"></i><b>12.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="12.2.3" data-path="circos.html"><a href="circos.html#parameter-explanation-17"><i class="fa fa-check"></i><b>12.2.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="circos.html"><a href="circos.html#bettervis_circos_ringplot"><i class="fa fa-check"></i><b>12.3</b> BetterVis_Circos_Ringplot</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="circos.html"><a href="circos.html#data-input-25"><i class="fa fa-check"></i><b>12.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="12.3.2" data-path="circos.html"><a href="circos.html#usage-example-4"><i class="fa fa-check"></i><b>12.3.2</b> Usage Example</a></li>
+<li class="chapter" data-level="12.3.3" data-path="circos.html"><a href="circos.html#parameter-explanation-18"><i class="fa fa-check"></i><b>12.3.3</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="lineplot.html"><a href="lineplot.html"><i class="fa fa-check"></i><b>13</b> Line Plot</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="lineplot.html"><a href="lineplot.html#at-the-beginning-9"><i class="fa fa-check"></i><b>13.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="13.2" data-path="lineplot.html"><a href="lineplot.html#bettervis_lineplot_chart"><i class="fa fa-check"></i><b>13.2</b> BetterVis_LinePlot_Chart</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="lineplot.html"><a href="lineplot.html#data-input-26"><i class="fa fa-check"></i><b>13.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="13.2.2" data-path="lineplot.html"><a href="lineplot.html#simple-example-23"><i class="fa fa-check"></i><b>13.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="13.2.3" data-path="lineplot.html"><a href="lineplot.html#advanced-example-23"><i class="fa fa-check"></i><b>13.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="13.2.4" data-path="lineplot.html"><a href="lineplot.html#parameter-explanation-19"><i class="fa fa-check"></i><b>13.2.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="pie.html"><a href="pie.html"><i class="fa fa-check"></i><b>14</b> Pie Plot</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="pie.html"><a href="pie.html#at-the-beginning-10"><i class="fa fa-check"></i><b>14.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="14.2" data-path="pie.html"><a href="pie.html#bettervis_pie_single"><i class="fa fa-check"></i><b>14.2</b> BetterVis_Pie_Single</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="pie.html"><a href="pie.html#data-input-27"><i class="fa fa-check"></i><b>14.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="14.2.2" data-path="pie.html"><a href="pie.html#usage-example-5"><i class="fa fa-check"></i><b>14.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="14.2.3" data-path="pie.html"><a href="pie.html#parameter-explanation-20"><i class="fa fa-check"></i><b>14.2.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="pie.html"><a href="pie.html#bettervis_pie_multi"><i class="fa fa-check"></i><b>14.3</b> BetterVis_Pie_Multi</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="pie.html"><a href="pie.html#data-input-28"><i class="fa fa-check"></i><b>14.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="14.3.2" data-path="pie.html"><a href="pie.html#usage-example-6"><i class="fa fa-check"></i><b>14.3.2</b> Usage Example</a></li>
+<li class="chapter" data-level="14.3.3" data-path="pie.html"><a href="pie.html#parameter-explanation-21"><i class="fa fa-check"></i><b>14.3.3</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -419,297 +423,297 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="barplots" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Barplot<a href="barplots.html#barplots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="at-the-beginning-1" class="section level3 hasAnchor" number="4.0.1">
-<h3><span class="header-section-number">4.0.1</span> At the Beginning<a href="barplots.html#at-the-beginning-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="barplots" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Barplot<a href="barplots.html#barplots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="at-the-beginning-1" class="section level3 hasAnchor" number="5.0.1">
+<h3><span class="header-section-number">5.0.1</span> At the Beginning<a href="barplots.html#at-the-beginning-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To use these features, the BetterVis functions must be loaded beforehand. In a real session, you would load the package and any other necessary libraries.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="barplots.html#cb17-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span>
-<span id="cb17-2"><a href="barplots.html#cb17-2" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
-<span id="cb17-3"><a href="barplots.html#cb17-3" tabindex="-1"></a><span class="fu">library</span>(plyr)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="barplots.html#cb19-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span>
+<span id="cb19-2"><a href="barplots.html#cb19-2" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
+<span id="cb19-3"><a href="barplots.html#cb19-3" tabindex="-1"></a><span class="fu">library</span>(plyr)</span></code></pre></div>
 </div>
-<div id="bettervis_barplot_accumulative" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> BetterVis_Barplot_Accumulative<a href="barplots.html#bettervis_barplot_accumulative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_accumulative" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> BetterVis_Barplot_Accumulative<a href="barplots.html#bettervis_barplot_accumulative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <code>BetterVis_Barplot_Accumulative</code> function allows you to display two stacked bar plots simultaneously, though you also have the option to show each one individually.</p>
-<div id="data-input-2" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Data Input<a href="barplots.html#data-input-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="barplots.html#cb18-1" tabindex="-1"></a><span class="co"># Create sample data for demonstration</span></span>
-<span id="cb18-2"><a href="barplots.html#cb18-2" tabindex="-1"></a><span class="co"># In your project, you would load this using: data(&quot;BetterVis_Barplot_Accumulative_example&quot;, package = &quot;BetterVis&quot;)</span></span>
-<span id="cb18-3"><a href="barplots.html#cb18-3" tabindex="-1"></a>df_accum <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb18-4"><a href="barplots.html#cb18-4" tabindex="-1"></a>  <span class="at">Patient =</span> <span class="fu">rep</span>(<span class="fu">paste0</span>(<span class="st">&quot;P&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;08&quot;</span>, <span class="st">&quot;21&quot;</span>, <span class="st">&quot;48&quot;</span>, <span class="st">&quot;53&quot;</span>, <span class="st">&quot;54&quot;</span>)), <span class="at">each =</span> <span class="dv">9</span>),</span>
-<span id="cb18-5"><a href="barplots.html#cb18-5" tabindex="-1"></a>  <span class="at">celltype =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Plasmacytoid DCs&quot;</span>, <span class="st">&quot;B cells&quot;</span>, <span class="st">&quot;Treg cells&quot;</span>, <span class="st">&quot;Plasma cells&quot;</span>, <span class="st">&quot;Monocytes&quot;</span>, <span class="st">&quot;Endothelial cells&quot;</span>, <span class="st">&quot;Cancer cells&quot;</span>, <span class="st">&quot;Fibroblasts&quot;</span>, <span class="st">&quot;Columner epithelial cells&quot;</span>), <span class="dv">5</span>)),</span>
-<span id="cb18-6"><a href="barplots.html#cb18-6" tabindex="-1"></a>  <span class="at">cell_num =</span> <span class="fu">floor</span>(<span class="fu">runif</span>(<span class="dv">45</span>, <span class="dv">100</span>, <span class="dv">2000</span>))</span>
-<span id="cb18-7"><a href="barplots.html#cb18-7" tabindex="-1"></a>)</span>
-<span id="cb18-8"><a href="barplots.html#cb18-8" tabindex="-1"></a>df_accum <span class="ot">&lt;-</span> <span class="fu">ddply</span>(df_accum, <span class="st">&#39;celltype&#39;</span>, transform, <span class="at">percent =</span> cell_num <span class="sc">/</span> <span class="fu">sum</span>(cell_num))</span>
-<span id="cb18-9"><a href="barplots.html#cb18-9" tabindex="-1"></a>df_accum<span class="sc">$</span>celltype <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_accum<span class="sc">$</span>celltype, <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">unique</span>(df_accum<span class="sc">$</span>celltype)))</span>
-<span id="cb18-10"><a href="barplots.html#cb18-10" tabindex="-1"></a>df_accum<span class="sc">$</span>Patient <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_accum<span class="sc">$</span>Patient, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;P21&quot;</span>,<span class="st">&quot;P48&quot;</span>,<span class="st">&quot;P53&quot;</span>,<span class="st">&quot;P54&quot;</span>,<span class="st">&quot;P08&quot;</span>))</span>
-<span id="cb18-11"><a href="barplots.html#cb18-11" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="barplots.html#cb18-12" tabindex="-1"></a>barplot_color <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;#ABDDDE&quot;</span>, <span class="st">&quot;#FAD510&quot;</span>, <span class="st">&quot;#C6CDF7&quot;</span>, <span class="st">&quot;#F4B5BD&quot;</span>, <span class="st">&quot;#FAEED1&quot;</span>,<span class="st">&quot;#0A9F9D&quot;</span>,  <span class="st">&quot;#005295&quot;</span>, <span class="st">&quot;#E6A0C4&quot;</span>,<span class="st">&quot;#C52E19&quot;</span>,<span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
+<div id="data-input-2" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Data Input<a href="barplots.html#data-input-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="barplots.html#cb20-1" tabindex="-1"></a><span class="co"># Create sample data for demonstration</span></span>
+<span id="cb20-2"><a href="barplots.html#cb20-2" tabindex="-1"></a><span class="co"># In your project, you would load this using: data(&quot;BetterVis_Barplot_Accumulative_example&quot;, package = &quot;BetterVis&quot;)</span></span>
+<span id="cb20-3"><a href="barplots.html#cb20-3" tabindex="-1"></a>df_accum <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb20-4"><a href="barplots.html#cb20-4" tabindex="-1"></a>  <span class="at">Patient =</span> <span class="fu">rep</span>(<span class="fu">paste0</span>(<span class="st">&quot;P&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;08&quot;</span>, <span class="st">&quot;21&quot;</span>, <span class="st">&quot;48&quot;</span>, <span class="st">&quot;53&quot;</span>, <span class="st">&quot;54&quot;</span>)), <span class="at">each =</span> <span class="dv">9</span>),</span>
+<span id="cb20-5"><a href="barplots.html#cb20-5" tabindex="-1"></a>  <span class="at">celltype =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Plasmacytoid DCs&quot;</span>, <span class="st">&quot;B cells&quot;</span>, <span class="st">&quot;Treg cells&quot;</span>, <span class="st">&quot;Plasma cells&quot;</span>, <span class="st">&quot;Monocytes&quot;</span>, <span class="st">&quot;Endothelial cells&quot;</span>, <span class="st">&quot;Cancer cells&quot;</span>, <span class="st">&quot;Fibroblasts&quot;</span>, <span class="st">&quot;Columner epithelial cells&quot;</span>), <span class="dv">5</span>)),</span>
+<span id="cb20-6"><a href="barplots.html#cb20-6" tabindex="-1"></a>  <span class="at">cell_num =</span> <span class="fu">floor</span>(<span class="fu">runif</span>(<span class="dv">45</span>, <span class="dv">100</span>, <span class="dv">2000</span>))</span>
+<span id="cb20-7"><a href="barplots.html#cb20-7" tabindex="-1"></a>)</span>
+<span id="cb20-8"><a href="barplots.html#cb20-8" tabindex="-1"></a>df_accum <span class="ot">&lt;-</span> <span class="fu">ddply</span>(df_accum, <span class="st">&#39;celltype&#39;</span>, transform, <span class="at">percent =</span> cell_num <span class="sc">/</span> <span class="fu">sum</span>(cell_num))</span>
+<span id="cb20-9"><a href="barplots.html#cb20-9" tabindex="-1"></a>df_accum<span class="sc">$</span>celltype <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_accum<span class="sc">$</span>celltype, <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">unique</span>(df_accum<span class="sc">$</span>celltype)))</span>
+<span id="cb20-10"><a href="barplots.html#cb20-10" tabindex="-1"></a>df_accum<span class="sc">$</span>Patient <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_accum<span class="sc">$</span>Patient, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;P21&quot;</span>,<span class="st">&quot;P48&quot;</span>,<span class="st">&quot;P53&quot;</span>,<span class="st">&quot;P54&quot;</span>,<span class="st">&quot;P08&quot;</span>))</span>
+<span id="cb20-11"><a href="barplots.html#cb20-11" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="barplots.html#cb20-12" tabindex="-1"></a>barplot_color <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;#ABDDDE&quot;</span>, <span class="st">&quot;#FAD510&quot;</span>, <span class="st">&quot;#C6CDF7&quot;</span>, <span class="st">&quot;#F4B5BD&quot;</span>, <span class="st">&quot;#FAEED1&quot;</span>,<span class="st">&quot;#0A9F9D&quot;</span>,  <span class="st">&quot;#005295&quot;</span>, <span class="st">&quot;#E6A0C4&quot;</span>,<span class="st">&quot;#C52E19&quot;</span>,<span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
 </div>
-<div id="simple-example-3" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Simple Example<a href="barplots.html#simple-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="barplots.html#cb19-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Accumulative</span>(</span>
-<span id="cb19-2"><a href="barplots.html#cb19-2" tabindex="-1"></a>  <span class="at">data =</span> df_accum, <span class="at">x_var =</span> <span class="st">&quot;celltype&quot;</span>, <span class="at">y1_var =</span> <span class="st">&quot;cell_num&quot;</span>, <span class="at">y2_var =</span> <span class="st">&quot;percent&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Patient&quot;</span>, </span>
-<span id="cb19-3"><a href="barplots.html#cb19-3" tabindex="-1"></a>  <span class="at">display =</span> <span class="dv">3</span>, <span class="at">barplot_color =</span> barplot_color,</span>
-<span id="cb19-4"><a href="barplots.html#cb19-4" tabindex="-1"></a>  <span class="at">ylim1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15000</span>), <span class="at">ylim2 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
-<span id="cb19-5"><a href="barplots.html#cb19-5" tabindex="-1"></a>  <span class="at">coord_flip =</span> <span class="cn">TRUE</span></span>
-<span id="cb19-6"><a href="barplots.html#cb19-6" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-3" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Simple Example<a href="barplots.html#simple-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="barplots.html#cb21-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Accumulative</span>(</span>
+<span id="cb21-2"><a href="barplots.html#cb21-2" tabindex="-1"></a>  <span class="at">data =</span> df_accum, <span class="at">x_var =</span> <span class="st">&quot;celltype&quot;</span>, <span class="at">y1_var =</span> <span class="st">&quot;cell_num&quot;</span>, <span class="at">y2_var =</span> <span class="st">&quot;percent&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Patient&quot;</span>, </span>
+<span id="cb21-3"><a href="barplots.html#cb21-3" tabindex="-1"></a>  <span class="at">display =</span> <span class="dv">3</span>, <span class="at">barplot_color =</span> barplot_color,</span>
+<span id="cb21-4"><a href="barplots.html#cb21-4" tabindex="-1"></a>  <span class="at">ylim1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15000</span>), <span class="at">ylim2 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
+<span id="cb21-5"><a href="barplots.html#cb21-5" tabindex="-1"></a>  <span class="at">coord_flip =</span> <span class="cn">TRUE</span></span>
+<span id="cb21-6"><a href="barplots.html#cb21-6" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="images/barplot_accumulative_simple.png" /></p>
 </div>
-<div id="advanced-example-3" class="section level3 hasAnchor" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Advanced Example<a href="barplots.html#advanced-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="barplots.html#cb20-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Accumulative</span>(</span>
-<span id="cb20-2"><a href="barplots.html#cb20-2" tabindex="-1"></a>  <span class="at">data =</span> df_accum, <span class="at">x_var =</span> <span class="st">&quot;celltype&quot;</span>, <span class="at">y1_var =</span> <span class="st">&quot;cell_num&quot;</span>, <span class="at">y2_var =</span> <span class="st">&quot;percent&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Patient&quot;</span>, </span>
-<span id="cb20-3"><a href="barplots.html#cb20-3" tabindex="-1"></a>  <span class="at">display =</span> <span class="dv">3</span>, <span class="at">barplot_color =</span> barplot_color,</span>
-<span id="cb20-4"><a href="barplots.html#cb20-4" tabindex="-1"></a>  <span class="at">ylim1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15000</span>), <span class="at">ylim2 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
-<span id="cb20-5"><a href="barplots.html#cb20-5" tabindex="-1"></a>  <span class="at">axis_titles_x =</span> <span class="st">&quot;Cell Types&quot;</span>, <span class="at">x_label_angle =</span> <span class="dv">0</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_title_x_size =</span> <span class="dv">14</span>, </span>
-<span id="cb20-6"><a href="barplots.html#cb20-6" tabindex="-1"></a>  <span class="at">axis_titles_y1 =</span> <span class="st">&quot;Cell Count&quot;</span>, <span class="at">axis_titles_y2 =</span> <span class="st">&quot;Sample Ratio&quot;</span>,</span>
-<span id="cb20-7"><a href="barplots.html#cb20-7" tabindex="-1"></a>  <span class="at">y1_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">y2_label_bold =</span>  <span class="cn">TRUE</span>, <span class="at">axis_title_y1_size =</span> <span class="dv">14</span>, <span class="at">axis_title_y2_size =</span> <span class="dv">14</span>,</span>
-<span id="cb20-8"><a href="barplots.html#cb20-8" tabindex="-1"></a>  <span class="at">title1 =</span> <span class="st">&quot;Cell Number Distribution&quot;</span>, <span class="at">title2 =</span> <span class="st">&quot;Sample Ratio Distribution&quot;</span>, </span>
-<span id="cb20-9"><a href="barplots.html#cb20-9" tabindex="-1"></a>  <span class="at">title_size =</span> <span class="dv">10</span>, <span class="at">title_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb20-10"><a href="barplots.html#cb20-10" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Legend&quot;</span>, <span class="at">legend_size =</span> <span class="dv">14</span>, <span class="at">legend_position =</span> <span class="st">&quot;bottom&quot;</span>,</span>
-<span id="cb20-11"><a href="barplots.html#cb20-11" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, </span>
-<span id="cb20-12"><a href="barplots.html#cb20-12" tabindex="-1"></a>  <span class="at">coord_flip =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb20-13"><a href="barplots.html#cb20-13" tabindex="-1"></a>  <span class="at">grid_ncol =</span> <span class="dv">2</span>, <span class="at">grid_layout  =</span> <span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>), </span>
-<span id="cb20-14"><a href="barplots.html#cb20-14" tabindex="-1"></a>                                       <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb20-15"><a href="barplots.html#cb20-15" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-3" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Advanced Example<a href="barplots.html#advanced-example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="barplots.html#cb22-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Accumulative</span>(</span>
+<span id="cb22-2"><a href="barplots.html#cb22-2" tabindex="-1"></a>  <span class="at">data =</span> df_accum, <span class="at">x_var =</span> <span class="st">&quot;celltype&quot;</span>, <span class="at">y1_var =</span> <span class="st">&quot;cell_num&quot;</span>, <span class="at">y2_var =</span> <span class="st">&quot;percent&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Patient&quot;</span>, </span>
+<span id="cb22-3"><a href="barplots.html#cb22-3" tabindex="-1"></a>  <span class="at">display =</span> <span class="dv">3</span>, <span class="at">barplot_color =</span> barplot_color,</span>
+<span id="cb22-4"><a href="barplots.html#cb22-4" tabindex="-1"></a>  <span class="at">ylim1 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15000</span>), <span class="at">ylim2 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
+<span id="cb22-5"><a href="barplots.html#cb22-5" tabindex="-1"></a>  <span class="at">axis_titles_x =</span> <span class="st">&quot;Cell Types&quot;</span>, <span class="at">x_label_angle =</span> <span class="dv">0</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_title_x_size =</span> <span class="dv">14</span>, </span>
+<span id="cb22-6"><a href="barplots.html#cb22-6" tabindex="-1"></a>  <span class="at">axis_titles_y1 =</span> <span class="st">&quot;Cell Count&quot;</span>, <span class="at">axis_titles_y2 =</span> <span class="st">&quot;Sample Ratio&quot;</span>,</span>
+<span id="cb22-7"><a href="barplots.html#cb22-7" tabindex="-1"></a>  <span class="at">y1_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">y2_label_bold =</span>  <span class="cn">TRUE</span>, <span class="at">axis_title_y1_size =</span> <span class="dv">14</span>, <span class="at">axis_title_y2_size =</span> <span class="dv">14</span>,</span>
+<span id="cb22-8"><a href="barplots.html#cb22-8" tabindex="-1"></a>  <span class="at">title1 =</span> <span class="st">&quot;Cell Number Distribution&quot;</span>, <span class="at">title2 =</span> <span class="st">&quot;Sample Ratio Distribution&quot;</span>, </span>
+<span id="cb22-9"><a href="barplots.html#cb22-9" tabindex="-1"></a>  <span class="at">title_size =</span> <span class="dv">10</span>, <span class="at">title_bold =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb22-10"><a href="barplots.html#cb22-10" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Legend&quot;</span>, <span class="at">legend_size =</span> <span class="dv">14</span>, <span class="at">legend_position =</span> <span class="st">&quot;bottom&quot;</span>,</span>
+<span id="cb22-11"><a href="barplots.html#cb22-11" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, </span>
+<span id="cb22-12"><a href="barplots.html#cb22-12" tabindex="-1"></a>  <span class="at">coord_flip =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb22-13"><a href="barplots.html#cb22-13" tabindex="-1"></a>  <span class="at">grid_ncol =</span> <span class="dv">2</span>, <span class="at">grid_layout  =</span> <span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>), </span>
+<span id="cb22-14"><a href="barplots.html#cb22-14" tabindex="-1"></a>                                       <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb22-15"><a href="barplots.html#cb22-15" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="images/barplot_accumulative_advanced.png" /></p>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_accumulative" class="section level3 hasAnchor" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_accumulative" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 <hr />
 </div>
 </div>
-<div id="bettervis_barplot_bidirectional" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> BetterVis_Barplot_Bidirectional<a href="barplots.html#bettervis_barplot_bidirectional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_bidirectional" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> BetterVis_Barplot_Bidirectional<a href="barplots.html#bettervis_barplot_bidirectional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes, a back-to-back bar chart is needed to display contrasting information, such as when comparing a treatment group against a control group.</p>
-<div id="data-input-3" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Data Input<a href="barplots.html#data-input-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="barplots.html#cb21-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb21-2"><a href="barplots.html#cb21-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Bidirectional_example&quot;, package = &quot;BetterVis&quot;)</span></span>
-<span id="cb21-3"><a href="barplots.html#cb21-3" tabindex="-1"></a>df_bidirect <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb21-4"><a href="barplots.html#cb21-4" tabindex="-1"></a>  <span class="at">pathway =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Pathway A&quot;</span>, <span class="st">&quot;Pathway B&quot;</span>, <span class="st">&quot;Pathway C&quot;</span>, <span class="st">&quot;Pathway D&quot;</span>, <span class="st">&quot;Pathway E&quot;</span>), <span class="at">each=</span><span class="dv">2</span>),</span>
-<span id="cb21-5"><a href="barplots.html#cb21-5" tabindex="-1"></a>  <span class="at">Species =</span> <span class="fu">factor</span>(<span class="fu">paste</span>(<span class="st">&quot;Species&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)),</span>
-<span id="cb21-6"><a href="barplots.html#cb21-6" tabindex="-1"></a>  <span class="at">Percentage =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="sc">-</span><span class="dv">12</span>, <span class="dv">8</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="dv">12</span>, <span class="sc">-</span><span class="dv">15</span>)</span>
-<span id="cb21-7"><a href="barplots.html#cb21-7" tabindex="-1"></a>)</span></code></pre></div>
+<div id="data-input-3" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Data Input<a href="barplots.html#data-input-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="barplots.html#cb23-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb23-2"><a href="barplots.html#cb23-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Bidirectional_example&quot;, package = &quot;BetterVis&quot;)</span></span>
+<span id="cb23-3"><a href="barplots.html#cb23-3" tabindex="-1"></a>df_bidirect <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb23-4"><a href="barplots.html#cb23-4" tabindex="-1"></a>  <span class="at">pathway =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Pathway A&quot;</span>, <span class="st">&quot;Pathway B&quot;</span>, <span class="st">&quot;Pathway C&quot;</span>, <span class="st">&quot;Pathway D&quot;</span>, <span class="st">&quot;Pathway E&quot;</span>), <span class="at">each=</span><span class="dv">2</span>),</span>
+<span id="cb23-5"><a href="barplots.html#cb23-5" tabindex="-1"></a>  <span class="at">Species =</span> <span class="fu">factor</span>(<span class="fu">paste</span>(<span class="st">&quot;Species&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)),</span>
+<span id="cb23-6"><a href="barplots.html#cb23-6" tabindex="-1"></a>  <span class="at">Percentage =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="sc">-</span><span class="dv">12</span>, <span class="dv">8</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="dv">12</span>, <span class="sc">-</span><span class="dv">15</span>)</span>
+<span id="cb23-7"><a href="barplots.html#cb23-7" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="simple-example-4" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Simple Example<a href="barplots.html#simple-example-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="barplots.html#cb22-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Bidirectional</span>(</span>
-<span id="cb22-2"><a href="barplots.html#cb22-2" tabindex="-1"></a>  <span class="at">data =</span> df_bidirect, <span class="at">x_var =</span> <span class="st">&quot;Percentage&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;pathway&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
-<span id="cb22-3"><a href="barplots.html#cb22-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color,</span>
-<span id="cb22-4"><a href="barplots.html#cb22-4" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Species Contribution to Pathways&quot;</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species Contribution&quot;</span>,</span>
-<span id="cb22-5"><a href="barplots.html#cb22-5" tabindex="-1"></a>  <span class="at">arrow =</span> <span class="cn">FALSE</span></span>
-<span id="cb22-6"><a href="barplots.html#cb22-6" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-4" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Simple Example<a href="barplots.html#simple-example-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="barplots.html#cb24-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Bidirectional</span>(</span>
+<span id="cb24-2"><a href="barplots.html#cb24-2" tabindex="-1"></a>  <span class="at">data =</span> df_bidirect, <span class="at">x_var =</span> <span class="st">&quot;Percentage&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;pathway&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
+<span id="cb24-3"><a href="barplots.html#cb24-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color,</span>
+<span id="cb24-4"><a href="barplots.html#cb24-4" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Species Contribution to Pathways&quot;</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species Contribution&quot;</span>,</span>
+<span id="cb24-5"><a href="barplots.html#cb24-5" tabindex="-1"></a>  <span class="at">arrow =</span> <span class="cn">FALSE</span></span>
+<span id="cb24-6"><a href="barplots.html#cb24-6" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="images/barplot_bidirectional_simple.png" /></p>
 </div>
-<div id="advanced-example-4" class="section level3 hasAnchor" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Advanced Example<a href="barplots.html#advanced-example-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="barplots.html#cb23-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Bidirectional</span>(</span>
-<span id="cb23-2"><a href="barplots.html#cb23-2" tabindex="-1"></a>  <span class="at">data =</span> df_bidirect, <span class="at">x_var =</span> <span class="st">&quot;Percentage&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;pathway&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
-<span id="cb23-3"><a href="barplots.html#cb23-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color,</span>
-<span id="cb23-4"><a href="barplots.html#cb23-4" tabindex="-1"></a>  <span class="at">axis_titles_x =</span> <span class="st">&quot;&quot;</span>, <span class="at">x_label_angle =</span> <span class="dv">0</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_title_x_size =</span> <span class="dv">14</span>,</span>
-<span id="cb23-5"><a href="barplots.html#cb23-5" tabindex="-1"></a>  <span class="at">axis_titles_y =</span> <span class="st">&quot;&quot;</span>, <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">y_label_angle =</span> <span class="dv">0</span>, <span class="at">axis_title_y_size =</span> <span class="dv">14</span>,</span>
-<span id="cb23-6"><a href="barplots.html#cb23-6" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Species Contribution to Pathways&quot;</span>, <span class="at">title_size =</span> <span class="dv">16</span>, <span class="at">title_bold =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-7"><a href="barplots.html#cb23-7" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species Contribution&quot;</span>, <span class="at">legend_size =</span> <span class="dv">10</span>,</span>
-<span id="cb23-8"><a href="barplots.html#cb23-8" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>,</span>
-<span id="cb23-9"><a href="barplots.html#cb23-9" tabindex="-1"></a>  <span class="at">plot_margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="fl">0.3</span>,<span class="fl">0.3</span>,<span class="fl">0.3</span>), <span class="at">unit=</span><span class="st">&quot;cm&quot;</span>),</span>
-<span id="cb23-10"><a href="barplots.html#cb23-10" tabindex="-1"></a>  <span class="at">arrow =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-11"><a href="barplots.html#cb23-11" tabindex="-1"></a>  <span class="at">arrow_x1 =</span> <span class="fu">c</span>(<span class="fl">0.35</span>, <span class="fl">0.2</span>), <span class="at">arrow_x2 =</span> <span class="fu">c</span>(<span class="fl">0.48</span>, <span class="fl">0.63</span>),</span>
-<span id="cb23-12"><a href="barplots.html#cb23-12" tabindex="-1"></a>  <span class="at">arrow_y1 =</span> <span class="fu">c</span>(<span class="fl">0.88</span>, <span class="fl">0.88</span>), <span class="at">arrow_y2 =</span> <span class="fu">c</span>(<span class="fl">0.88</span>, <span class="fl">0.88</span>),</span>
-<span id="cb23-13"><a href="barplots.html#cb23-13" tabindex="-1"></a>  <span class="at">arrow_col =</span> <span class="st">&quot;black&quot;</span>, <span class="at">arrow_size =</span> <span class="fl">0.5</span>,</span>
-<span id="cb23-14"><a href="barplots.html#cb23-14" tabindex="-1"></a>  <span class="at">arrow_text =</span> <span class="fu">c</span>(<span class="st">&quot;Enriched in Group A&quot;</span>,<span class="st">&quot;Enriched in Group B&quot;</span>), <span class="at">arrow_text_size =</span> <span class="dv">12</span>, <span class="at">arrow_text_adjust =</span> <span class="fl">0.03</span>,</span>
-<span id="cb23-15"><a href="barplots.html#cb23-15" tabindex="-1"></a>  <span class="at">right_text =</span> <span class="cn">TRUE</span>, <span class="at">right_text1 =</span> <span class="st">&quot;n = 154 for Group B&quot;</span>, <span class="at">right_text2 =</span> <span class="st">&quot;n = 192 for Group A&quot;</span>, <span class="at">right_text_hjust =</span> <span class="fl">1.2</span>, <span class="at">right_text_vjust =</span> <span class="sc">-</span><span class="fl">3.5</span>, <span class="at">right_text_size =</span> <span class="dv">4</span></span>
-<span id="cb23-16"><a href="barplots.html#cb23-16" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-4" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Advanced Example<a href="barplots.html#advanced-example-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="barplots.html#cb25-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Bidirectional</span>(</span>
+<span id="cb25-2"><a href="barplots.html#cb25-2" tabindex="-1"></a>  <span class="at">data =</span> df_bidirect, <span class="at">x_var =</span> <span class="st">&quot;Percentage&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;pathway&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
+<span id="cb25-3"><a href="barplots.html#cb25-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color,</span>
+<span id="cb25-4"><a href="barplots.html#cb25-4" tabindex="-1"></a>  <span class="at">axis_titles_x =</span> <span class="st">&quot;&quot;</span>, <span class="at">x_label_angle =</span> <span class="dv">0</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_title_x_size =</span> <span class="dv">14</span>,</span>
+<span id="cb25-5"><a href="barplots.html#cb25-5" tabindex="-1"></a>  <span class="at">axis_titles_y =</span> <span class="st">&quot;&quot;</span>, <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">y_label_angle =</span> <span class="dv">0</span>, <span class="at">axis_title_y_size =</span> <span class="dv">14</span>,</span>
+<span id="cb25-6"><a href="barplots.html#cb25-6" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Species Contribution to Pathways&quot;</span>, <span class="at">title_size =</span> <span class="dv">16</span>, <span class="at">title_bold =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb25-7"><a href="barplots.html#cb25-7" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Species Contribution&quot;</span>, <span class="at">legend_size =</span> <span class="dv">10</span>,</span>
+<span id="cb25-8"><a href="barplots.html#cb25-8" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>,</span>
+<span id="cb25-9"><a href="barplots.html#cb25-9" tabindex="-1"></a>  <span class="at">plot_margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="fl">0.3</span>,<span class="fl">0.3</span>,<span class="fl">0.3</span>), <span class="at">unit=</span><span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb25-10"><a href="barplots.html#cb25-10" tabindex="-1"></a>  <span class="at">arrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb25-11"><a href="barplots.html#cb25-11" tabindex="-1"></a>  <span class="at">arrow_x1 =</span> <span class="fu">c</span>(<span class="fl">0.35</span>, <span class="fl">0.2</span>), <span class="at">arrow_x2 =</span> <span class="fu">c</span>(<span class="fl">0.48</span>, <span class="fl">0.63</span>),</span>
+<span id="cb25-12"><a href="barplots.html#cb25-12" tabindex="-1"></a>  <span class="at">arrow_y1 =</span> <span class="fu">c</span>(<span class="fl">0.88</span>, <span class="fl">0.88</span>), <span class="at">arrow_y2 =</span> <span class="fu">c</span>(<span class="fl">0.88</span>, <span class="fl">0.88</span>),</span>
+<span id="cb25-13"><a href="barplots.html#cb25-13" tabindex="-1"></a>  <span class="at">arrow_col =</span> <span class="st">&quot;black&quot;</span>, <span class="at">arrow_size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb25-14"><a href="barplots.html#cb25-14" tabindex="-1"></a>  <span class="at">arrow_text =</span> <span class="fu">c</span>(<span class="st">&quot;Enriched in Group A&quot;</span>,<span class="st">&quot;Enriched in Group B&quot;</span>), <span class="at">arrow_text_size =</span> <span class="dv">12</span>, <span class="at">arrow_text_adjust =</span> <span class="fl">0.03</span>,</span>
+<span id="cb25-15"><a href="barplots.html#cb25-15" tabindex="-1"></a>  <span class="at">right_text =</span> <span class="cn">TRUE</span>, <span class="at">right_text1 =</span> <span class="st">&quot;n = 154 for Group B&quot;</span>, <span class="at">right_text2 =</span> <span class="st">&quot;n = 192 for Group A&quot;</span>, <span class="at">right_text_hjust =</span> <span class="fl">1.2</span>, <span class="at">right_text_vjust =</span> <span class="sc">-</span><span class="fl">3.5</span>, <span class="at">right_text_size =</span> <span class="dv">4</span></span>
+<span id="cb25-16"><a href="barplots.html#cb25-16" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="images/barplot_bidirectional_advanced.png" /></p>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_bidirectional" class="section level3 hasAnchor" number="4.2.4">
-<h3><span class="header-section-number">4.2.4</span> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_bidirectional" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 <hr />
 </div>
 </div>
-<div id="bettervis_barplot_circle" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> BetterVis_Barplot_Circle<a href="barplots.html#bettervis_barplot_circle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_circle" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> BetterVis_Barplot_Circle<a href="barplots.html#bettervis_barplot_circle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When a category contains a large number of individual items, consider using a circular bar plot for visualization.</p>
-<div id="data-input-4" class="section level3 hasAnchor" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Data Input<a href="barplots.html#data-input-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="barplots.html#cb24-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb24-2"><a href="barplots.html#cb24-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Circle_example&quot;, package =&quot;BetterVis&quot;)</span></span>
-<span id="cb24-3"><a href="barplots.html#cb24-3" tabindex="-1"></a>df_circle <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb24-4"><a href="barplots.html#cb24-4" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">60</span>,</span>
-<span id="cb24-5"><a href="barplots.html#cb24-5" tabindex="-1"></a>  <span class="at">geneSymbol =</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">60</span>),</span>
-<span id="cb24-6"><a href="barplots.html#cb24-6" tabindex="-1"></a>  <span class="at">med_LFC =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">2</span>, <span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">0.8</span>), <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>)),</span>
-<span id="cb24-7"><a href="barplots.html#cb24-7" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Upregulated&quot;</span>, <span class="st">&quot;Downregulated&quot;</span>, <span class="st">&quot;Neutral&quot;</span>), <span class="at">each =</span> <span class="dv">20</span>)</span>
-<span id="cb24-8"><a href="barplots.html#cb24-8" tabindex="-1"></a>)</span>
-<span id="cb24-9"><a href="barplots.html#cb24-9" tabindex="-1"></a>barplot_color_circle <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;#C6CDF7&quot;</span>, <span class="st">&quot;#FAD510&quot;</span>, <span class="st">&quot;#ABDDDE&quot;</span>)</span></code></pre></div>
+<div id="data-input-4" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Data Input<a href="barplots.html#data-input-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="barplots.html#cb26-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb26-2"><a href="barplots.html#cb26-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Circle_example&quot;, package =&quot;BetterVis&quot;)</span></span>
+<span id="cb26-3"><a href="barplots.html#cb26-3" tabindex="-1"></a>df_circle <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb26-4"><a href="barplots.html#cb26-4" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">60</span>,</span>
+<span id="cb26-5"><a href="barplots.html#cb26-5" tabindex="-1"></a>  <span class="at">geneSymbol =</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">60</span>),</span>
+<span id="cb26-6"><a href="barplots.html#cb26-6" tabindex="-1"></a>  <span class="at">med_LFC =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">2</span>, <span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">0.8</span>), <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>)),</span>
+<span id="cb26-7"><a href="barplots.html#cb26-7" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Upregulated&quot;</span>, <span class="st">&quot;Downregulated&quot;</span>, <span class="st">&quot;Neutral&quot;</span>), <span class="at">each =</span> <span class="dv">20</span>)</span>
+<span id="cb26-8"><a href="barplots.html#cb26-8" tabindex="-1"></a>)</span>
+<span id="cb26-9"><a href="barplots.html#cb26-9" tabindex="-1"></a>barplot_color_circle <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;#C6CDF7&quot;</span>, <span class="st">&quot;#FAD510&quot;</span>, <span class="st">&quot;#ABDDDE&quot;</span>)</span></code></pre></div>
 </div>
-<div id="simple-example-5" class="section level3 hasAnchor" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Simple Example<a href="barplots.html#simple-example-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="barplots.html#cb25-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Circle</span>(</span>
-<span id="cb25-2"><a href="barplots.html#cb25-2" tabindex="-1"></a>  <span class="at">data =</span> df_circle, <span class="at">x_var =</span> <span class="st">&quot;id&quot;</span>, <span class="at">y_var=</span><span class="st">&quot;med_LFC&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;type&quot;</span>,</span>
-<span id="cb25-3"><a href="barplots.html#cb25-3" tabindex="-1"></a>  <span class="at">label_var =</span> <span class="st">&quot;geneSymbol&quot;</span>, <span class="at">barplot_color =</span> barplot_color_circle</span>
-<span id="cb25-4"><a href="barplots.html#cb25-4" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-5" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Simple Example<a href="barplots.html#simple-example-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="barplots.html#cb27-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Circle</span>(</span>
+<span id="cb27-2"><a href="barplots.html#cb27-2" tabindex="-1"></a>  <span class="at">data =</span> df_circle, <span class="at">x_var =</span> <span class="st">&quot;id&quot;</span>, <span class="at">y_var=</span><span class="st">&quot;med_LFC&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;type&quot;</span>,</span>
+<span id="cb27-3"><a href="barplots.html#cb27-3" tabindex="-1"></a>  <span class="at">label_var =</span> <span class="st">&quot;geneSymbol&quot;</span>, <span class="at">barplot_color =</span> barplot_color_circle</span>
+<span id="cb27-4"><a href="barplots.html#cb27-4" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="advanced-example-5" class="section level3 hasAnchor" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Advanced Example<a href="barplots.html#advanced-example-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="barplots.html#cb26-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Circle</span>(</span>
-<span id="cb26-2"><a href="barplots.html#cb26-2" tabindex="-1"></a>  <span class="at">data =</span> df_circle, <span class="at">x_var =</span> <span class="st">&quot;id&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;med_LFC&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;type&quot;</span>, <span class="at">label_var =</span> <span class="st">&quot;geneSymbol&quot;</span>, </span>
-<span id="cb26-3"><a href="barplots.html#cb26-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color_circle,</span>
-<span id="cb26-4"><a href="barplots.html#cb26-4" tabindex="-1"></a>  <span class="at">y_continuous_limit =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">3</span>), </span>
-<span id="cb26-5"><a href="barplots.html#cb26-5" tabindex="-1"></a>  <span class="at">point_shape =</span> <span class="dv">19</span>, <span class="at">point_alpha =</span> <span class="fl">0.7</span>, </span>
-<span id="cb26-6"><a href="barplots.html#cb26-6" tabindex="-1"></a>  <span class="at">text_adjust =</span> <span class="fl">0.5</span>, <span class="at">text_size =</span> <span class="dv">2</span>, <span class="at">text_alpha =</span> <span class="fl">0.9</span>, <span class="at">text_bold =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb26-7"><a href="barplots.html#cb26-7" tabindex="-1"></a>  <span class="at">size_legend =</span> <span class="cn">FALSE</span>, <span class="at">fill_legend =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb26-8"><a href="barplots.html#cb26-8" tabindex="-1"></a>  <span class="at">legend_bold =</span> <span class="cn">TRUE</span>, <span class="at">legend_size =</span> <span class="dv">10</span>, <span class="at">legend_title_size =</span> <span class="dv">12</span>, <span class="at">legend_title_bold =</span> <span class="cn">TRUE</span></span>
-<span id="cb26-9"><a href="barplots.html#cb26-9" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-5" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Advanced Example<a href="barplots.html#advanced-example-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="barplots.html#cb28-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Circle</span>(</span>
+<span id="cb28-2"><a href="barplots.html#cb28-2" tabindex="-1"></a>  <span class="at">data =</span> df_circle, <span class="at">x_var =</span> <span class="st">&quot;id&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;med_LFC&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;type&quot;</span>, <span class="at">label_var =</span> <span class="st">&quot;geneSymbol&quot;</span>, </span>
+<span id="cb28-3"><a href="barplots.html#cb28-3" tabindex="-1"></a>  <span class="at">barplot_color =</span> barplot_color_circle,</span>
+<span id="cb28-4"><a href="barplots.html#cb28-4" tabindex="-1"></a>  <span class="at">y_continuous_limit =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">3</span>), </span>
+<span id="cb28-5"><a href="barplots.html#cb28-5" tabindex="-1"></a>  <span class="at">point_shape =</span> <span class="dv">19</span>, <span class="at">point_alpha =</span> <span class="fl">0.7</span>, </span>
+<span id="cb28-6"><a href="barplots.html#cb28-6" tabindex="-1"></a>  <span class="at">text_adjust =</span> <span class="fl">0.5</span>, <span class="at">text_size =</span> <span class="dv">2</span>, <span class="at">text_alpha =</span> <span class="fl">0.9</span>, <span class="at">text_bold =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb28-7"><a href="barplots.html#cb28-7" tabindex="-1"></a>  <span class="at">size_legend =</span> <span class="cn">FALSE</span>, <span class="at">fill_legend =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb28-8"><a href="barplots.html#cb28-8" tabindex="-1"></a>  <span class="at">legend_bold =</span> <span class="cn">TRUE</span>, <span class="at">legend_size =</span> <span class="dv">10</span>, <span class="at">legend_title_size =</span> <span class="dv">12</span>, <span class="at">legend_title_bold =</span> <span class="cn">TRUE</span></span>
+<span id="cb28-9"><a href="barplots.html#cb28-9" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_circle" class="section level3 hasAnchor" number="4.3.4">
-<h3><span class="header-section-number">4.3.4</span> Parameter explanation for <code>BetterVis_Barplot_Circle</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_circle" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Parameter explanation for <code>BetterVis_Barplot_Circle</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 <hr />
 </div>
 </div>
-<div id="bettervis_barplot_experiment" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> BetterVis_Barplot_Experiment<a href="barplots.html#bettervis_barplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_experiment" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> BetterVis_Barplot_Experiment<a href="barplots.html#bettervis_barplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This function streamlines the presentation of multi-group bar plots with integrated significance comparisons.</p>
-<div id="data-input-5" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> Data Input<a href="barplots.html#data-input-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="barplots.html#cb27-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb27-2"><a href="barplots.html#cb27-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Experiment_example&quot;, package = &quot;BetterVis&quot;)</span></span>
-<span id="cb27-3"><a href="barplots.html#cb27-3" tabindex="-1"></a>df_barplot_exp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb27-4"><a href="barplots.html#cb27-4" tabindex="-1"></a>  <span class="at">len =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">10</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">4</span>), </span>
-<span id="cb27-5"><a href="barplots.html#cb27-5" tabindex="-1"></a>          <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">12</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">28</span>, <span class="dv">4</span>)),</span>
-<span id="cb27-6"><a href="barplots.html#cb27-6" tabindex="-1"></a>  <span class="at">supp =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;OJ&quot;</span>, <span class="st">&quot;VC&quot;</span>), <span class="at">each =</span> <span class="dv">90</span>)),</span>
-<span id="cb27-7"><a href="barplots.html#cb27-7" tabindex="-1"></a>  <span class="at">dose =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>), <span class="at">each =</span> <span class="dv">30</span>, <span class="at">times =</span> <span class="dv">2</span>))</span>
-<span id="cb27-8"><a href="barplots.html#cb27-8" tabindex="-1"></a>)</span></code></pre></div>
+<div id="data-input-5" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Data Input<a href="barplots.html#data-input-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="barplots.html#cb29-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb29-2"><a href="barplots.html#cb29-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Experiment_example&quot;, package = &quot;BetterVis&quot;)</span></span>
+<span id="cb29-3"><a href="barplots.html#cb29-3" tabindex="-1"></a>df_barplot_exp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb29-4"><a href="barplots.html#cb29-4" tabindex="-1"></a>  <span class="at">len =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">10</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">4</span>), </span>
+<span id="cb29-5"><a href="barplots.html#cb29-5" tabindex="-1"></a>          <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">12</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">28</span>, <span class="dv">4</span>)),</span>
+<span id="cb29-6"><a href="barplots.html#cb29-6" tabindex="-1"></a>  <span class="at">supp =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;OJ&quot;</span>, <span class="st">&quot;VC&quot;</span>), <span class="at">each =</span> <span class="dv">90</span>)),</span>
+<span id="cb29-7"><a href="barplots.html#cb29-7" tabindex="-1"></a>  <span class="at">dose =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>), <span class="at">each =</span> <span class="dv">30</span>, <span class="at">times =</span> <span class="dv">2</span>))</span>
+<span id="cb29-8"><a href="barplots.html#cb29-8" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="simple-example-6" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> Simple Example<a href="barplots.html#simple-example-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="barplots.html#cb28-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Experiment</span>(</span>
-<span id="cb28-2"><a href="barplots.html#cb28-2" tabindex="-1"></a>  <span class="at">data =</span> df_barplot_exp, <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>,</span>
-<span id="cb28-3"><a href="barplots.html#cb28-3" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>, <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>,</span>
-<span id="cb28-4"><a href="barplots.html#cb28-4" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>)),</span>
-<span id="cb28-5"><a href="barplots.html#cb28-5" tabindex="-1"></a>  <span class="at">barplot_color =</span> <span class="fu">c</span>(<span class="st">&quot;#E84A32&quot;</span>, <span class="st">&quot;#4CBCD2&quot;</span>, <span class="st">&quot;#00A18A&quot;</span>),</span>
-<span id="cb28-6"><a href="barplots.html#cb28-6" tabindex="-1"></a>  <span class="at">facet =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb28-7"><a href="barplots.html#cb28-7" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">45</span>)</span>
-<span id="cb28-8"><a href="barplots.html#cb28-8" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-6" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Simple Example<a href="barplots.html#simple-example-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="barplots.html#cb30-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Experiment</span>(</span>
+<span id="cb30-2"><a href="barplots.html#cb30-2" tabindex="-1"></a>  <span class="at">data =</span> df_barplot_exp, <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>,</span>
+<span id="cb30-3"><a href="barplots.html#cb30-3" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>, <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>,</span>
+<span id="cb30-4"><a href="barplots.html#cb30-4" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>)),</span>
+<span id="cb30-5"><a href="barplots.html#cb30-5" tabindex="-1"></a>  <span class="at">barplot_color =</span> <span class="fu">c</span>(<span class="st">&quot;#E84A32&quot;</span>, <span class="st">&quot;#4CBCD2&quot;</span>, <span class="st">&quot;#00A18A&quot;</span>),</span>
+<span id="cb30-6"><a href="barplots.html#cb30-6" tabindex="-1"></a>  <span class="at">facet =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb30-7"><a href="barplots.html#cb30-7" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">45</span>)</span>
+<span id="cb30-8"><a href="barplots.html#cb30-8" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="advanced-example-6" class="section level3 hasAnchor" number="4.4.3">
-<h3><span class="header-section-number">4.4.3</span> Advanced Example<a href="barplots.html#advanced-example-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="barplots.html#cb29-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Experiment</span>(</span>
-<span id="cb29-2"><a href="barplots.html#cb29-2" tabindex="-1"></a>  <span class="at">data =</span> df_barplot_exp, <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>,</span>
-<span id="cb29-3"><a href="barplots.html#cb29-3" tabindex="-1"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span>, <span class="at">jitter_color =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>,<span class="st">&quot;black&quot;</span>,<span class="st">&quot;black&quot;</span>),</span>
-<span id="cb29-4"><a href="barplots.html#cb29-4" tabindex="-1"></a>  <span class="at">jitter_width =</span> <span class="fl">0.2</span>, <span class="at">jitter_alpha =</span> <span class="fl">0.7</span>, <span class="at">jitter_size =</span> <span class="dv">3</span>,</span>
-<span id="cb29-5"><a href="barplots.html#cb29-5" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">FALSE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Dose&quot;</span>,</span>
-<span id="cb29-6"><a href="barplots.html#cb29-6" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>, <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>,</span>
-<span id="cb29-7"><a href="barplots.html#cb29-7" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>)),</span>
-<span id="cb29-8"><a href="barplots.html#cb29-8" tabindex="-1"></a>  <span class="at">barplot_color =</span> <span class="fu">c</span>(<span class="st">&quot;#E84A32&quot;</span>, <span class="st">&quot;#4CBCD2&quot;</span>, <span class="st">&quot;#00A18A&quot;</span>),</span>
-<span id="cb29-9"><a href="barplots.html#cb29-9" tabindex="-1"></a>  <span class="at">facet =</span> <span class="cn">TRUE</span>, <span class="at">facet_title_size =</span> <span class="dv">16</span>,</span>
-<span id="cb29-10"><a href="barplots.html#cb29-10" tabindex="-1"></a>  <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_titles_y =</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb29-11"><a href="barplots.html#cb29-11" tabindex="-1"></a>  <span class="at">x_label_angle =</span> <span class="dv">45</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_titles_x =</span> <span class="fu">c</span>(<span class="st">&quot;&quot;</span>),</span>
-<span id="cb29-12"><a href="barplots.html#cb29-12" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;&quot;</span>, <span class="at">axis_title_bold =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb29-13"><a href="barplots.html#cb29-13" tabindex="-1"></a>  <span class="at">error_bar_width =</span> <span class="fl">0.5</span>, <span class="at">error_bar_size =</span> <span class="fl">0.5</span>, <span class="at">bar_border =</span> <span class="cn">TRUE</span>, <span class="at">bar_border_size =</span> <span class="fl">0.8</span>,</span>
-<span id="cb29-14"><a href="barplots.html#cb29-14" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">sig_type =</span> <span class="st">&quot;SYMBOL&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">45</span>)</span>
-<span id="cb29-15"><a href="barplots.html#cb29-15" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-6" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Advanced Example<a href="barplots.html#advanced-example-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="barplots.html#cb31-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Experiment</span>(</span>
+<span id="cb31-2"><a href="barplots.html#cb31-2" tabindex="-1"></a>  <span class="at">data =</span> df_barplot_exp, <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>,</span>
+<span id="cb31-3"><a href="barplots.html#cb31-3" tabindex="-1"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span>, <span class="at">jitter_color =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>,<span class="st">&quot;black&quot;</span>,<span class="st">&quot;black&quot;</span>),</span>
+<span id="cb31-4"><a href="barplots.html#cb31-4" tabindex="-1"></a>  <span class="at">jitter_width =</span> <span class="fl">0.2</span>, <span class="at">jitter_alpha =</span> <span class="fl">0.7</span>, <span class="at">jitter_size =</span> <span class="dv">3</span>,</span>
+<span id="cb31-5"><a href="barplots.html#cb31-5" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">FALSE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Dose&quot;</span>,</span>
+<span id="cb31-6"><a href="barplots.html#cb31-6" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>, <span class="at">comparison_method =</span> <span class="st">&quot;t.test&quot;</span>,</span>
+<span id="cb31-7"><a href="barplots.html#cb31-7" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>)),</span>
+<span id="cb31-8"><a href="barplots.html#cb31-8" tabindex="-1"></a>  <span class="at">barplot_color =</span> <span class="fu">c</span>(<span class="st">&quot;#E84A32&quot;</span>, <span class="st">&quot;#4CBCD2&quot;</span>, <span class="st">&quot;#00A18A&quot;</span>),</span>
+<span id="cb31-9"><a href="barplots.html#cb31-9" tabindex="-1"></a>  <span class="at">facet =</span> <span class="cn">TRUE</span>, <span class="at">facet_title_size =</span> <span class="dv">16</span>,</span>
+<span id="cb31-10"><a href="barplots.html#cb31-10" tabindex="-1"></a>  <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_titles_y =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb31-11"><a href="barplots.html#cb31-11" tabindex="-1"></a>  <span class="at">x_label_angle =</span> <span class="dv">45</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_titles_x =</span> <span class="fu">c</span>(<span class="st">&quot;&quot;</span>),</span>
+<span id="cb31-12"><a href="barplots.html#cb31-12" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;&quot;</span>, <span class="at">axis_title_bold =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb31-13"><a href="barplots.html#cb31-13" tabindex="-1"></a>  <span class="at">error_bar_width =</span> <span class="fl">0.5</span>, <span class="at">error_bar_size =</span> <span class="fl">0.5</span>, <span class="at">bar_border =</span> <span class="cn">TRUE</span>, <span class="at">bar_border_size =</span> <span class="fl">0.8</span>,</span>
+<span id="cb31-14"><a href="barplots.html#cb31-14" tabindex="-1"></a>  <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">sig_type =</span> <span class="st">&quot;SYMBOL&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">45</span>)</span>
+<span id="cb31-15"><a href="barplots.html#cb31-15" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_experiment" class="section level3 hasAnchor" number="4.4.4">
-<h3><span class="header-section-number">4.4.4</span> Parameter explanation for <code>BetterVis_Barplot_Experiment</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_experiment" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Parameter explanation for <code>BetterVis_Barplot_Experiment</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 <hr />
 </div>
 </div>
-<div id="bettervis_barplot_horizontal" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> BetterVis_Barplot_Horizontal<a href="barplots.html#bettervis_barplot_horizontal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_horizontal" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> BetterVis_Barplot_Horizontal<a href="barplots.html#bettervis_barplot_horizontal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Horizontal bar charts are frequently used for classic enrichment analyses.</p>
-<div id="data-input-6" class="section level3 hasAnchor" number="4.5.1">
-<h3><span class="header-section-number">4.5.1</span> Data Input<a href="barplots.html#data-input-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="barplots.html#cb30-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb30-2"><a href="barplots.html#cb30-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Horizontal_example&quot;, package=&quot;BetterVis&quot;)</span></span>
-<span id="cb30-3"><a href="barplots.html#cb30-3" tabindex="-1"></a>df_horizontal <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb30-4"><a href="barplots.html#cb30-4" tabindex="-1"></a>  <span class="at">Category =</span> <span class="st">&quot;KEGG&quot;</span>,</span>
-<span id="cb30-5"><a href="barplots.html#cb30-5" tabindex="-1"></a>  <span class="at">Description =</span> <span class="fu">paste</span>(<span class="st">&quot;KEGG:&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Metabolism of xenobiotics&quot;</span>, <span class="st">&quot;Drug metabolism&quot;</span>, <span class="st">&quot;Steroid hormone biosynthesis&quot;</span>, <span class="st">&quot;Retinol metabolism&quot;</span>, <span class="st">&quot;Linoleic acid metabolism&quot;</span>, <span class="st">&quot;Arachidonic acid metabolism&quot;</span>, <span class="st">&quot;Glycolysis / Gluconeogenesis&quot;</span>, <span class="st">&quot;Citrate cycle (TCA cycle)&quot;</span>, <span class="st">&quot;Pentose phosphate pathway&quot;</span>, <span class="st">&quot;Amino sugar and nucleotide sugar metabolism&quot;</span>)),</span>
-<span id="cb30-6"><a href="barplots.html#cb30-6" tabindex="-1"></a>  <span class="at">Count =</span> <span class="fu">sample</span>(<span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>, <span class="dv">10</span>),</span>
-<span id="cb30-7"><a href="barplots.html#cb30-7" tabindex="-1"></a>  <span class="at">Bonferroni =</span> <span class="dv">10</span><span class="sc">^-</span><span class="fu">runif</span>(<span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">5</span>),</span>
-<span id="cb30-8"><a href="barplots.html#cb30-8" tabindex="-1"></a>  <span class="at">Genes =</span> <span class="fu">replicate</span>(<span class="dv">10</span>, <span class="fu">paste</span>(<span class="fu">sample</span>(LETTERS, <span class="dv">5</span>), <span class="at">collapse=</span><span class="st">&quot;, &quot;</span>))</span>
-<span id="cb30-9"><a href="barplots.html#cb30-9" tabindex="-1"></a>)</span>
-<span id="cb30-10"><a href="barplots.html#cb30-10" tabindex="-1"></a>df_horizontal<span class="sc">$</span>LogP <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fu">as.numeric</span>(df_horizontal<span class="sc">$</span>Bonferroni))</span>
-<span id="cb30-11"><a href="barplots.html#cb30-11" tabindex="-1"></a>df_horizontal <span class="ot">&lt;-</span> <span class="fu">arrange</span>(df_horizontal, Bonferroni)</span>
-<span id="cb30-12"><a href="barplots.html#cb30-12" tabindex="-1"></a>df_horizontal<span class="sc">$</span>Description_short <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;.*:&quot;</span>, <span class="st">&quot;&quot;</span>, df_horizontal<span class="sc">$</span>Description)</span>
-<span id="cb30-13"><a href="barplots.html#cb30-13" tabindex="-1"></a>df_horizontal<span class="sc">$</span>Description_short <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_horizontal<span class="sc">$</span>Description_short, <span class="at">levels =</span> df_horizontal<span class="sc">$</span>Description_short[<span class="fu">order</span>(df_horizontal<span class="sc">$</span>LogP)])</span></code></pre></div>
+<div id="data-input-6" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Data Input<a href="barplots.html#data-input-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="barplots.html#cb32-1" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb32-2"><a href="barplots.html#cb32-2" tabindex="-1"></a><span class="co"># In your project: data(&quot;BetterVis_Barplot_Horizontal_example&quot;, package=&quot;BetterVis&quot;)</span></span>
+<span id="cb32-3"><a href="barplots.html#cb32-3" tabindex="-1"></a>df_horizontal <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb32-4"><a href="barplots.html#cb32-4" tabindex="-1"></a>  <span class="at">Category =</span> <span class="st">&quot;KEGG&quot;</span>,</span>
+<span id="cb32-5"><a href="barplots.html#cb32-5" tabindex="-1"></a>  <span class="at">Description =</span> <span class="fu">paste</span>(<span class="st">&quot;KEGG:&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Metabolism of xenobiotics&quot;</span>, <span class="st">&quot;Drug metabolism&quot;</span>, <span class="st">&quot;Steroid hormone biosynthesis&quot;</span>, <span class="st">&quot;Retinol metabolism&quot;</span>, <span class="st">&quot;Linoleic acid metabolism&quot;</span>, <span class="st">&quot;Arachidonic acid metabolism&quot;</span>, <span class="st">&quot;Glycolysis / Gluconeogenesis&quot;</span>, <span class="st">&quot;Citrate cycle (TCA cycle)&quot;</span>, <span class="st">&quot;Pentose phosphate pathway&quot;</span>, <span class="st">&quot;Amino sugar and nucleotide sugar metabolism&quot;</span>)),</span>
+<span id="cb32-6"><a href="barplots.html#cb32-6" tabindex="-1"></a>  <span class="at">Count =</span> <span class="fu">sample</span>(<span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>, <span class="dv">10</span>),</span>
+<span id="cb32-7"><a href="barplots.html#cb32-7" tabindex="-1"></a>  <span class="at">Bonferroni =</span> <span class="dv">10</span><span class="sc">^-</span><span class="fu">runif</span>(<span class="dv">10</span>, <span class="dv">2</span>, <span class="dv">5</span>),</span>
+<span id="cb32-8"><a href="barplots.html#cb32-8" tabindex="-1"></a>  <span class="at">Genes =</span> <span class="fu">replicate</span>(<span class="dv">10</span>, <span class="fu">paste</span>(<span class="fu">sample</span>(LETTERS, <span class="dv">5</span>), <span class="at">collapse=</span><span class="st">&quot;, &quot;</span>))</span>
+<span id="cb32-9"><a href="barplots.html#cb32-9" tabindex="-1"></a>)</span>
+<span id="cb32-10"><a href="barplots.html#cb32-10" tabindex="-1"></a>df_horizontal<span class="sc">$</span>LogP <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fu">as.numeric</span>(df_horizontal<span class="sc">$</span>Bonferroni))</span>
+<span id="cb32-11"><a href="barplots.html#cb32-11" tabindex="-1"></a>df_horizontal <span class="ot">&lt;-</span> <span class="fu">arrange</span>(df_horizontal, Bonferroni)</span>
+<span id="cb32-12"><a href="barplots.html#cb32-12" tabindex="-1"></a>df_horizontal<span class="sc">$</span>Description_short <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;.*:&quot;</span>, <span class="st">&quot;&quot;</span>, df_horizontal<span class="sc">$</span>Description)</span>
+<span id="cb32-13"><a href="barplots.html#cb32-13" tabindex="-1"></a>df_horizontal<span class="sc">$</span>Description_short <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_horizontal<span class="sc">$</span>Description_short, <span class="at">levels =</span> df_horizontal<span class="sc">$</span>Description_short[<span class="fu">order</span>(df_horizontal<span class="sc">$</span>LogP)])</span></code></pre></div>
 </div>
-<div id="simple-example-7" class="section level3 hasAnchor" number="4.5.2">
-<h3><span class="header-section-number">4.5.2</span> Simple Example<a href="barplots.html#simple-example-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="barplots.html#cb31-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal</span>(</span>
-<span id="cb31-2"><a href="barplots.html#cb31-2" tabindex="-1"></a>  <span class="at">data =</span> df_horizontal, <span class="at">x_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
-<span id="cb31-3"><a href="barplots.html#cb31-3" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
-<span id="cb31-4"><a href="barplots.html#cb31-4" tabindex="-1"></a>  <span class="at">fill_legend_title =</span> <span class="st">&quot;logP&quot;</span>,</span>
-<span id="cb31-5"><a href="barplots.html#cb31-5" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
-<span id="cb31-6"><a href="barplots.html#cb31-6" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">TRUE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span></span>
-<span id="cb31-7"><a href="barplots.html#cb31-7" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-7" class="section level3 hasAnchor" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Simple Example<a href="barplots.html#simple-example-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="barplots.html#cb33-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal</span>(</span>
+<span id="cb33-2"><a href="barplots.html#cb33-2" tabindex="-1"></a>  <span class="at">data =</span> df_horizontal, <span class="at">x_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
+<span id="cb33-3"><a href="barplots.html#cb33-3" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
+<span id="cb33-4"><a href="barplots.html#cb33-4" tabindex="-1"></a>  <span class="at">fill_legend_title =</span> <span class="st">&quot;logP&quot;</span>,</span>
+<span id="cb33-5"><a href="barplots.html#cb33-5" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
+<span id="cb33-6"><a href="barplots.html#cb33-6" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">TRUE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span></span>
+<span id="cb33-7"><a href="barplots.html#cb33-7" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="advanced-example-7" class="section level3 hasAnchor" number="4.5.3">
-<h3><span class="header-section-number">4.5.3</span> Advanced Example<a href="barplots.html#advanced-example-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="barplots.html#cb32-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal</span>(</span>
-<span id="cb32-2"><a href="barplots.html#cb32-2" tabindex="-1"></a>  <span class="at">data =</span> df_horizontal, <span class="at">x_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
-<span id="cb32-3"><a href="barplots.html#cb32-3" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
-<span id="cb32-4"><a href="barplots.html#cb32-4" tabindex="-1"></a>  <span class="at">bar_width =</span> <span class="fl">0.4</span>, <span class="at">base_size =</span> <span class="dv">20</span>,</span>
-<span id="cb32-5"><a href="barplots.html#cb32-5" tabindex="-1"></a>  <span class="at">label_y_start =</span> <span class="fl">0.5</span>, <span class="at">label_y_size =</span> <span class="fl">3.5</span>, <span class="at">label_y_hjust =</span> <span class="dv">0</span>, <span class="at">label_y_vjust =</span> <span class="fl">0.5</span>,</span>
-<span id="cb32-6"><a href="barplots.html#cb32-6" tabindex="-1"></a>  <span class="at">label_other_start =</span> <span class="fl">0.5</span>, <span class="at">label_other_size =</span> <span class="dv">3</span>, <span class="at">label_other_hjust =</span> <span class="dv">0</span>, <span class="at">label_other_vjust =</span> <span class="fl">0.5</span>,</span>
-<span id="cb32-7"><a href="barplots.html#cb32-7" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
-<span id="cb32-8"><a href="barplots.html#cb32-8" tabindex="-1"></a>  <span class="at">color_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
-<span id="cb32-9"><a href="barplots.html#cb32-9" tabindex="-1"></a>  <span class="at">fill_legend =</span> <span class="cn">TRUE</span>, <span class="at">fill_legend_title=</span><span class="st">&quot;logP&quot;</span>, <span class="at">color_legend =</span> <span class="cn">FALSE</span>, <span class="at">color_legend_title =</span> <span class="st">&quot;col_lengend&quot;</span>,</span>
-<span id="cb32-10"><a href="barplots.html#cb32-10" tabindex="-1"></a>  <span class="at">legend_title_size =</span> <span class="dv">12</span>, <span class="at">legend_text_size =</span> <span class="dv">10</span>,</span>
-<span id="cb32-11"><a href="barplots.html#cb32-11" tabindex="-1"></a>  <span class="at">xlab_text =</span> <span class="st">&quot;Gene Count&quot;</span>, <span class="at">ylab_text =</span> <span class="st">&quot;Pathway&quot;</span>, <span class="at">plot_title =</span> <span class="st">&quot;KEGG Enrichment Analysis&quot;</span>,</span>
-<span id="cb32-12"><a href="barplots.html#cb32-12" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">TRUE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span></span>
-<span id="cb32-13"><a href="barplots.html#cb32-13" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-7" class="section level3 hasAnchor" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Advanced Example<a href="barplots.html#advanced-example-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="barplots.html#cb34-1" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal</span>(</span>
+<span id="cb34-2"><a href="barplots.html#cb34-2" tabindex="-1"></a>  <span class="at">data =</span> df_horizontal, <span class="at">x_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
+<span id="cb34-3"><a href="barplots.html#cb34-3" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description_short&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
+<span id="cb34-4"><a href="barplots.html#cb34-4" tabindex="-1"></a>  <span class="at">bar_width =</span> <span class="fl">0.4</span>, <span class="at">base_size =</span> <span class="dv">20</span>,</span>
+<span id="cb34-5"><a href="barplots.html#cb34-5" tabindex="-1"></a>  <span class="at">label_y_start =</span> <span class="fl">0.5</span>, <span class="at">label_y_size =</span> <span class="fl">3.5</span>, <span class="at">label_y_hjust =</span> <span class="dv">0</span>, <span class="at">label_y_vjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb34-6"><a href="barplots.html#cb34-6" tabindex="-1"></a>  <span class="at">label_other_start =</span> <span class="fl">0.5</span>, <span class="at">label_other_size =</span> <span class="dv">3</span>, <span class="at">label_other_hjust =</span> <span class="dv">0</span>, <span class="at">label_other_vjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb34-7"><a href="barplots.html#cb34-7" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
+<span id="cb34-8"><a href="barplots.html#cb34-8" tabindex="-1"></a>  <span class="at">color_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
+<span id="cb34-9"><a href="barplots.html#cb34-9" tabindex="-1"></a>  <span class="at">fill_legend =</span> <span class="cn">TRUE</span>, <span class="at">fill_legend_title=</span><span class="st">&quot;logP&quot;</span>, <span class="at">color_legend =</span> <span class="cn">FALSE</span>, <span class="at">color_legend_title =</span> <span class="st">&quot;col_lengend&quot;</span>,</span>
+<span id="cb34-10"><a href="barplots.html#cb34-10" tabindex="-1"></a>  <span class="at">legend_title_size =</span> <span class="dv">12</span>, <span class="at">legend_text_size =</span> <span class="dv">10</span>,</span>
+<span id="cb34-11"><a href="barplots.html#cb34-11" tabindex="-1"></a>  <span class="at">xlab_text =</span> <span class="st">&quot;Gene Count&quot;</span>, <span class="at">ylab_text =</span> <span class="st">&quot;Pathway&quot;</span>, <span class="at">plot_title =</span> <span class="st">&quot;KEGG Enrichment Analysis&quot;</span>,</span>
+<span id="cb34-12"><a href="barplots.html#cb34-12" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">TRUE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span></span>
+<span id="cb34-13"><a href="barplots.html#cb34-13" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_horizontal" class="section level3 hasAnchor" number="4.5.4">
-<h3><span class="header-section-number">4.5.4</span> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_horizontal" class="section level3 hasAnchor" number="5.5.4">
+<h3><span class="header-section-number">5.5.4</span> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 <hr />
 </div>
 </div>
-<div id="bettervis_barplot_horizontal2" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> BetterVis_Barplot_Horizontal2<a href="barplots.html#bettervis_barplot_horizontal2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bettervis_barplot_horizontal2" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> BetterVis_Barplot_Horizontal2<a href="barplots.html#bettervis_barplot_horizontal2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This function provides another highly aesthetic and effective way to create horizontal bar charts, often used for enrichment analysis.</p>
 <p><em><strong>Note:</strong> The following examples are included for structure, but are set to <code>eval=FALSE</code> because the source code for <code>BetterVis_Barplot_Horizontal2</code> was not provided. They will not be run when building the book.</em></p>
-<div id="data-input-7" class="section level3 hasAnchor" number="4.6.1">
-<h3><span class="header-section-number">4.6.1</span> Data Input<a href="barplots.html#data-input-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="barplots.html#cb33-1" tabindex="-1"></a><span class="co"># This would use the same df_horizontal data from the previous section</span></span>
-<span id="cb33-2"><a href="barplots.html#cb33-2" tabindex="-1"></a><span class="co"># df_horizontal$Category2 &lt;- sample(c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;), 10, replace=TRUE)</span></span></code></pre></div>
+<div id="data-input-7" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Data Input<a href="barplots.html#data-input-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="barplots.html#cb35-1" tabindex="-1"></a><span class="co"># This would use the same df_horizontal data from the previous section</span></span>
+<span id="cb35-2"><a href="barplots.html#cb35-2" tabindex="-1"></a><span class="co"># df_horizontal$Category2 &lt;- sample(c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;), 10, replace=TRUE)</span></span></code></pre></div>
 </div>
-<div id="simple-example-8" class="section level3 hasAnchor" number="4.6.2">
-<h3><span class="header-section-number">4.6.2</span> Simple Example<a href="barplots.html#simple-example-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="barplots.html#cb34-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE</span></span>
-<span id="cb34-2"><a href="barplots.html#cb34-2" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal2</span>(</span>
-<span id="cb34-3"><a href="barplots.html#cb34-3" tabindex="-1"></a>  <span class="at">data =</span> df,<span class="at">x_var =</span> <span class="st">&quot;Description&quot;</span>,<span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>,<span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,<span class="at">label_y_var =</span> <span class="st">&quot;Description&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
-<span id="cb34-4"><a href="barplots.html#cb34-4" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
-<span id="cb34-5"><a href="barplots.html#cb34-5" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">FALSE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span>, <span class="at">Category_Var =</span> <span class="st">&quot;Category2&quot;</span>,</span>
-<span id="cb34-6"><a href="barplots.html#cb34-6" tabindex="-1"></a>  <span class="at">category_var_color =</span> <span class="fu">c</span>(<span class="st">&quot;#c3e1e6&quot;</span>,<span class="st">&quot;#f3dfb7&quot;</span>,<span class="st">&quot;#dcc6dc&quot;</span>), <span class="at">annot_y_offset =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">annot_y_width =</span> <span class="fl">0.5</span></span>
-<span id="cb34-7"><a href="barplots.html#cb34-7" tabindex="-1"></a>)</span></code></pre></div>
+<div id="simple-example-8" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Simple Example<a href="barplots.html#simple-example-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="barplots.html#cb36-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE</span></span>
+<span id="cb36-2"><a href="barplots.html#cb36-2" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal2</span>(</span>
+<span id="cb36-3"><a href="barplots.html#cb36-3" tabindex="-1"></a>  <span class="at">data =</span> df,<span class="at">x_var =</span> <span class="st">&quot;Description&quot;</span>,<span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>,<span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,<span class="at">label_y_var =</span> <span class="st">&quot;Description&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,</span>
+<span id="cb36-4"><a href="barplots.html#cb36-4" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
+<span id="cb36-5"><a href="barplots.html#cb36-5" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">FALSE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span>, <span class="at">Category_Var =</span> <span class="st">&quot;Category2&quot;</span>,</span>
+<span id="cb36-6"><a href="barplots.html#cb36-6" tabindex="-1"></a>  <span class="at">category_var_color =</span> <span class="fu">c</span>(<span class="st">&quot;#c3e1e6&quot;</span>,<span class="st">&quot;#f3dfb7&quot;</span>,<span class="st">&quot;#dcc6dc&quot;</span>), <span class="at">annot_y_offset =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">annot_y_width =</span> <span class="fl">0.5</span></span>
+<span id="cb36-7"><a href="barplots.html#cb36-7" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="advanced-example-8" class="section level3 hasAnchor" number="4.6.3">
-<h3><span class="header-section-number">4.6.3</span> Advanced Example<a href="barplots.html#advanced-example-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="barplots.html#cb35-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE</span></span>
-<span id="cb35-2"><a href="barplots.html#cb35-2" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal2</span>(</span>
-<span id="cb35-3"><a href="barplots.html#cb35-3" tabindex="-1"></a>  <span class="at">data =</span> df,<span class="at">x_var =</span> <span class="st">&quot;Description&quot;</span>,<span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>,<span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
-<span id="cb35-4"><a href="barplots.html#cb35-4" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,   </span>
-<span id="cb35-5"><a href="barplots.html#cb35-5" tabindex="-1"></a>  <span class="at">bar_width =</span> <span class="fl">0.4</span>,<span class="at">base_size =</span> <span class="dv">30</span>,</span>
-<span id="cb35-6"><a href="barplots.html#cb35-6" tabindex="-1"></a>  <span class="at">label_y_start =</span> <span class="fl">0.5</span>,<span class="at">label_y_size =</span> <span class="dv">5</span>,<span class="at">label_y_hjust =</span> <span class="dv">0</span>,<span class="at">label_y_vjust =</span> <span class="dv">1</span>,</span>
-<span id="cb35-7"><a href="barplots.html#cb35-7" tabindex="-1"></a>  <span class="at">label_other_start =</span> <span class="fl">0.5</span>,<span class="at">label_other_size =</span> <span class="fl">4.5</span>,<span class="at">label_other_hjust =</span> <span class="dv">0</span>,<span class="at">label_other_vjust =</span> <span class="fl">2.4</span>,</span>
-<span id="cb35-8"><a href="barplots.html#cb35-8" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
-<span id="cb35-9"><a href="barplots.html#cb35-9" tabindex="-1"></a>  <span class="at">color_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>), </span>
-<span id="cb35-10"><a href="barplots.html#cb35-10" tabindex="-1"></a>  <span class="at">fill_legend =</span> <span class="cn">TRUE</span>, <span class="at">fill_legend_title=</span><span class="st">&quot;logp&quot;</span>,<span class="at">color_legend =</span> <span class="cn">FALSE</span>,<span class="at">color_legend_title =</span> <span class="st">&quot;col_lengend&quot;</span>,</span>
-<span id="cb35-11"><a href="barplots.html#cb35-11" tabindex="-1"></a>  <span class="at">legend_title_size =</span> <span class="dv">16</span>, <span class="at">legend_text_size =</span> <span class="dv">16</span>,</span>
-<span id="cb35-12"><a href="barplots.html#cb35-12" tabindex="-1"></a>  <span class="at">xlab_text =</span> <span class="st">&quot; Names&quot;</span>,<span class="at">ylab_text =</span> <span class="st">&quot;Gene Count&quot;</span>, <span class="at">plot_title =</span> <span class="st">&quot;KEGG Enrichment Analysis&quot;</span>,   </span>
-<span id="cb35-13"><a href="barplots.html#cb35-13" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">FALSE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span>, <span class="at">Category_Var =</span> <span class="st">&quot;Category2&quot;</span>,</span>
-<span id="cb35-14"><a href="barplots.html#cb35-14" tabindex="-1"></a>  <span class="at">category_var_color =</span> <span class="fu">c</span>(<span class="st">&quot;#c3e1e6&quot;</span>,<span class="st">&quot;#f3dfb7&quot;</span>,<span class="st">&quot;#dcc6dc&quot;</span>),</span>
-<span id="cb35-15"><a href="barplots.html#cb35-15" tabindex="-1"></a>  <span class="at">annot_y_offset =</span> <span class="sc">-</span><span class="fl">1.5</span>, <span class="at">annot_y_width =</span> <span class="fl">0.8</span>, <span class="at">category_text_display=</span><span class="cn">TRUE</span>, <span class="at">category_text_angle=</span><span class="dv">90</span></span>
-<span id="cb35-16"><a href="barplots.html#cb35-16" tabindex="-1"></a>)</span></code></pre></div>
+<div id="advanced-example-8" class="section level3 hasAnchor" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Advanced Example<a href="barplots.html#advanced-example-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="barplots.html#cb37-1" tabindex="-1"></a><span class="co"># Note: eval=FALSE</span></span>
+<span id="cb37-2"><a href="barplots.html#cb37-2" tabindex="-1"></a><span class="fu">BetterVis_Barplot_Horizontal2</span>(</span>
+<span id="cb37-3"><a href="barplots.html#cb37-3" tabindex="-1"></a>  <span class="at">data =</span> df,<span class="at">x_var =</span> <span class="st">&quot;Description&quot;</span>,<span class="at">y_var =</span> <span class="st">&quot;Count&quot;</span>,<span class="at">fill_var =</span> <span class="st">&quot;LogP&quot;</span>,</span>
+<span id="cb37-4"><a href="barplots.html#cb37-4" tabindex="-1"></a>  <span class="at">label_y_var =</span> <span class="st">&quot;Description&quot;</span>, <span class="at">label_other_var =</span> <span class="st">&quot;Genes&quot;</span>,   </span>
+<span id="cb37-5"><a href="barplots.html#cb37-5" tabindex="-1"></a>  <span class="at">bar_width =</span> <span class="fl">0.4</span>,<span class="at">base_size =</span> <span class="dv">30</span>,</span>
+<span id="cb37-6"><a href="barplots.html#cb37-6" tabindex="-1"></a>  <span class="at">label_y_start =</span> <span class="fl">0.5</span>,<span class="at">label_y_size =</span> <span class="dv">5</span>,<span class="at">label_y_hjust =</span> <span class="dv">0</span>,<span class="at">label_y_vjust =</span> <span class="dv">1</span>,</span>
+<span id="cb37-7"><a href="barplots.html#cb37-7" tabindex="-1"></a>  <span class="at">label_other_start =</span> <span class="fl">0.5</span>,<span class="at">label_other_size =</span> <span class="fl">4.5</span>,<span class="at">label_other_hjust =</span> <span class="dv">0</span>,<span class="at">label_other_vjust =</span> <span class="fl">2.4</span>,</span>
+<span id="cb37-8"><a href="barplots.html#cb37-8" tabindex="-1"></a>  <span class="at">fill_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>),</span>
+<span id="cb37-9"><a href="barplots.html#cb37-9" tabindex="-1"></a>  <span class="at">color_gradient =</span> <span class="fu">list</span>(<span class="at">low =</span> <span class="st">&quot;#486b98&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#f5f2b1&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#b93735&quot;</span>, <span class="at">midpoint =</span> <span class="dv">3</span>), </span>
+<span id="cb37-10"><a href="barplots.html#cb37-10" tabindex="-1"></a>  <span class="at">fill_legend =</span> <span class="cn">TRUE</span>, <span class="at">fill_legend_title=</span><span class="st">&quot;logp&quot;</span>,<span class="at">color_legend =</span> <span class="cn">FALSE</span>,<span class="at">color_legend_title =</span> <span class="st">&quot;col_lengend&quot;</span>,</span>
+<span id="cb37-11"><a href="barplots.html#cb37-11" tabindex="-1"></a>  <span class="at">legend_title_size =</span> <span class="dv">16</span>, <span class="at">legend_text_size =</span> <span class="dv">16</span>,</span>
+<span id="cb37-12"><a href="barplots.html#cb37-12" tabindex="-1"></a>  <span class="at">xlab_text =</span> <span class="st">&quot; Names&quot;</span>,<span class="at">ylab_text =</span> <span class="st">&quot;Gene Count&quot;</span>, <span class="at">plot_title =</span> <span class="st">&quot;KEGG Enrichment Analysis&quot;</span>,   </span>
+<span id="cb37-13"><a href="barplots.html#cb37-13" tabindex="-1"></a>  <span class="at">y_label_out =</span> <span class="cn">FALSE</span>, <span class="at">label_other_display =</span> <span class="cn">TRUE</span>, <span class="at">Category_Var =</span> <span class="st">&quot;Category2&quot;</span>,</span>
+<span id="cb37-14"><a href="barplots.html#cb37-14" tabindex="-1"></a>  <span class="at">category_var_color =</span> <span class="fu">c</span>(<span class="st">&quot;#c3e1e6&quot;</span>,<span class="st">&quot;#f3dfb7&quot;</span>,<span class="st">&quot;#dcc6dc&quot;</span>),</span>
+<span id="cb37-15"><a href="barplots.html#cb37-15" tabindex="-1"></a>  <span class="at">annot_y_offset =</span> <span class="sc">-</span><span class="fl">1.5</span>, <span class="at">annot_y_width =</span> <span class="fl">0.8</span>, <span class="at">category_text_display=</span><span class="cn">TRUE</span>, <span class="at">category_text_angle=</span><span class="dv">90</span></span>
+<span id="cb37-16"><a href="barplots.html#cb37-16" tabindex="-1"></a>)</span></code></pre></div>
 </div>
-<div id="parameter-explanation-for-bettervis_barplot_horizontal2" class="section level3 hasAnchor" number="4.6.4">
-<h3><span class="header-section-number">4.6.4</span> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="parameter-explanation-for-bettervis_barplot_horizontal2" class="section level3 hasAnchor" number="5.6.4">
+<h3><span class="header-section-number">5.6.4</span> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(Full parameter list as you provided)…</strong></p>
 
 </div>

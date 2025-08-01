@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Boxplot | An Introduction to BetterVis</title>
+  <title>Chapter 2 An Introduction to BetterVis | An Introduction to BetterVis</title>
   <meta name="description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Boxplot | An Introduction to BetterVis" />
+  <meta property="og:title" content="Chapter 2 An Introduction to BetterVis | An Introduction to BetterVis" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Boxplot | An Introduction to BetterVis" />
+  <meta name="twitter:title" content="Chapter 2 An Introduction to BetterVis | An Introduction to BetterVis" />
   
   <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="colors.html"/>
-<link rel="next" href="barplots.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="colors.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -423,168 +423,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="boxplots" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Boxplot<a href="boxplots.html#boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="at-the-beginning" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> At the Beginning<a href="boxplots.html#at-the-beginning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To use these features, the BetterVis functions must be loaded beforehand (which is done in the <code>index.Rmd</code> setup chunk for this book). In a real session, you would load the package:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="boxplots.html#cb10-1" tabindex="-1"></a><span class="co"># library(BetterVis)</span></span></code></pre></div>
+<div id="an-introduction-to-bettervis" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> An Introduction to BetterVis<a href="an-introduction-to-bettervis.html#an-introduction-to-bettervis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="images/logo.png" /></p>
+<p><strong>BetterVis</strong> is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. Before using BetterVis, you should be aware of the following information.</p>
+<div id="prerequisites" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Prerequisites<a href="an-introduction-to-bettervis.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>You are a current or former R user,</strong> comfortable working in an editor like RStudio or VS Code.</p>
+<p><strong>You have used <code>ggplot2</code> to create plots before.</strong> Even if you aren’t an expert, you understand its basic syntax and grammar.</p>
 </div>
-<div id="bettervis_boxplot_experiment" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> BetterVis_Boxplot_Experiment<a href="boxplots.html#bettervis_boxplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In <code>BetterVis_Boxplot_Experiment</code>, we have streamlined the method for presenting multi-group boxplots and for visualizing significance comparisons across facets, allowing for rapid comparisons between multiple groups.</p>
-<div id="data-input" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Data Input<a href="boxplots.html#data-input" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The examples below will use a sample dataset. In your own project, you would load it from the package like this:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="boxplots.html#cb11-1" tabindex="-1"></a><span class="co"># For this book, the data is created in the code chunk below.</span></span>
-<span id="cb11-2"><a href="boxplots.html#cb11-2" tabindex="-1"></a><span class="co"># In your own analysis, you would use:</span></span>
-<span id="cb11-3"><a href="boxplots.html#cb11-3" tabindex="-1"></a><span class="co"># data(&quot;Boxplot_Experiment_example&quot;, package = &quot;BetterVis&quot;)</span></span>
-<span id="cb11-4"><a href="boxplots.html#cb11-4" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="boxplots.html#cb11-5" tabindex="-1"></a><span class="co"># Create the sample data for demonstration</span></span>
-<span id="cb11-6"><a href="boxplots.html#cb11-6" tabindex="-1"></a>Boxplot_Experiment_example <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb11-7"><a href="boxplots.html#cb11-7" tabindex="-1"></a>  <span class="at">len =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">10</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">4</span>), </span>
-<span id="cb11-8"><a href="boxplots.html#cb11-8" tabindex="-1"></a>          <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">12</span>, <span class="dv">2</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">3</span>), <span class="fu">rnorm</span>(<span class="dv">30</span>, <span class="dv">28</span>, <span class="dv">4</span>)),</span>
-<span id="cb11-9"><a href="boxplots.html#cb11-9" tabindex="-1"></a>  <span class="at">supp =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;OJ&quot;</span>, <span class="st">&quot;VC&quot;</span>), <span class="at">each =</span> <span class="dv">90</span>)),</span>
-<span id="cb11-10"><a href="boxplots.html#cb11-10" tabindex="-1"></a>  <span class="at">dose =</span> <span class="fu">factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>, <span class="st">&quot;dose_2&quot;</span>, <span class="st">&quot;dose_3&quot;</span>), <span class="at">each =</span> <span class="dv">30</span>, <span class="at">times =</span> <span class="dv">2</span>))</span>
-<span id="cb11-11"><a href="boxplots.html#cb11-11" tabindex="-1"></a>)</span></code></pre></div>
+<div id="how-to-use-this-guide" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> How to Use This Guide<a href="an-introduction-to-bettervis.html#how-to-use-this-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This guide covers the functions and their corresponding examples, showcasing the results of advanced visualizations on the sample data included in the <strong>BetterVis</strong> package.</p>
+<p>Each chapter represents a fundamental plot type, such as boxplots, bar charts, etc., and provides a detailed explanation of its functions and the meaning of their parameters.</p>
+<p>If you are looking for a specific type of graphic, you don’t need to read the entire guide. Using your browser’s search function (<strong>Ctrl+F</strong>) is a great way to quickly locate the section you need.</p>
 </div>
-<div id="simple-example-1" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Simple Example<a href="boxplots.html#simple-example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="boxplots.html#cb12-1" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_Experiment</span>(</span>
-<span id="cb12-2"><a href="boxplots.html#cb12-2" tabindex="-1"></a>  <span class="at">data =</span> Boxplot_Experiment_example, </span>
-<span id="cb12-3"><a href="boxplots.html#cb12-3" tabindex="-1"></a>  <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>, </span>
-<span id="cb12-4"><a href="boxplots.html#cb12-4" tabindex="-1"></a>  <span class="at">use_facet =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb12-5"><a href="boxplots.html#cb12-5" tabindex="-1"></a>  <span class="at">custom_colors =</span> <span class="fu">c</span>(<span class="st">&quot;#FC5D5C&quot;</span>, <span class="st">&quot;#4B6A9D&quot;</span>, <span class="st">&quot;#167D7D&quot;</span>),</span>
-<span id="cb12-6"><a href="boxplots.html#cb12-6" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>,</span>
-<span id="cb12-7"><a href="boxplots.html#cb12-7" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>,<span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>,<span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>,<span class="st">&quot;dose_3&quot;</span>)),</span>
-<span id="cb12-8"><a href="boxplots.html#cb12-8" tabindex="-1"></a>  <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>)</span>
-<span id="cb12-9"><a href="boxplots.html#cb12-9" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="images/boxplot_experiment_simple.png" /></p>
+<div id="the-core-philosophy-of-bettervis" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> The Core Philosophy of BetterVis<a href="an-introduction-to-bettervis.html#the-core-philosophy-of-bettervis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Our authors have encapsulated the complex process of creating beautiful graphics into functions, exposing the necessary parameters for users to make adjustments. You can use a simplified function call for quick plotting, or alternatively, use more detailed parameters for fine-tuned control. In either case, it retains the advantage of producing advanced visualizations in a short amount of time. The brief example below will help you understand this better.</p>
+<div id="simple-example" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Simple Example<a href="an-introduction-to-bettervis.html#simple-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="an-introduction-to-bettervis.html#cb3-1" tabindex="-1"></a><span class="co"># 模拟数据以运行示例</span></span>
+<span id="cb3-2"><a href="an-introduction-to-bettervis.html#cb3-2" tabindex="-1"></a><span class="co"># Mock data to run the example</span></span>
+<span id="cb3-3"><a href="an-introduction-to-bettervis.html#cb3-3" tabindex="-1"></a>phenotype_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-4"><a href="an-introduction-to-bettervis.html#cb3-4" tabindex="-1"></a>  <span class="at">stage =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;I&quot;</span>, <span class="st">&quot;II&quot;</span>, <span class="st">&quot;III&quot;</span>, <span class="st">&quot;IV&quot;</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-5"><a href="an-introduction-to-bettervis.html#cb3-5" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">10</span>),</span>
+<span id="cb3-6"><a href="an-introduction-to-bettervis.html#cb3-6" tabindex="-1"></a>  <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-7"><a href="an-introduction-to-bettervis.html#cb3-7" tabindex="-1"></a>  <span class="at">CA125 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">30</span>, <span class="dv">10</span>),</span>
+<span id="cb3-8"><a href="an-introduction-to-bettervis.html#cb3-8" tabindex="-1"></a>  <span class="at">CEA =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">5</span>, <span class="dv">2</span>),</span>
+<span id="cb3-9"><a href="an-introduction-to-bettervis.html#cb3-9" tabindex="-1"></a>  <span class="at">CA15.3 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">25</span>, <span class="dv">8</span>)</span>
+<span id="cb3-10"><a href="an-introduction-to-bettervis.html#cb3-10" tabindex="-1"></a>)</span>
+<span id="cb3-11"><a href="an-introduction-to-bettervis.html#cb3-11" tabindex="-1"></a>expression_data <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">50</span>, <span class="at">ncol =</span> <span class="dv">100</span>))</span>
+<span id="cb3-12"><a href="an-introduction-to-bettervis.html#cb3-12" tabindex="-1"></a><span class="fu">colnames</span>(expression_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb3-13"><a href="an-introduction-to-bettervis.html#cb3-13" tabindex="-1"></a><span class="fu">rownames</span>(expression_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>)</span>
+<span id="cb3-14"><a href="an-introduction-to-bettervis.html#cb3-14" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="an-introduction-to-bettervis.html#cb3-15" tabindex="-1"></a><span class="co"># 这是一个假设的函数调用，因为 BetterVis_Heatmap_Mantel 并不在您提供的文件中</span></span>
+<span id="cb3-16"><a href="an-introduction-to-bettervis.html#cb3-16" tabindex="-1"></a><span class="co"># This is a hypothetical function call as BetterVis_Heatmap_Mantel was not in the provided files</span></span>
+<span id="cb3-17"><a href="an-introduction-to-bettervis.html#cb3-17" tabindex="-1"></a><span class="co"># BetterVis_Heatmap_Mantel(phenotype_data, expression_data, spec_select=c(&quot;stage&quot;, &quot;age&quot;, &quot;gender&quot;, &quot;CA125&quot;, &quot;CEA&quot;, &quot;CA15.3&quot;))</span></span></code></pre></div>
+<p><img src="images/simple_example.png" /></p>
 </div>
-<div id="advanced-example-1" class="section level3 hasAnchor" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Advanced Example<a href="boxplots.html#advanced-example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="boxplots.html#cb13-1" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_Experiment</span>(</span>
-<span id="cb13-2"><a href="boxplots.html#cb13-2" tabindex="-1"></a>  <span class="at">data =</span> Boxplot_Experiment_example, <span class="at">x_var =</span> <span class="st">&quot;supp&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;len&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;dose&quot;</span>, </span>
-<span id="cb13-3"><a href="boxplots.html#cb13-3" tabindex="-1"></a>  <span class="at">use_facet =</span> <span class="cn">TRUE</span>, <span class="at">title =</span> <span class="st">&quot;Effect of Supplement and Dose on Length&quot;</span>,</span>
-<span id="cb13-4"><a href="boxplots.html#cb13-4" tabindex="-1"></a>  <span class="at">x_label_angle =</span> <span class="dv">45</span>, <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb13-5"><a href="boxplots.html#cb13-5" tabindex="-1"></a>  <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, <span class="at">axis_titles =</span> <span class="fu">c</span>(<span class="st">&quot;Supplement Type&quot;</span>, <span class="st">&quot;Length&quot;</span>), </span>
-<span id="cb13-6"><a href="boxplots.html#cb13-6" tabindex="-1"></a>  <span class="at">axis_title_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb13-7"><a href="boxplots.html#cb13-7" tabindex="-1"></a>  <span class="at">custom_colors =</span> <span class="fu">c</span>(<span class="st">&quot;#FC5D5C&quot;</span>, <span class="st">&quot;#4B6A9D&quot;</span>, <span class="st">&quot;#167D7D&quot;</span>), </span>
-<span id="cb13-8"><a href="boxplots.html#cb13-8" tabindex="-1"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb13-9"><a href="boxplots.html#cb13-9" tabindex="-1"></a>  <span class="at">jitter_color =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;black&quot;</span>),</span>
-<span id="cb13-10"><a href="boxplots.html#cb13-10" tabindex="-1"></a>  <span class="at">jitter_width =</span> <span class="fl">0.2</span>, <span class="at">jitter_alpha =</span> <span class="fl">0.5</span>, <span class="at">jitter_size =</span> <span class="dv">2</span>,</span>
-<span id="cb13-11"><a href="boxplots.html#cb13-11" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">FALSE</span>, <span class="at">legend_title =</span> <span class="st">&quot;&quot;</span>, </span>
-<span id="cb13-12"><a href="boxplots.html#cb13-12" tabindex="-1"></a>  <span class="at">box_width =</span> <span class="fl">0.6</span>, </span>
-<span id="cb13-13"><a href="boxplots.html#cb13-13" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;dose&quot;</span>,</span>
-<span id="cb13-14"><a href="boxplots.html#cb13-14" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>,<span class="st">&quot;dose_2&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_1&quot;</span>,<span class="st">&quot;dose_3&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;dose_2&quot;</span>,<span class="st">&quot;dose_3&quot;</span>)),</span>
-<span id="cb13-15"><a href="boxplots.html#cb13-15" tabindex="-1"></a>  <span class="at">comparison_method =</span> <span class="st">&quot;wilcox&quot;</span>, </span>
-<span id="cb13-16"><a href="boxplots.html#cb13-16" tabindex="-1"></a>  <span class="at">box_background =</span> <span class="cn">TRUE</span>, <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">background_border =</span> <span class="cn">TRUE</span>, <span class="at">sig_type =</span> <span class="st">&quot;SYMBOL&quot;</span>, <span class="at">violin =</span> <span class="cn">FALSE</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>)</span>
-<span id="cb13-17"><a href="boxplots.html#cb13-17" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="images/boxplot_experiment_advanced.png" /></p>
-</div>
-<div id="we-have-modified-the-iris-dataset-to-create-these-boxplots" class="section level3 hasAnchor" number="4.2.4">
-<h3><span class="header-section-number">4.2.4</span> We have modified the iris dataset to create these boxplots<a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="boxplots.html#cb14-1" tabindex="-1"></a><span class="co"># Prepare iris data with a new grouping variable</span></span>
-<span id="cb14-2"><a href="boxplots.html#cb14-2" tabindex="-1"></a>iris_mod <span class="ot">&lt;-</span> iris</span>
-<span id="cb14-3"><a href="boxplots.html#cb14-3" tabindex="-1"></a>iris_mod<span class="sc">$</span>Group <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">rep</span>(<span class="fu">paste0</span>(<span class="st">&quot;Group&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">each =</span> <span class="dv">10</span>),<span class="dv">3</span>))</span>
-<span id="cb14-4"><a href="boxplots.html#cb14-4" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="boxplots.html#cb14-5" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_Experiment</span>(</span>
-<span id="cb14-6"><a href="boxplots.html#cb14-6" tabindex="-1"></a>  <span class="at">data =</span> iris_mod, <span class="at">x_var =</span> <span class="st">&quot;Group&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Petal.Width&quot;</span>, <span class="at">fill_var =</span> <span class="st">&quot;Species&quot;</span>, </span>
-<span id="cb14-7"><a href="boxplots.html#cb14-7" tabindex="-1"></a>  <span class="at">use_facet =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-8"><a href="boxplots.html#cb14-8" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Petal Width Across Groups and Species&quot;</span>,</span>
-<span id="cb14-9"><a href="boxplots.html#cb14-9" tabindex="-1"></a>  <span class="at">x_label_angle =</span> <span class="dv">45</span>, </span>
-<span id="cb14-10"><a href="boxplots.html#cb14-10" tabindex="-1"></a>  <span class="at">x_label_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-11"><a href="boxplots.html#cb14-11" tabindex="-1"></a>  <span class="at">y_label_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-12"><a href="boxplots.html#cb14-12" tabindex="-1"></a>  <span class="at">axis_titles =</span> <span class="fu">c</span>(<span class="st">&quot;Group&quot;</span>, <span class="st">&quot;Petal Width&quot;</span>), </span>
-<span id="cb14-13"><a href="boxplots.html#cb14-13" tabindex="-1"></a>  <span class="at">axis_title_bold =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-14"><a href="boxplots.html#cb14-14" tabindex="-1"></a>  <span class="at">custom_colors =</span> <span class="fu">c</span>(<span class="st">&quot;#FC5D5C&quot;</span>, <span class="st">&quot;#4B6A9D&quot;</span>, <span class="st">&quot;#167D7D&quot;</span>), </span>
-<span id="cb14-15"><a href="boxplots.html#cb14-15" tabindex="-1"></a>  <span class="at">jitter =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-16"><a href="boxplots.html#cb14-16" tabindex="-1"></a>  <span class="at">jitter_color =</span> <span class="fu">c</span>(<span class="st">&quot;black&quot;</span>, <span class="st">&quot;black&quot;</span>, <span class="st">&quot;black&quot;</span>),</span>
-<span id="cb14-17"><a href="boxplots.html#cb14-17" tabindex="-1"></a>  <span class="at">jitter_width =</span> <span class="fl">0.1</span>,</span>
-<span id="cb14-18"><a href="boxplots.html#cb14-18" tabindex="-1"></a>  <span class="at">jitter_alpha =</span> <span class="fl">0.6</span>,</span>
-<span id="cb14-19"><a href="boxplots.html#cb14-19" tabindex="-1"></a>  <span class="at">jitter_size =</span> <span class="dv">2</span>,</span>
-<span id="cb14-20"><a href="boxplots.html#cb14-20" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-21"><a href="boxplots.html#cb14-21" tabindex="-1"></a>  <span class="at">legend_title =</span> <span class="st">&quot;Species&quot;</span>, </span>
-<span id="cb14-22"><a href="boxplots.html#cb14-22" tabindex="-1"></a>  <span class="at">box_width =</span> <span class="fl">0.6</span>, </span>
-<span id="cb14-23"><a href="boxplots.html#cb14-23" tabindex="-1"></a>  <span class="at">comparison_col =</span> <span class="st">&quot;Species&quot;</span>,</span>
-<span id="cb14-24"><a href="boxplots.html#cb14-24" tabindex="-1"></a>  <span class="at">comparison =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;setosa&quot;</span>, <span class="st">&quot;versicolor&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;setosa&quot;</span>, <span class="st">&quot;virginica&quot;</span>),<span class="fu">c</span>(<span class="st">&quot;versicolor&quot;</span>, <span class="st">&quot;virginica&quot;</span>)), </span>
-<span id="cb14-25"><a href="boxplots.html#cb14-25" tabindex="-1"></a>  <span class="at">comparison_method =</span> <span class="st">&quot;wilcox&quot;</span>, </span>
-<span id="cb14-26"><a href="boxplots.html#cb14-26" tabindex="-1"></a>  <span class="at">box_background =</span> <span class="cn">TRUE</span>, <span class="at">background_color =</span> <span class="st">&quot;white&quot;</span>, <span class="at">background_border =</span> <span class="cn">TRUE</span>, <span class="at">sig_type =</span> <span class="st">&quot;NUMBER&quot;</span>, <span class="at">violin =</span> <span class="cn">FALSE</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">3.5</span>)</span>
-<span id="cb14-27"><a href="boxplots.html#cb14-27" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="images/boxplot_iris_example.png" /></p>
-</div>
-<div id="parameter-explanation-for-bettervis_boxplot_experiment" class="section level3 hasAnchor" number="4.2.5">
-<h3><span class="header-section-number">4.2.5</span> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><code>data</code></strong>: The input dataset.
-<strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).
-<strong><code>y_var</code></strong>: The numerical variable for the y-axis.
-<strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).
-<strong><code>use_facet</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to use faceting. Default: <code>FALSE</code>.
-<strong><code>title</code></strong>: The title of the plot.
-… <em>(and so on for all other parameters)</em></p>
-<hr />
-</div>
-</div>
-<div id="bettervis_boxplot_mixviolin" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> BetterVis_Boxplot_MixViolin<a href="boxplots.html#bettervis_boxplot_mixviolin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="data-input-1" class="section level3 hasAnchor" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Data Input<a href="boxplots.html#data-input-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="boxplots.html#cb15-1" tabindex="-1"></a><span class="co"># Prepare iris data with another grouping variable</span></span>
-<span id="cb15-2"><a href="boxplots.html#cb15-2" tabindex="-1"></a>iris_mix <span class="ot">&lt;-</span> iris</span>
-<span id="cb15-3"><a href="boxplots.html#cb15-3" tabindex="-1"></a>iris_mix<span class="sc">$</span>Group2 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">sample</span>(<span class="fu">rep</span>(<span class="fu">paste0</span>(<span class="st">&quot;Color&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="dv">30</span>)))</span>
-<span id="cb15-4"><a href="boxplots.html#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="boxplots.html#cb15-5" tabindex="-1"></a><span class="co"># Define a color palette</span></span>
-<span id="cb15-6"><a href="boxplots.html#cb15-6" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#e97257&quot;</span>,<span class="st">&quot;#72c5d9&quot;</span>,<span class="st">&quot;#58ae9a&quot;</span>,<span class="st">&quot;#646e9a&quot;</span>,<span class="st">&quot;#efa78e&quot;</span>,<span class="st">&quot;#f3a9c4&quot;</span>, <span class="st">&quot;#ffbf69&quot;</span>, <span class="st">&quot;#b4d33e&quot;</span>,<span class="st">&quot;#ed7d31&quot;</span>,<span class="st">&quot;#6b83b3&quot;</span>,<span class="st">&quot;#b7d3ff&quot;</span>, <span class="st">&quot;#ff72cc&quot;</span>, <span class="st">&quot;#d4a4ff&quot;</span>)</span></code></pre></div>
-</div>
-<div id="simple-example-2" class="section level3 hasAnchor" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Simple Example<a href="boxplots.html#simple-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="boxplots.html#cb16-1" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_MixViolin</span>(</span>
-<span id="cb16-2"><a href="boxplots.html#cb16-2" tabindex="-1"></a>  <span class="at">data =</span> iris, <span class="at">x_var =</span> <span class="st">&quot;Species&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Sepal.Length&quot;</span>, </span>
-<span id="cb16-3"><a href="boxplots.html#cb16-3" tabindex="-1"></a>  <span class="at">fill_color =</span> colors,</span>
-<span id="cb16-4"><a href="boxplots.html#cb16-4" tabindex="-1"></a>  <span class="at">y_max_adjust =</span> <span class="dv">2</span>, <span class="at">y_min_adjust =</span> <span class="dv">1</span></span>
-<span id="cb16-5"><a href="boxplots.html#cb16-5" tabindex="-1"></a>)</span></code></pre></div>
-</div>
-<div id="advanced-example-2" class="section level3 hasAnchor" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Advanced Example<a href="boxplots.html#advanced-example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="boxplots.html#cb17-1" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_MixViolin</span>(</span>
-<span id="cb17-2"><a href="boxplots.html#cb17-2" tabindex="-1"></a>  <span class="at">data =</span> iris, <span class="at">x_var =</span><span class="st">&quot;Species&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Sepal.Length&quot;</span>, <span class="at">fill_color =</span> colors,</span>
-<span id="cb17-3"><a href="boxplots.html#cb17-3" tabindex="-1"></a>  <span class="at">y_max_adjust =</span> <span class="dv">2</span>, <span class="at">y_min_adjust =</span> <span class="dv">1</span>,</span>
-<span id="cb17-4"><a href="boxplots.html#cb17-4" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Mixed Violin and Boxplot of Sepal Length&quot;</span>, <span class="at">title_size =</span> <span class="dv">20</span>, <span class="at">title_bold =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb17-5"><a href="boxplots.html#cb17-5" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">&quot;Species&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sepal Length (cm)&quot;</span>,</span>
-<span id="cb17-6"><a href="boxplots.html#cb17-6" tabindex="-1"></a>  <span class="at">border =</span> <span class="cn">TRUE</span>, <span class="at">panel_background_color =</span> <span class="st">&quot;#f3f6f6&quot;</span>,</span>
-<span id="cb17-7"><a href="boxplots.html#cb17-7" tabindex="-1"></a>  <span class="at">axis_x_title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">color =</span> <span class="st">&quot;#b35959&quot;</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb17-8"><a href="boxplots.html#cb17-8" tabindex="-1"></a>  <span class="at">axis_y_title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">color =</span> <span class="st">&quot;#b35959&quot;</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb17-9"><a href="boxplots.html#cb17-9" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb17-10"><a href="boxplots.html#cb17-10" tabindex="-1"></a>  <span class="at">stat_compare_means =</span> <span class="cn">TRUE</span>, <span class="at">compare_symbol =</span> <span class="st">&quot;SYMBOL&quot;</span></span>
-<span id="cb17-11"><a href="boxplots.html#cb17-11" tabindex="-1"></a>)</span></code></pre></div>
-</div>
-<div id="adjusting-variables-and-redrawing-the-plot" class="section level3 hasAnchor" number="4.3.4">
-<h3><span class="header-section-number">4.3.4</span> Adjusting variables and redrawing the plot<a href="boxplots.html#adjusting-variables-and-redrawing-the-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="boxplots.html#cb18-1" tabindex="-1"></a><span class="fu">BetterVis_Boxplot_MixViolin</span>(</span>
-<span id="cb18-2"><a href="boxplots.html#cb18-2" tabindex="-1"></a>  <span class="at">data =</span> iris_mix, <span class="at">x_var =</span> <span class="st">&quot;Group2&quot;</span>, <span class="at">y_var =</span> <span class="st">&quot;Sepal.Length&quot;</span>, <span class="at">fill_color =</span> colors,</span>
-<span id="cb18-3"><a href="boxplots.html#cb18-3" tabindex="-1"></a>  <span class="at">y_max_adjust =</span> <span class="dv">2</span>, <span class="at">y_min_adjust =</span> <span class="dv">1</span>,</span>
-<span id="cb18-4"><a href="boxplots.html#cb18-4" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">&quot;Distribution by Custom Grouping&quot;</span>,</span>
-<span id="cb18-5"><a href="boxplots.html#cb18-5" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">&quot;Custom Group&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sepal Length (cm)&quot;</span>,</span>
-<span id="cb18-6"><a href="boxplots.html#cb18-6" tabindex="-1"></a>  <span class="at">border =</span> <span class="cn">TRUE</span>, <span class="at">panel_background_color =</span> <span class="st">&quot;#f3f6f6&quot;</span>,</span>
-<span id="cb18-7"><a href="boxplots.html#cb18-7" tabindex="-1"></a>  <span class="at">axis_x_title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">color =</span> <span class="st">&quot;#b35959&quot;</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb18-8"><a href="boxplots.html#cb18-8" tabindex="-1"></a>  <span class="at">axis_y_title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>, <span class="at">color =</span> <span class="st">&quot;#b35959&quot;</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
-<span id="cb18-9"><a href="boxplots.html#cb18-9" tabindex="-1"></a>  <span class="at">legend_show =</span> <span class="cn">TRUE</span>, <span class="at">legend_title =</span> <span class="st">&quot;Group2&quot;</span>,</span>
-<span id="cb18-10"><a href="boxplots.html#cb18-10" tabindex="-1"></a>  <span class="at">stat_compare_means =</span> <span class="cn">TRUE</span>, <span class="at">compare_symbol =</span> <span class="st">&quot;SYMBOL&quot;</span></span>
-<span id="cb18-11"><a href="boxplots.html#cb18-11" tabindex="-1"></a>)</span></code></pre></div>
-</div>
-<div id="parameter-explanation-for-bettervis_boxplot_mixviolin" class="section level3 hasAnchor" number="4.3.5">
-<h3><span class="header-section-number">4.3.5</span> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><code>data</code></strong>: The input dataset.
-<strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).
-<strong><code>y_var</code></strong>: The numerical variable for the y-axis.
-<strong><code>fill_color</code></strong>: A vector of colors for the plot fills.
-… <em>(and so on for all other parameters)</em></p>
-</div>
-<div id="important-notes" class="section level3 hasAnchor" number="4.3.6">
-<h3><span class="header-section-number">4.3.6</span> Important Notes<a href="boxplots.html#important-notes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Properly setting <code>ylim</code> is important to ensure that the entire boxplot, including any significance indicators, is fully visible.</p>
-<p>When using <code>comparison_col</code> and <code>comparison</code>, the <code>comparison</code> list should specify pairs of groups found within the <code>comparison_col</code> variable. This feature is best visualized when <code>use_facet = TRUE</code>.</p>
-<p>You can further customize elements like fonts, borders, etc., by adding standard <code>ggplot2</code> <code>theme()</code> or <code>guide()</code> functions to the plot object afterwards.</p>
+<div id="advanced-example" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Advanced Example<a href="an-introduction-to-bettervis.html#advanced-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="an-introduction-to-bettervis.html#cb4-1" tabindex="-1"></a><span class="co"># 这是一个假设的函数调用</span></span>
+<span id="cb4-2"><a href="an-introduction-to-bettervis.html#cb4-2" tabindex="-1"></a><span class="co"># This is a hypothetical function call</span></span>
+<span id="cb4-3"><a href="an-introduction-to-bettervis.html#cb4-3" tabindex="-1"></a><span class="co"># BetterVis_Heatmap_Mantel(phenotype_data, expression_data, spec_select=c(&quot;stage&quot;, &quot;age&quot;, &quot;gender&quot;, &quot;CA125&quot;, &quot;CEA&quot;, &quot;CA15.3&quot;),</span></span>
+<span id="cb4-4"><a href="an-introduction-to-bettervis.html#cb4-4" tabindex="-1"></a><span class="co">#                          significant_symbol = TRUE,</span></span>
+<span id="cb4-5"><a href="an-introduction-to-bettervis.html#cb4-5" tabindex="-1"></a><span class="co">#                          heatmap_color = brewer.pal(11, &quot;PuOr&quot;),</span></span>
+<span id="cb4-6"><a href="an-introduction-to-bettervis.html#cb4-6" tabindex="-1"></a><span class="co">#                          line_size = c(0.5, 1, 2),</span></span>
+<span id="cb4-7"><a href="an-introduction-to-bettervis.html#cb4-7" tabindex="-1"></a><span class="co">#                          line_color =  BetterVis_Color(type=&quot;discrete&quot;, odd_or_even=&quot;odd&quot;, n=3, style=&quot;Science&quot;),</span></span>
+<span id="cb4-8"><a href="an-introduction-to-bettervis.html#cb4-8" tabindex="-1"></a><span class="co">#                          phenotype_text_size = 5) +</span></span>
+<span id="cb4-9"><a href="an-introduction-to-bettervis.html#cb4-9" tabindex="-1"></a><span class="co"># theme(legend.text = element_text(size=14), legend.title = element_text(size=16))</span></span></code></pre></div>
+<p><img src="images/advanced_example.png" /></p>
+<p>You can specify various parameters for fine-tuning. However, if you don’t provide them, the function uses default values that have been carefully chosen through extensive testing to be suitable for most common scenarios.</p>
 
 </div>
 </div>
@@ -594,8 +484,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="colors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="barplots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="colors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

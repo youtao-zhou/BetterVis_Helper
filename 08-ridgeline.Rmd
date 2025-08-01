@@ -1,6 +1,6 @@
 # Ridgeline Plot {#ridgeline}
 
-### At the Beginning
+## At the Beginning
 ```r
 # library(BetterVis)
 ```

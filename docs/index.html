@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="The official documentation for the BetterVis R package, providing a comprehensive guide to creating beautiful and informative visualizations." />
   
 
-<meta name="author" content="Your Name" />
+<meta name="author" content="Youtao Zhou, Zikai Lin" />
 
 
 <meta name="date" content="2025-08-01" />
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="colors.html"/>
+<link rel="next" href="an-introduction-to-bettervis.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,270 +136,274 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> An Introduction to BetterVis</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> BetterVis Visualization Tutorial and Parameter Explanation</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#how-to-use-this-guide"><i class="fa fa-check"></i><b>1.2</b> How to Use This Guide</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#the-core-philosophy-of-bettervis"><i class="fa fa-check"></i><b>1.3</b> The Core Philosophy of BetterVis</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#install-of-bettervis"><i class="fa fa-check"></i><b>1.1</b> Install of BetterVis</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html"><i class="fa fa-check"></i><b>2</b> An Introduction to BetterVis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#simple-example"><i class="fa fa-check"></i><b>1.3.1</b> Simple Example</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#advanced-example"><i class="fa fa-check"></i><b>1.3.2</b> Advanced Example</a></li>
+<li class="chapter" data-level="2.1" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#prerequisites"><i class="fa fa-check"></i><b>2.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2.2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#how-to-use-this-guide"><i class="fa fa-check"></i><b>2.2</b> How to Use This Guide</a></li>
+<li class="chapter" data-level="2.3" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#the-core-philosophy-of-bettervis"><i class="fa fa-check"></i><b>2.3</b> The Core Philosophy of BetterVis</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#simple-example"><i class="fa fa-check"></i><b>2.3.1</b> Simple Example</a></li>
+<li class="chapter" data-level="2.3.2" data-path="an-introduction-to-bettervis.html"><a href="an-introduction-to-bettervis.html#advanced-example"><i class="fa fa-check"></i><b>2.3.2</b> Advanced Example</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>2</b> How to choose colors in BetterVis</a>
+<li class="chapter" data-level="3" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>3</b> How to choose colors in BetterVis</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="colors.html"><a href="colors.html#written-at-the-beginning"><i class="fa fa-check"></i><b>2.1</b> Written at the beginning</a></li>
-<li class="chapter" data-level="2.2" data-path="colors.html"><a href="colors.html#usage-example"><i class="fa fa-check"></i><b>2.2</b> Usage example</a>
+<li class="chapter" data-level="3.1" data-path="colors.html"><a href="colors.html#written-at-the-beginning"><i class="fa fa-check"></i><b>3.1</b> Written at the beginning</a></li>
+<li class="chapter" data-level="3.2" data-path="colors.html"><a href="colors.html#usage-example"><i class="fa fa-check"></i><b>3.2</b> Usage example</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="colors.html"><a href="colors.html#discrete-and-unpaired-color-selection"><i class="fa fa-check"></i><b>2.2.1</b> Discrete And Unpaired color selection</a></li>
-<li class="chapter" data-level="2.2.2" data-path="colors.html"><a href="colors.html#discrete-and-paired-color-selection"><i class="fa fa-check"></i><b>2.2.2</b> Discrete And paired color selection</a></li>
-<li class="chapter" data-level="2.2.3" data-path="colors.html"><a href="colors.html#continuous-color-extraction"><i class="fa fa-check"></i><b>2.2.3</b> Continuous color extraction</a></li>
+<li class="chapter" data-level="3.2.1" data-path="colors.html"><a href="colors.html#discrete-and-unpaired-color-selection"><i class="fa fa-check"></i><b>3.2.1</b> Discrete And Unpaired color selection</a></li>
+<li class="chapter" data-level="3.2.2" data-path="colors.html"><a href="colors.html#discrete-and-paired-color-selection"><i class="fa fa-check"></i><b>3.2.2</b> Discrete And paired color selection</a></li>
+<li class="chapter" data-level="3.2.3" data-path="colors.html"><a href="colors.html#continuous-color-extraction"><i class="fa fa-check"></i><b>3.2.3</b> Continuous color extraction</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="colors.html"><a href="colors.html#parameter-explanation"><i class="fa fa-check"></i><b>2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="3.3" data-path="colors.html"><a href="colors.html#parameter-explanation"><i class="fa fa-check"></i><b>3.3</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>3</b> Boxplot</a>
+<li class="chapter" data-level="4" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>4</b> Boxplot</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="boxplots.html"><a href="boxplots.html#at-the-beginning"><i class="fa fa-check"></i><b>3.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="3.2" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2</b> BetterVis_Boxplot_Experiment</a>
+<li class="chapter" data-level="4.1" data-path="boxplots.html"><a href="boxplots.html#at-the-beginning"><i class="fa fa-check"></i><b>4.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="4.2" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>4.2</b> BetterVis_Boxplot_Experiment</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="boxplots.html"><a href="boxplots.html#data-input"><i class="fa fa-check"></i><b>3.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="3.2.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-1"><i class="fa fa-check"></i><b>3.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="3.2.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-1"><i class="fa fa-check"></i><b>3.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="3.2.4" data-path="boxplots.html"><a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots"><i class="fa fa-check"></i><b>3.2.4</b> We have modified the iris dataset to create these boxplots</a></li>
-<li class="chapter" data-level="3.2.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>3.2.5</b> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code></a></li>
+<li class="chapter" data-level="4.2.1" data-path="boxplots.html"><a href="boxplots.html#data-input"><i class="fa fa-check"></i><b>4.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.2.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-1"><i class="fa fa-check"></i><b>4.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.2.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-1"><i class="fa fa-check"></i><b>4.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="boxplots.html"><a href="boxplots.html#we-have-modified-the-iris-dataset-to-create-these-boxplots"><i class="fa fa-check"></i><b>4.2.4</b> We have modified the iris dataset to create these boxplots</a></li>
+<li class="chapter" data-level="4.2.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_experiment"><i class="fa fa-check"></i><b>4.2.5</b> Parameter explanation for <code>BetterVis_Boxplot_Experiment</code></a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3</b> BetterVis_Boxplot_MixViolin</a>
+<li class="chapter" data-level="4.3" data-path="boxplots.html"><a href="boxplots.html#bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>4.3</b> BetterVis_Boxplot_MixViolin</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="boxplots.html"><a href="boxplots.html#data-input-1"><i class="fa fa-check"></i><b>3.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="3.3.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-2"><i class="fa fa-check"></i><b>3.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="3.3.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-2"><i class="fa fa-check"></i><b>3.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="3.3.4" data-path="boxplots.html"><a href="boxplots.html#adjusting-variables-and-redrawing-the-plot"><i class="fa fa-check"></i><b>3.3.4</b> Adjusting variables and redrawing the plot</a></li>
-<li class="chapter" data-level="3.3.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>3.3.5</b> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code></a></li>
-<li class="chapter" data-level="3.3.6" data-path="boxplots.html"><a href="boxplots.html#important-notes"><i class="fa fa-check"></i><b>3.3.6</b> Important Notes</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>4</b> Barplot</a>
-<ul>
-<li class="chapter" data-level="4.0.1" data-path="barplots.html"><a href="barplots.html#at-the-beginning-1"><i class="fa fa-check"></i><b>4.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="4.1" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1</b> BetterVis_Barplot_Accumulative</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="barplots.html"><a href="barplots.html#data-input-2"><i class="fa fa-check"></i><b>4.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.1.2" data-path="barplots.html"><a href="barplots.html#simple-example-3"><i class="fa fa-check"></i><b>4.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.1.3" data-path="barplots.html"><a href="barplots.html#advanced-example-3"><i class="fa fa-check"></i><b>4.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.1.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>4.1.4</b> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2</b> BetterVis_Barplot_Bidirectional</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="barplots.html"><a href="barplots.html#data-input-3"><i class="fa fa-check"></i><b>4.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.2.2" data-path="barplots.html"><a href="barplots.html#simple-example-4"><i class="fa fa-check"></i><b>4.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.2.3" data-path="barplots.html"><a href="barplots.html#advanced-example-4"><i class="fa fa-check"></i><b>4.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.2.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>4.2.4</b> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3</b> BetterVis_Barplot_Circle</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="barplots.html"><a href="barplots.html#data-input-4"><i class="fa fa-check"></i><b>4.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.3.2" data-path="barplots.html"><a href="barplots.html#simple-example-5"><i class="fa fa-check"></i><b>4.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.3.3" data-path="barplots.html"><a href="barplots.html#advanced-example-5"><i class="fa fa-check"></i><b>4.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.3.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle"><i class="fa fa-check"></i><b>4.3.4</b> Parameter explanation for <code>BetterVis_Barplot_Circle</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4</b> BetterVis_Barplot_Experiment</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="barplots.html"><a href="barplots.html#data-input-5"><i class="fa fa-check"></i><b>4.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.4.2" data-path="barplots.html"><a href="barplots.html#simple-example-6"><i class="fa fa-check"></i><b>4.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.4.3" data-path="barplots.html"><a href="barplots.html#advanced-example-6"><i class="fa fa-check"></i><b>4.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.4.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment"><i class="fa fa-check"></i><b>4.4.4</b> Parameter explanation for <code>BetterVis_Barplot_Experiment</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5</b> BetterVis_Barplot_Horizontal</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="barplots.html"><a href="barplots.html#data-input-6"><i class="fa fa-check"></i><b>4.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.5.2" data-path="barplots.html"><a href="barplots.html#simple-example-7"><i class="fa fa-check"></i><b>4.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.5.3" data-path="barplots.html"><a href="barplots.html#advanced-example-7"><i class="fa fa-check"></i><b>4.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.5.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>4.5.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code></a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6</b> BetterVis_Barplot_Horizontal2</a>
-<ul>
-<li class="chapter" data-level="4.6.1" data-path="barplots.html"><a href="barplots.html#data-input-7"><i class="fa fa-check"></i><b>4.6.1</b> Data Input</a></li>
-<li class="chapter" data-level="4.6.2" data-path="barplots.html"><a href="barplots.html#simple-example-8"><i class="fa fa-check"></i><b>4.6.2</b> Simple Example</a></li>
-<li class="chapter" data-level="4.6.3" data-path="barplots.html"><a href="barplots.html#advanced-example-8"><i class="fa fa-check"></i><b>4.6.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="4.6.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>4.6.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code></a></li>
+<li class="chapter" data-level="4.3.1" data-path="boxplots.html"><a href="boxplots.html#data-input-1"><i class="fa fa-check"></i><b>4.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="4.3.2" data-path="boxplots.html"><a href="boxplots.html#simple-example-2"><i class="fa fa-check"></i><b>4.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="4.3.3" data-path="boxplots.html"><a href="boxplots.html#advanced-example-2"><i class="fa fa-check"></i><b>4.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="4.3.4" data-path="boxplots.html"><a href="boxplots.html#adjusting-variables-and-redrawing-the-plot"><i class="fa fa-check"></i><b>4.3.4</b> Adjusting variables and redrawing the plot</a></li>
+<li class="chapter" data-level="4.3.5" data-path="boxplots.html"><a href="boxplots.html#parameter-explanation-for-bettervis_boxplot_mixviolin"><i class="fa fa-check"></i><b>4.3.5</b> Parameter explanation for <code>BetterVis_Boxplot_MixViolin</code></a></li>
+<li class="chapter" data-level="4.3.6" data-path="boxplots.html"><a href="boxplots.html#important-notes"><i class="fa fa-check"></i><b>4.3.6</b> Important Notes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>5</b> Network Plot</a>
+<li class="chapter" data-level="5" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>5</b> Barplot</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="network.html"><a href="network.html#at-the-beginning-2"><i class="fa fa-check"></i><b>5.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="5.1" data-path="network.html"><a href="network.html#bettervis_network_ppi"><i class="fa fa-check"></i><b>5.1</b> BetterVis_Network_PPI</a>
+<li class="chapter" data-level="5.0.1" data-path="barplots.html"><a href="barplots.html#at-the-beginning-1"><i class="fa fa-check"></i><b>5.0.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="5.1" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>5.1</b> BetterVis_Barplot_Accumulative</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="network.html"><a href="network.html#data-input-8"><i class="fa fa-check"></i><b>5.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="5.1.2" data-path="network.html"><a href="network.html#usage-example-1"><i class="fa fa-check"></i><b>5.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="5.1.3" data-path="network.html"><a href="network.html#parameter-explanation-1"><i class="fa fa-check"></i><b>5.1.3</b> Parameter explanation</a></li>
-<li class="chapter" data-level="5.1.4" data-path="network.html"><a href="network.html#important-note"><i class="fa fa-check"></i><b>5.1.4</b> Important Note</a></li>
+<li class="chapter" data-level="5.1.1" data-path="barplots.html"><a href="barplots.html#data-input-2"><i class="fa fa-check"></i><b>5.1.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.1.2" data-path="barplots.html"><a href="barplots.html#simple-example-3"><i class="fa fa-check"></i><b>5.1.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.1.3" data-path="barplots.html"><a href="barplots.html#advanced-example-3"><i class="fa fa-check"></i><b>5.1.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.1.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_accumulative"><i class="fa fa-check"></i><b>5.1.4</b> Parameter explanation for <code>BetterVis_Barplot_Accumulative</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>5.2</b> BetterVis_Barplot_Bidirectional</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="barplots.html"><a href="barplots.html#data-input-3"><i class="fa fa-check"></i><b>5.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.2.2" data-path="barplots.html"><a href="barplots.html#simple-example-4"><i class="fa fa-check"></i><b>5.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.2.3" data-path="barplots.html"><a href="barplots.html#advanced-example-4"><i class="fa fa-check"></i><b>5.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.2.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_bidirectional"><i class="fa fa-check"></i><b>5.2.4</b> Parameter explanation for <code>BetterVis_Barplot_Bidirectional</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_circle"><i class="fa fa-check"></i><b>5.3</b> BetterVis_Barplot_Circle</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="barplots.html"><a href="barplots.html#data-input-4"><i class="fa fa-check"></i><b>5.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.3.2" data-path="barplots.html"><a href="barplots.html#simple-example-5"><i class="fa fa-check"></i><b>5.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.3.3" data-path="barplots.html"><a href="barplots.html#advanced-example-5"><i class="fa fa-check"></i><b>5.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.3.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_circle"><i class="fa fa-check"></i><b>5.3.4</b> Parameter explanation for <code>BetterVis_Barplot_Circle</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_experiment"><i class="fa fa-check"></i><b>5.4</b> BetterVis_Barplot_Experiment</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="barplots.html"><a href="barplots.html#data-input-5"><i class="fa fa-check"></i><b>5.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.4.2" data-path="barplots.html"><a href="barplots.html#simple-example-6"><i class="fa fa-check"></i><b>5.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.4.3" data-path="barplots.html"><a href="barplots.html#advanced-example-6"><i class="fa fa-check"></i><b>5.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.4.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_experiment"><i class="fa fa-check"></i><b>5.4.4</b> Parameter explanation for <code>BetterVis_Barplot_Experiment</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>5.5</b> BetterVis_Barplot_Horizontal</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="barplots.html"><a href="barplots.html#data-input-6"><i class="fa fa-check"></i><b>5.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.5.2" data-path="barplots.html"><a href="barplots.html#simple-example-7"><i class="fa fa-check"></i><b>5.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.5.3" data-path="barplots.html"><a href="barplots.html#advanced-example-7"><i class="fa fa-check"></i><b>5.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.5.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal"><i class="fa fa-check"></i><b>5.5.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="barplots.html"><a href="barplots.html#bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>5.6</b> BetterVis_Barplot_Horizontal2</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="barplots.html"><a href="barplots.html#data-input-7"><i class="fa fa-check"></i><b>5.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="5.6.2" data-path="barplots.html"><a href="barplots.html#simple-example-8"><i class="fa fa-check"></i><b>5.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="5.6.3" data-path="barplots.html"><a href="barplots.html#advanced-example-8"><i class="fa fa-check"></i><b>5.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="5.6.4" data-path="barplots.html"><a href="barplots.html#parameter-explanation-for-bettervis_barplot_horizontal2"><i class="fa fa-check"></i><b>5.6.4</b> Parameter explanation for <code>BetterVis_Barplot_Horizontal2</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>6</b> Heatmap</a>
+<li class="chapter" data-level="6" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>6</b> Network Plot</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="heatmap.html"><a href="heatmap.html#at-the-beginning-3"><i class="fa fa-check"></i><b>6.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="6.1" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_bicontinuous"><i class="fa fa-check"></i><b>6.1</b> BetterVis_Heatmap_Bicontinuous</a>
+<li class="chapter" data-level="6.1" data-path="network.html"><a href="network.html#at-the-beginning-2"><i class="fa fa-check"></i><b>6.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="6.2" data-path="network.html"><a href="network.html#bettervis_network_ppi"><i class="fa fa-check"></i><b>6.2</b> BetterVis_Network_PPI</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="heatmap.html"><a href="heatmap.html#data-input-9"><i class="fa fa-check"></i><b>6.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.1.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-9"><i class="fa fa-check"></i><b>6.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.1.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-9"><i class="fa fa-check"></i><b>6.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.1.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-2"><i class="fa fa-check"></i><b>6.1.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_circle"><i class="fa fa-check"></i><b>6.2</b> BetterVis_Heatmap_Circle</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="heatmap.html"><a href="heatmap.html#data-input-10"><i class="fa fa-check"></i><b>6.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.2.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-10"><i class="fa fa-check"></i><b>6.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.2.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-10"><i class="fa fa-check"></i><b>6.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.2.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-3"><i class="fa fa-check"></i><b>6.2.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_common"><i class="fa fa-check"></i><b>6.3</b> BetterVis_Heatmap_Common</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="heatmap.html"><a href="heatmap.html#data-input-11"><i class="fa fa-check"></i><b>6.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.3.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-11"><i class="fa fa-check"></i><b>6.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.3.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-11"><i class="fa fa-check"></i><b>6.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.3.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-4"><i class="fa fa-check"></i><b>6.3.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_mantel"><i class="fa fa-check"></i><b>6.4</b> BetterVis_Heatmap_Mantel</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="heatmap.html"><a href="heatmap.html#data-input-12"><i class="fa fa-check"></i><b>6.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.4.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-12"><i class="fa fa-check"></i><b>6.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.4.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-12"><i class="fa fa-check"></i><b>6.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.4.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-5"><i class="fa fa-check"></i><b>6.4.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_multi"><i class="fa fa-check"></i><b>6.5</b> BetterVis_Heatmap_Multi</a>
-<ul>
-<li class="chapter" data-level="6.5.1" data-path="heatmap.html"><a href="heatmap.html#data-input-13"><i class="fa fa-check"></i><b>6.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="6.5.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-13"><i class="fa fa-check"></i><b>6.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="6.5.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-13"><i class="fa fa-check"></i><b>6.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="6.5.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-6"><i class="fa fa-check"></i><b>6.5.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="6.2.1" data-path="network.html"><a href="network.html#data-input-8"><i class="fa fa-check"></i><b>6.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="6.2.2" data-path="network.html"><a href="network.html#usage-example-1"><i class="fa fa-check"></i><b>6.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="6.2.3" data-path="network.html"><a href="network.html#parameter-explanation-1"><i class="fa fa-check"></i><b>6.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="6.2.4" data-path="network.html"><a href="network.html#important-note"><i class="fa fa-check"></i><b>6.2.4</b> Important Note</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dotplot.html"><a href="dotplot.html"><i class="fa fa-check"></i><b>7</b> Dotplot</a>
+<li class="chapter" data-level="7" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>7</b> Heatmap</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="dotplot.html"><a href="dotplot.html#at-the-beginning-4"><i class="fa fa-check"></i><b>7.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="7.1" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_heatmap"><i class="fa fa-check"></i><b>7.1</b> BetterVis_DotPlot_Heatmap</a>
+<li class="chapter" data-level="7.1" data-path="heatmap.html"><a href="heatmap.html#at-the-beginning-3"><i class="fa fa-check"></i><b>7.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="7.2" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_bicontinuous"><i class="fa fa-check"></i><b>7.2</b> BetterVis_Heatmap_Bicontinuous</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="dotplot.html"><a href="dotplot.html#data-input-14"><i class="fa fa-check"></i><b>7.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.1.2" data-path="dotplot.html"><a href="dotplot.html#usage-example-2"><i class="fa fa-check"></i><b>7.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="7.1.3" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-7"><i class="fa fa-check"></i><b>7.1.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.2.1" data-path="heatmap.html"><a href="heatmap.html#data-input-9"><i class="fa fa-check"></i><b>7.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.2.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-9"><i class="fa fa-check"></i><b>7.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.2.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-9"><i class="fa fa-check"></i><b>7.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.2.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-2"><i class="fa fa-check"></i><b>7.2.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_beeswarm"><i class="fa fa-check"></i><b>7.2</b> BetterVis_Dotplot_Beeswarm</a>
+<li class="chapter" data-level="7.3" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_circle"><i class="fa fa-check"></i><b>7.3</b> BetterVis_Heatmap_Circle</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="dotplot.html"><a href="dotplot.html#data-input-15"><i class="fa fa-check"></i><b>7.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.2.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-14"><i class="fa fa-check"></i><b>7.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.2.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-14"><i class="fa fa-check"></i><b>7.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.2.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-8"><i class="fa fa-check"></i><b>7.2.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.3.1" data-path="heatmap.html"><a href="heatmap.html#data-input-10"><i class="fa fa-check"></i><b>7.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.3.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-10"><i class="fa fa-check"></i><b>7.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.3.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-10"><i class="fa fa-check"></i><b>7.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.3.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-3"><i class="fa fa-check"></i><b>7.3.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_mixbar"><i class="fa fa-check"></i><b>7.3</b> BetterVis_Dotplot_Mixbar</a>
+<li class="chapter" data-level="7.4" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_common"><i class="fa fa-check"></i><b>7.4</b> BetterVis_Heatmap_Common</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="dotplot.html"><a href="dotplot.html#data-input-16"><i class="fa fa-check"></i><b>7.3.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.3.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-15"><i class="fa fa-check"></i><b>7.3.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.3.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-15"><i class="fa fa-check"></i><b>7.3.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.3.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-9"><i class="fa fa-check"></i><b>7.3.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.4.1" data-path="heatmap.html"><a href="heatmap.html#data-input-11"><i class="fa fa-check"></i><b>7.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.4.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-11"><i class="fa fa-check"></i><b>7.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.4.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-11"><i class="fa fa-check"></i><b>7.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.4.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-4"><i class="fa fa-check"></i><b>7.4.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_multifacet"><i class="fa fa-check"></i><b>7.4</b> BetterVis_Dotplot_Multifacet</a>
+<li class="chapter" data-level="7.5" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_mantel"><i class="fa fa-check"></i><b>7.5</b> BetterVis_Heatmap_Mantel</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="dotplot.html"><a href="dotplot.html#data-input-17"><i class="fa fa-check"></i><b>7.4.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.4.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-16"><i class="fa fa-check"></i><b>7.4.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.4.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-16"><i class="fa fa-check"></i><b>7.4.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.4.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-10"><i class="fa fa-check"></i><b>7.4.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.5.1" data-path="heatmap.html"><a href="heatmap.html#data-input-12"><i class="fa fa-check"></i><b>7.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.5.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-12"><i class="fa fa-check"></i><b>7.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.5.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-12"><i class="fa fa-check"></i><b>7.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.5.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-5"><i class="fa fa-check"></i><b>7.5.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_smoothline"><i class="fa fa-check"></i><b>7.5</b> BetterVis_Dotplot_Smoothline</a>
+<li class="chapter" data-level="7.6" data-path="heatmap.html"><a href="heatmap.html#bettervis_heatmap_multi"><i class="fa fa-check"></i><b>7.6</b> BetterVis_Heatmap_Multi</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="dotplot.html"><a href="dotplot.html#data-input-18"><i class="fa fa-check"></i><b>7.5.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.5.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-17"><i class="fa fa-check"></i><b>7.5.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.5.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-17"><i class="fa fa-check"></i><b>7.5.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.5.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-11"><i class="fa fa-check"></i><b>7.5.4</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="7.6" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_ternary"><i class="fa fa-check"></i><b>7.6</b> BetterVis_Dotplot_Ternary</a>
-<ul>
-<li class="chapter" data-level="7.6.1" data-path="dotplot.html"><a href="dotplot.html#data-input-19"><i class="fa fa-check"></i><b>7.6.1</b> Data Input</a></li>
-<li class="chapter" data-level="7.6.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-18"><i class="fa fa-check"></i><b>7.6.2</b> Simple Example</a></li>
-<li class="chapter" data-level="7.6.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-18"><i class="fa fa-check"></i><b>7.6.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="7.6.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-12"><i class="fa fa-check"></i><b>7.6.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="7.6.1" data-path="heatmap.html"><a href="heatmap.html#data-input-13"><i class="fa fa-check"></i><b>7.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="7.6.2" data-path="heatmap.html"><a href="heatmap.html#simple-example-13"><i class="fa fa-check"></i><b>7.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="7.6.3" data-path="heatmap.html"><a href="heatmap.html#advanced-example-13"><i class="fa fa-check"></i><b>7.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="7.6.4" data-path="heatmap.html"><a href="heatmap.html#parameter-explanation-6"><i class="fa fa-check"></i><b>7.6.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>8</b> Ridgeline Plot</a>
+<li class="chapter" data-level="8" data-path="dotplot.html"><a href="dotplot.html"><i class="fa fa-check"></i><b>8</b> Dotplot</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="ridgeline.html"><a href="ridgeline.html#at-the-beginning-5"><i class="fa fa-check"></i><b>8.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="8.1" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_single"><i class="fa fa-check"></i><b>8.1</b> BetterVis_Ridgeline_Single</a>
+<li class="chapter" data-level="8.1" data-path="dotplot.html"><a href="dotplot.html#at-the-beginning-4"><i class="fa fa-check"></i><b>8.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="8.2" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_heatmap"><i class="fa fa-check"></i><b>8.2</b> BetterVis_DotPlot_Heatmap</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-20"><i class="fa fa-check"></i><b>8.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="8.1.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-19"><i class="fa fa-check"></i><b>8.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="8.1.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-19"><i class="fa fa-check"></i><b>8.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="8.1.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-13"><i class="fa fa-check"></i><b>8.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.2.1" data-path="dotplot.html"><a href="dotplot.html#data-input-14"><i class="fa fa-check"></i><b>8.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dotplot.html"><a href="dotplot.html#usage-example-2"><i class="fa fa-check"></i><b>8.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="8.2.3" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-7"><i class="fa fa-check"></i><b>8.2.3</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_facet"><i class="fa fa-check"></i><b>8.2</b> BetterVis_Ridgeline_Facet</a>
+<li class="chapter" data-level="8.3" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_beeswarm"><i class="fa fa-check"></i><b>8.3</b> BetterVis_Dotplot_Beeswarm</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-21"><i class="fa fa-check"></i><b>8.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="8.2.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-20"><i class="fa fa-check"></i><b>8.2.2</b> Simple Example</a></li>
-<li class="chapter" data-level="8.2.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-20"><i class="fa fa-check"></i><b>8.2.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="8.2.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-14"><i class="fa fa-check"></i><b>8.2.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.3.1" data-path="dotplot.html"><a href="dotplot.html#data-input-15"><i class="fa fa-check"></i><b>8.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.3.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-14"><i class="fa fa-check"></i><b>8.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.3.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-14"><i class="fa fa-check"></i><b>8.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.3.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-8"><i class="fa fa-check"></i><b>8.3.4</b> Parameter explanation</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_mixbar"><i class="fa fa-check"></i><b>8.4</b> BetterVis_Dotplot_Mixbar</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="dotplot.html"><a href="dotplot.html#data-input-16"><i class="fa fa-check"></i><b>8.4.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.4.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-15"><i class="fa fa-check"></i><b>8.4.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.4.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-15"><i class="fa fa-check"></i><b>8.4.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.4.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-9"><i class="fa fa-check"></i><b>8.4.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="sankey.html"><a href="sankey.html"><i class="fa fa-check"></i><b>9</b> Sankey Plot</a>
+<li class="chapter" data-level="8.5" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_multifacet"><i class="fa fa-check"></i><b>8.5</b> BetterVis_Dotplot_Multifacet</a>
 <ul>
-<li class="chapter" data-level="9.0.1" data-path="sankey.html"><a href="sankey.html#at-the-beginning-6"><i class="fa fa-check"></i><b>9.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="9.1" data-path="sankey.html"><a href="sankey.html#bettervis_sankey_single"><i class="fa fa-check"></i><b>9.1</b> BetterVis_Sankey_Single</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="sankey.html"><a href="sankey.html#data-input-22"><i class="fa fa-check"></i><b>9.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="9.1.2" data-path="sankey.html"><a href="sankey.html#simple-example-21"><i class="fa fa-check"></i><b>9.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="9.1.3" data-path="sankey.html"><a href="sankey.html#advanced-example-21"><i class="fa fa-check"></i><b>9.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="9.1.4" data-path="sankey.html"><a href="sankey.html#parameter-explanation-15"><i class="fa fa-check"></i><b>9.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.5.1" data-path="dotplot.html"><a href="dotplot.html#data-input-17"><i class="fa fa-check"></i><b>8.5.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.5.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-16"><i class="fa fa-check"></i><b>8.5.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.5.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-16"><i class="fa fa-check"></i><b>8.5.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.5.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-10"><i class="fa fa-check"></i><b>8.5.4</b> Parameter explanation</a></li>
 </ul></li>
+<li class="chapter" data-level="8.6" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_smoothline"><i class="fa fa-check"></i><b>8.6</b> BetterVis_Dotplot_Smoothline</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="dotplot.html"><a href="dotplot.html#data-input-18"><i class="fa fa-check"></i><b>8.6.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.6.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-17"><i class="fa fa-check"></i><b>8.6.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.6.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-17"><i class="fa fa-check"></i><b>8.6.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.6.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-11"><i class="fa fa-check"></i><b>8.6.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="venn.html"><a href="venn.html"><i class="fa fa-check"></i><b>10</b> Venn and Upset Plots</a>
+<li class="chapter" data-level="8.7" data-path="dotplot.html"><a href="dotplot.html#bettervis_dotplot_ternary"><i class="fa fa-check"></i><b>8.7</b> BetterVis_Dotplot_Ternary</a>
 <ul>
-<li class="chapter" data-level="10.0.1" data-path="venn.html"><a href="venn.html#at-the-beginning-7"><i class="fa fa-check"></i><b>10.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="10.1" data-path="venn.html"><a href="venn.html#bettervis_venn_upsetr"><i class="fa fa-check"></i><b>10.1</b> BetterVis_Venn_UpsetR</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="venn.html"><a href="venn.html#data-input-23"><i class="fa fa-check"></i><b>10.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="10.1.2" data-path="venn.html"><a href="venn.html#simple-example-22"><i class="fa fa-check"></i><b>10.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="10.1.3" data-path="venn.html"><a href="venn.html#advanced-example-22"><i class="fa fa-check"></i><b>10.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="10.1.4" data-path="venn.html"><a href="venn.html#parameter-explanation-16"><i class="fa fa-check"></i><b>10.1.4</b> Parameter explanation</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="circos.html"><a href="circos.html"><i class="fa fa-check"></i><b>11</b> Circos</a>
-<ul>
-<li class="chapter" data-level="11.0.1" data-path="circos.html"><a href="circos.html#at-the-beginning-8"><i class="fa fa-check"></i><b>11.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="11.1" data-path="circos.html"><a href="circos.html#bettervis_circos_interaction"><i class="fa fa-check"></i><b>11.1</b> BetterVis_Circos_Interaction</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="circos.html"><a href="circos.html#data-input-24"><i class="fa fa-check"></i><b>11.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="11.1.2" data-path="circos.html"><a href="circos.html#usage-example-3"><i class="fa fa-check"></i><b>11.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="11.1.3" data-path="circos.html"><a href="circos.html#parameter-explanation-17"><i class="fa fa-check"></i><b>11.1.3</b> Parameter explanation</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="circos.html"><a href="circos.html#bettervis_circos_ringplot"><i class="fa fa-check"></i><b>11.2</b> BetterVis_Circos_Ringplot</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="circos.html"><a href="circos.html#data-input-25"><i class="fa fa-check"></i><b>11.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="11.2.2" data-path="circos.html"><a href="circos.html#usage-example-4"><i class="fa fa-check"></i><b>11.2.2</b> Usage Example</a></li>
-<li class="chapter" data-level="11.2.3" data-path="circos.html"><a href="circos.html#parameter-explanation-18"><i class="fa fa-check"></i><b>11.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="8.7.1" data-path="dotplot.html"><a href="dotplot.html#data-input-19"><i class="fa fa-check"></i><b>8.7.1</b> Data Input</a></li>
+<li class="chapter" data-level="8.7.2" data-path="dotplot.html"><a href="dotplot.html#simple-example-18"><i class="fa fa-check"></i><b>8.7.2</b> Simple Example</a></li>
+<li class="chapter" data-level="8.7.3" data-path="dotplot.html"><a href="dotplot.html#advanced-example-18"><i class="fa fa-check"></i><b>8.7.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="8.7.4" data-path="dotplot.html"><a href="dotplot.html#parameter-explanation-12"><i class="fa fa-check"></i><b>8.7.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="lineplot.html"><a href="lineplot.html"><i class="fa fa-check"></i><b>12</b> Line Plot</a>
+<li class="chapter" data-level="9" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>9</b> Ridgeline Plot</a>
 <ul>
-<li class="chapter" data-level="12.0.1" data-path="lineplot.html"><a href="lineplot.html#at-the-beginning-9"><i class="fa fa-check"></i><b>12.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="12.1" data-path="lineplot.html"><a href="lineplot.html#bettervis_lineplot_chart"><i class="fa fa-check"></i><b>12.1</b> BetterVis_LinePlot_Chart</a>
+<li class="chapter" data-level="9.1" data-path="ridgeline.html"><a href="ridgeline.html#at-the-beginning-5"><i class="fa fa-check"></i><b>9.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="9.2" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_single"><i class="fa fa-check"></i><b>9.2</b> BetterVis_Ridgeline_Single</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="lineplot.html"><a href="lineplot.html#data-input-26"><i class="fa fa-check"></i><b>12.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="12.1.2" data-path="lineplot.html"><a href="lineplot.html#simple-example-23"><i class="fa fa-check"></i><b>12.1.2</b> Simple Example</a></li>
-<li class="chapter" data-level="12.1.3" data-path="lineplot.html"><a href="lineplot.html#advanced-example-23"><i class="fa fa-check"></i><b>12.1.3</b> Advanced Example</a></li>
-<li class="chapter" data-level="12.1.4" data-path="lineplot.html"><a href="lineplot.html#parameter-explanation-19"><i class="fa fa-check"></i><b>12.1.4</b> Parameter explanation</a></li>
+<li class="chapter" data-level="9.2.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-20"><i class="fa fa-check"></i><b>9.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="9.2.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-19"><i class="fa fa-check"></i><b>9.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="9.2.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-19"><i class="fa fa-check"></i><b>9.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="9.2.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-13"><i class="fa fa-check"></i><b>9.2.4</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="ridgeline.html"><a href="ridgeline.html#bettervis_ridgeline_facet"><i class="fa fa-check"></i><b>9.3</b> BetterVis_Ridgeline_Facet</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="ridgeline.html"><a href="ridgeline.html#data-input-21"><i class="fa fa-check"></i><b>9.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="9.3.2" data-path="ridgeline.html"><a href="ridgeline.html#simple-example-20"><i class="fa fa-check"></i><b>9.3.2</b> Simple Example</a></li>
+<li class="chapter" data-level="9.3.3" data-path="ridgeline.html"><a href="ridgeline.html#advanced-example-20"><i class="fa fa-check"></i><b>9.3.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="9.3.4" data-path="ridgeline.html"><a href="ridgeline.html#parameter-explanation-14"><i class="fa fa-check"></i><b>9.3.4</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="pie.html"><a href="pie.html"><i class="fa fa-check"></i><b>13</b> Pie Plot</a>
+<li class="chapter" data-level="10" data-path="sankey.html"><a href="sankey.html"><i class="fa fa-check"></i><b>10</b> Sankey Plot</a>
 <ul>
-<li class="chapter" data-level="13.0.1" data-path="pie.html"><a href="pie.html#at-the-beginning-10"><i class="fa fa-check"></i><b>13.0.1</b> At the Beginning</a></li>
-<li class="chapter" data-level="13.1" data-path="pie.html"><a href="pie.html#bettervis_pie_single"><i class="fa fa-check"></i><b>13.1</b> BetterVis_Pie_Single</a>
+<li class="chapter" data-level="10.1" data-path="sankey.html"><a href="sankey.html#at-the-beginning-6"><i class="fa fa-check"></i><b>10.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="10.2" data-path="sankey.html"><a href="sankey.html#bettervis_sankey_single"><i class="fa fa-check"></i><b>10.2</b> BetterVis_Sankey_Single</a>
 <ul>
-<li class="chapter" data-level="13.1.1" data-path="pie.html"><a href="pie.html#data-input-27"><i class="fa fa-check"></i><b>13.1.1</b> Data Input</a></li>
-<li class="chapter" data-level="13.1.2" data-path="pie.html"><a href="pie.html#usage-example-5"><i class="fa fa-check"></i><b>13.1.2</b> Usage Example</a></li>
-<li class="chapter" data-level="13.1.3" data-path="pie.html"><a href="pie.html#parameter-explanation-20"><i class="fa fa-check"></i><b>13.1.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="10.2.1" data-path="sankey.html"><a href="sankey.html#data-input-22"><i class="fa fa-check"></i><b>10.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="10.2.2" data-path="sankey.html"><a href="sankey.html#simple-example-21"><i class="fa fa-check"></i><b>10.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="10.2.3" data-path="sankey.html"><a href="sankey.html#advanced-example-21"><i class="fa fa-check"></i><b>10.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="10.2.4" data-path="sankey.html"><a href="sankey.html#parameter-explanation-15"><i class="fa fa-check"></i><b>10.2.4</b> Parameter explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="pie.html"><a href="pie.html#bettervis_pie_multi"><i class="fa fa-check"></i><b>13.2</b> BetterVis_Pie_Multi</a>
+</ul></li>
+<li class="chapter" data-level="11" data-path="venn.html"><a href="venn.html"><i class="fa fa-check"></i><b>11</b> Venn and Upset Plots</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="pie.html"><a href="pie.html#data-input-28"><i class="fa fa-check"></i><b>13.2.1</b> Data Input</a></li>
-<li class="chapter" data-level="13.2.2" data-path="pie.html"><a href="pie.html#usage-example-6"><i class="fa fa-check"></i><b>13.2.2</b> Usage Example</a></li>
-<li class="chapter" data-level="13.2.3" data-path="pie.html"><a href="pie.html#parameter-explanation-21"><i class="fa fa-check"></i><b>13.2.3</b> Parameter explanation</a></li>
+<li class="chapter" data-level="11.1" data-path="venn.html"><a href="venn.html#at-the-beginning-7"><i class="fa fa-check"></i><b>11.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="11.2" data-path="venn.html"><a href="venn.html#bettervis_venn_upsetr"><i class="fa fa-check"></i><b>11.2</b> BetterVis_Venn_UpsetR</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="venn.html"><a href="venn.html#data-input-23"><i class="fa fa-check"></i><b>11.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="11.2.2" data-path="venn.html"><a href="venn.html#simple-example-22"><i class="fa fa-check"></i><b>11.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="11.2.3" data-path="venn.html"><a href="venn.html#advanced-example-22"><i class="fa fa-check"></i><b>11.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="11.2.4" data-path="venn.html"><a href="venn.html#parameter-explanation-16"><i class="fa fa-check"></i><b>11.2.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="circos.html"><a href="circos.html"><i class="fa fa-check"></i><b>12</b> Circos</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="circos.html"><a href="circos.html#at-the-beginning-8"><i class="fa fa-check"></i><b>12.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="12.2" data-path="circos.html"><a href="circos.html#bettervis_circos_interaction"><i class="fa fa-check"></i><b>12.2</b> BetterVis_Circos_Interaction</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="circos.html"><a href="circos.html#data-input-24"><i class="fa fa-check"></i><b>12.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="12.2.2" data-path="circos.html"><a href="circos.html#usage-example-3"><i class="fa fa-check"></i><b>12.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="12.2.3" data-path="circos.html"><a href="circos.html#parameter-explanation-17"><i class="fa fa-check"></i><b>12.2.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="circos.html"><a href="circos.html#bettervis_circos_ringplot"><i class="fa fa-check"></i><b>12.3</b> BetterVis_Circos_Ringplot</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="circos.html"><a href="circos.html#data-input-25"><i class="fa fa-check"></i><b>12.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="12.3.2" data-path="circos.html"><a href="circos.html#usage-example-4"><i class="fa fa-check"></i><b>12.3.2</b> Usage Example</a></li>
+<li class="chapter" data-level="12.3.3" data-path="circos.html"><a href="circos.html#parameter-explanation-18"><i class="fa fa-check"></i><b>12.3.3</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="lineplot.html"><a href="lineplot.html"><i class="fa fa-check"></i><b>13</b> Line Plot</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="lineplot.html"><a href="lineplot.html#at-the-beginning-9"><i class="fa fa-check"></i><b>13.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="13.2" data-path="lineplot.html"><a href="lineplot.html#bettervis_lineplot_chart"><i class="fa fa-check"></i><b>13.2</b> BetterVis_LinePlot_Chart</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="lineplot.html"><a href="lineplot.html#data-input-26"><i class="fa fa-check"></i><b>13.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="13.2.2" data-path="lineplot.html"><a href="lineplot.html#simple-example-23"><i class="fa fa-check"></i><b>13.2.2</b> Simple Example</a></li>
+<li class="chapter" data-level="13.2.3" data-path="lineplot.html"><a href="lineplot.html#advanced-example-23"><i class="fa fa-check"></i><b>13.2.3</b> Advanced Example</a></li>
+<li class="chapter" data-level="13.2.4" data-path="lineplot.html"><a href="lineplot.html#parameter-explanation-19"><i class="fa fa-check"></i><b>13.2.4</b> Parameter explanation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="pie.html"><a href="pie.html"><i class="fa fa-check"></i><b>14</b> Pie Plot</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="pie.html"><a href="pie.html#at-the-beginning-10"><i class="fa fa-check"></i><b>14.1</b> At the Beginning</a></li>
+<li class="chapter" data-level="14.2" data-path="pie.html"><a href="pie.html#bettervis_pie_single"><i class="fa fa-check"></i><b>14.2</b> BetterVis_Pie_Single</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="pie.html"><a href="pie.html#data-input-27"><i class="fa fa-check"></i><b>14.2.1</b> Data Input</a></li>
+<li class="chapter" data-level="14.2.2" data-path="pie.html"><a href="pie.html#usage-example-5"><i class="fa fa-check"></i><b>14.2.2</b> Usage Example</a></li>
+<li class="chapter" data-level="14.2.3" data-path="pie.html"><a href="pie.html#parameter-explanation-20"><i class="fa fa-check"></i><b>14.2.3</b> Parameter explanation</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="pie.html"><a href="pie.html#bettervis_pie_multi"><i class="fa fa-check"></i><b>14.3</b> BetterVis_Pie_Multi</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="pie.html"><a href="pie.html#data-input-28"><i class="fa fa-check"></i><b>14.3.1</b> Data Input</a></li>
+<li class="chapter" data-level="14.3.2" data-path="pie.html"><a href="pie.html#usage-example-6"><i class="fa fa-check"></i><b>14.3.2</b> Usage Example</a></li>
+<li class="chapter" data-level="14.3.3" data-path="pie.html"><a href="pie.html#parameter-explanation-21"><i class="fa fa-check"></i><b>14.3.3</b> Parameter explanation</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -421,63 +425,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">An Introduction to BetterVis</h1>
-<p class="author"><em>Your Name</em></p>
+<p class="author"><em>Youtao Zhou, Zikai Lin</em></p>
 <p class="date"><em>2025-08-01</em></p>
 </div>
-<div id="an-introduction-to-bettervis" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> An Introduction to BetterVis<a href="index.html#an-introduction-to-bettervis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="images/logo.png" /></p>
-<p><strong>BetterVis</strong> is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. Before using BetterVis, you should be aware of the following information.</p>
-<div id="prerequisites" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>You are a current or former R user,</strong> comfortable working in an editor like RStudio or VS Code.</p>
-<p><strong>You have used <code>ggplot2</code> to create plots before.</strong> Even if you aren’t an expert, you understand its basic syntax and grammar.</p>
-</div>
-<div id="how-to-use-this-guide" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> How to Use This Guide<a href="index.html#how-to-use-this-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This guide covers the functions and their corresponding examples, showcasing the results of advanced visualizations on the sample data included in the <strong>BetterVis</strong> package.</p>
-<p>Each chapter represents a fundamental plot type, such as boxplots, bar charts, etc., and provides a detailed explanation of its functions and the meaning of their parameters.</p>
-<p>If you are looking for a specific type of graphic, you don’t need to read the entire guide. Using your browser’s search function (<strong>Ctrl+F</strong>) is a great way to quickly locate the section you need.</p>
-</div>
-<div id="the-core-philosophy-of-bettervis" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> The Core Philosophy of BetterVis<a href="index.html#the-core-philosophy-of-bettervis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Our authors have encapsulated the complex process of creating beautiful graphics into functions, exposing the necessary parameters for users to make adjustments. You can use a simplified function call for quick plotting, or alternatively, use more detailed parameters for fine-tuned control. In either case, it retains the advantage of producing advanced visualizations in a short amount of time. The brief example below will help you understand this better.</p>
-<div id="simple-example" class="section level3 hasAnchor" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Simple Example<a href="index.html#simple-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="co"># 模拟数据以运行示例</span></span>
-<span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a><span class="co"># Mock data to run the example</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>phenotype_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a>  <span class="at">stage =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;I&quot;</span>, <span class="st">&quot;II&quot;</span>, <span class="st">&quot;III&quot;</span>, <span class="st">&quot;IV&quot;</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">10</span>),</span>
-<span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a>  <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>  <span class="at">CA125 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">30</span>, <span class="dv">10</span>),</span>
-<span id="cb1-8"><a href="index.html#cb1-8" tabindex="-1"></a>  <span class="at">CEA =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">5</span>, <span class="dv">2</span>),</span>
-<span id="cb1-9"><a href="index.html#cb1-9" tabindex="-1"></a>  <span class="at">CA15.3 =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">25</span>, <span class="dv">8</span>)</span>
-<span id="cb1-10"><a href="index.html#cb1-10" tabindex="-1"></a>)</span>
-<span id="cb1-11"><a href="index.html#cb1-11" tabindex="-1"></a>expression_data <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="dv">50</span>), <span class="at">nrow =</span> <span class="dv">50</span>, <span class="at">ncol =</span> <span class="dv">100</span>))</span>
-<span id="cb1-12"><a href="index.html#cb1-12" tabindex="-1"></a><span class="fu">colnames</span>(expression_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
-<span id="cb1-13"><a href="index.html#cb1-13" tabindex="-1"></a><span class="fu">rownames</span>(expression_data) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>)</span>
-<span id="cb1-14"><a href="index.html#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="index.html#cb1-15" tabindex="-1"></a><span class="co"># 这是一个假设的函数调用，因为 BetterVis_Heatmap_Mantel 并不在您提供的文件中</span></span>
-<span id="cb1-16"><a href="index.html#cb1-16" tabindex="-1"></a><span class="co"># This is a hypothetical function call as BetterVis_Heatmap_Mantel was not in the provided files</span></span>
-<span id="cb1-17"><a href="index.html#cb1-17" tabindex="-1"></a><span class="co"># BetterVis_Heatmap_Mantel(phenotype_data, expression_data, spec_select=c(&quot;stage&quot;, &quot;age&quot;, &quot;gender&quot;, &quot;CA125&quot;, &quot;CEA&quot;, &quot;CA15.3&quot;))</span></span></code></pre></div>
-<p><img src="images/simple_example.png" /></p>
-</div>
-<div id="advanced-example" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Advanced Example<a href="index.html#advanced-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a><span class="co"># 这是一个假设的函数调用</span></span>
-<span id="cb2-2"><a href="index.html#cb2-2" tabindex="-1"></a><span class="co"># This is a hypothetical function call</span></span>
-<span id="cb2-3"><a href="index.html#cb2-3" tabindex="-1"></a><span class="co"># BetterVis_Heatmap_Mantel(phenotype_data, expression_data, spec_select=c(&quot;stage&quot;, &quot;age&quot;, &quot;gender&quot;, &quot;CA125&quot;, &quot;CEA&quot;, &quot;CA15.3&quot;),</span></span>
-<span id="cb2-4"><a href="index.html#cb2-4" tabindex="-1"></a><span class="co">#                          significant_symbol = TRUE,</span></span>
-<span id="cb2-5"><a href="index.html#cb2-5" tabindex="-1"></a><span class="co">#                          heatmap_color = brewer.pal(11, &quot;PuOr&quot;),</span></span>
-<span id="cb2-6"><a href="index.html#cb2-6" tabindex="-1"></a><span class="co">#                          line_size = c(0.5, 1, 2),</span></span>
-<span id="cb2-7"><a href="index.html#cb2-7" tabindex="-1"></a><span class="co">#                          line_color =  BetterVis_Color(type=&quot;discrete&quot;, odd_or_even=&quot;odd&quot;, n=3, style=&quot;Science&quot;),</span></span>
-<span id="cb2-8"><a href="index.html#cb2-8" tabindex="-1"></a><span class="co">#                          phenotype_text_size = 5) +</span></span>
-<span id="cb2-9"><a href="index.html#cb2-9" tabindex="-1"></a><span class="co"># theme(legend.text = element_text(size=14), legend.title = element_text(size=16))</span></span></code></pre></div>
-<p><img src="images/advanced_example.png" /></p>
-<p>You can specify various parameters for fine-tuning. However, if you don’t provide them, the function uses default values that have been carefully chosen through extensive testing to be suitable for most common scenarios.</p>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> BetterVis Visualization Tutorial and Parameter Explanation<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>## Welcome to BetterVis</p>
+<p><img src="https://img.shields.io/badge/GitBook-%23000000.svg?style=for-the-badge&amp;logo=gitbook&amp;logoColor=white" alt="GitBook" /> <a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown" /></a> <img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&amp;logo=r&amp;logoColor=white" alt="R" /></p>
+<div id="install-of-bettervis" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Install of BetterVis<a href="index.html#install-of-bettervis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before installing BetterVis, please check that your R version meets the requirements.</p>
+<p><strong>We require R version 4.4 or higher and ggplot2 package version 3.5.0 or higher.</strong></p>
+<p>BetterVis has not been uploaded to CRAN yet. If users need to download BetterVis, they should install it via Github. Before this, installing <code>devtools</code> is mandatory.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="co"># install.packages(&#39;devtools&#39;)</span></span>
+<span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;youtao-zhou/BetterVis&quot;)</span></span></code></pre></div>
+<p>Some required packages, including <code>jjPlot</code>, <code>linkET</code>, <code>ComplexHeatmap</code>, <code>ggsankey</code>, and <code>vegan</code>, may not be installed automatically and could have dependency issues. Please use the following commands to install them:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;junjunlab/jjPlot&quot;)</span></span>
+<span id="cb2-2"><a href="index.html#cb2-2" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;Hy4m/linkET&quot;, force = TRUE)</span></span>
+<span id="cb2-3"><a href="index.html#cb2-3" tabindex="-1"></a><span class="co"># if (!require(&quot;BiocManager&quot;, quietly = TRUE))</span></span>
+<span id="cb2-4"><a href="index.html#cb2-4" tabindex="-1"></a><span class="co">#     install.packages(&quot;BiocManager&quot;)</span></span>
+<span id="cb2-5"><a href="index.html#cb2-5" tabindex="-1"></a><span class="co"># BiocManager::install(&quot;ComplexHeatmap&quot;)</span></span>
+<span id="cb2-6"><a href="index.html#cb2-6" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;davidsjoberg/ggsankey&quot;)</span></span>
+<span id="cb2-7"><a href="index.html#cb2-7" tabindex="-1"></a><span class="co"># install.packages(&quot;vegan&quot;)</span></span></code></pre></div>
 
-</div>
 </div>
 </div>
             </section>
@@ -486,7 +456,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="colors.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="an-introduction-to-bettervis.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

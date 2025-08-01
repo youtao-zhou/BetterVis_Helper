@@ -1,6 +1,6 @@
 # Network Plot {#network}
 
-### At the Beginning
+## At the Beginning
 
 BetterVis package must be loaded beforehand.
 

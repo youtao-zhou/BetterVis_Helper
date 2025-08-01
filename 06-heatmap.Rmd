@@ -1,6 +1,6 @@
 # Heatmap {#heatmap}
 
-### At the Beginning
+## At the Beginning
 
 To use these features, the BetterVis functions must be loaded beforehand.
 
