@@ -11,15 +11,13 @@ Youtao Zhou, Zikai Lin, Hengrui Liang
 ![GitBook](https://img.shields.io/badge/GitBook-%23000000.svg?style=for-the-badge&logo=gitbook&logoColor=white)[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
 
 
-    <hr>
+ 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Logo2.png" width="300"/>
+</p>
 
-.. image::  https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Logo2.png
-    :align: center
-    :scale: 50%
 
-.. raw:: html
 
-    <hr>
     
 ![Github Page](https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Log.png)
 
