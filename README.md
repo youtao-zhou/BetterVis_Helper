@@ -1,18 +1,11 @@
-# BetterVis Visualization Tutorial and Parameter Explanation
-
-Youtao Zhou, Zikai Lin, Hengrui Liang
-
-
-
-![GitBook](https://img.shields.io/badge/GitBook-%23000000.svg?style=for-the-badge&logo=gitbook&logoColor=white)![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-
-
- 
 <p align="center">
   <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page__Logo1.png" width="800" height="200"/>
 </p>
 
+![GitBook](https://img.shields.io/badge/GitBook-%23000000.svg?style=for-the-badge&logo=gitbook&logoColor=white)![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
+
+ Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
 
 
 ## Install of BetterVis
