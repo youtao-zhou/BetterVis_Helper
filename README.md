@@ -32,6 +32,9 @@ Visit our full online documentation at [BetterVis_Helper Docs](https://youtao-zh
 | ⚙️ Fine-tune every plot element with extensive customization options
 | 💾 Export publication-quality figures with ease
 
+|
+
+
 <br>
 
 ## Install of BetterVis
