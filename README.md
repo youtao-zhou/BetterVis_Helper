@@ -12,10 +12,10 @@ BetterVis is designed to create beautiful graphics with elegant and concise code
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo1.png" width="100%"/>
+      <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo2.png" width="100%"/>
     </td>
     <td align="center" width="50%">
-      <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo1.png" width="100%"/>
+      <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo3.png" width="100%"/>
     </td>
   </tr>
 </table>
