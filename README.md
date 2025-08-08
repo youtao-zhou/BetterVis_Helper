@@ -8,7 +8,7 @@
  #### Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo2.png" width="800" height="200"/>
+  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo2.png" width="400" height="200"/>
 </p>
  
 
