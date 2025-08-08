@@ -13,7 +13,7 @@ Youtao Zhou, Zikai Lin, Hengrui Liang
 
  
 <p align="center">
-  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Logo7.png" width="800" height="200"/>
+  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Logo7.png" width="600" height="200"/>
 </p>
 
 
