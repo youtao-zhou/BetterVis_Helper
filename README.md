@@ -6,6 +6,7 @@
 
 
  #### Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
+ <br>
 
 BetterVis is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. 
 
