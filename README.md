@@ -7,6 +7,11 @@
 
  #### Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page__Logo2.png" width="800" height="200"/>
+</p>
+ 
+
 BetterVis is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. 
 
 
