@@ -21,6 +21,7 @@ BetterVis is designed to create beautiful graphics with elegant and concise code
 </table>
 
 
+
 ## Install of BetterVis
 
 Before installing BetterVis, please check that your R version meets the requirements.
