@@ -20,7 +20,7 @@ BetterVis is designed to create beautiful graphics with elegant and concise code
   </tr>
 </table>
 
-<hr>
+<br><br>  
 
 ## Install of BetterVis
 
