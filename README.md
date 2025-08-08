@@ -4,6 +4,11 @@
 
 ![GitBook](https://img.shields.io/badge/GitBook-%23000000.svg?style=for-the-badge&logo=gitbook&logoColor=white)![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
+.. image::  https://img.shields.io/badge/great%20tools-good%20vibes%20%F0%9F%A4%99-brightgreen
+    :target: https://www.youtube.com/watch?v=kIV1a8tE_2w&ab_channel=Hypnotized
+
+.. image:: https://img.shields.io/github/stars/MICA-MNI/ENIGMA.svg?style=flat&label=%E2%AD%90%EF%B8%8F%20give%20us%20some%20love&color=brightgreen
+    :target: https://github.com/MICA-MNI/ENIGMA/stargazers
 
  #### Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
 
