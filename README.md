@@ -21,6 +21,19 @@ BetterVis is designed to create beautiful graphics with elegant and concise code
 
 <br>
 
+Advantage 🚀
+---------------------------------------------
+Visit our full online documentation at [BetterVis_Helper Docs](https://youtao-zhou.github.io/BetterVis_Helper/) for detailed instructions on how to:
+
+| 🔌 Install BetterVis in R with a single command
+| 🎓 Get started quickly with concise code and easy-to-understand tutorials
+| 📊 Create a wide array of advanced plots for comprehensive data exploration
+| 📄 Generate figures suitable for most clinical research papers
+| ⚙️ Fine-tune every plot element with extensive customization options
+| 💾 Export publication-quality figures with ease
+
+<br>
+
 ## Install of BetterVis
 
 Before installing BetterVis, please check that your R version meets the requirements.
