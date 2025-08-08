@@ -7,6 +7,8 @@
 
  #### Authors: Youtao Zhou, Zikai Lin, Hengrui Liang
 
+BetterVis is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. 
+
 <table>
   <tr>
     <td align="center" width="50%">
@@ -17,10 +19,6 @@
     </td>
   </tr>
 </table>
-
- 
-
-BetterVis is designed to create beautiful graphics with elegant and concise code. It is especially suitable for medical researchers, helping to reduce the inefficient time they spend on plot beautification and to achieve publication-ready graphics for mainstream journals in the shortest possible time. 
 
 
 ## Install of BetterVis
