@@ -1,0 +1,955 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chapter 4: Barplots · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="topbar.css" />
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Chapter5 Network Plot.html" />
+    
+    
+    <link rel="prev" href="Chapter3 Boxplot.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Install BetterVis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Chapter1 Some introductions to BetterVis.html">
+            
+                <a href="Chapter1 Some introductions to BetterVis.html">
+            
+                    
+                    Chapter 1: An Introduction to BetterVis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Chapter2 Color Choice.html">
+            
+                <a href="Chapter2 Color Choice.html">
+            
+                    
+                    Chapter 2: Color Choice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Chapter3 Boxplot.html">
+            
+                <a href="Chapter3 Boxplot.html">
+            
+                    
+                    Chapter 3: Boxplots
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Chapter4 Barplot.html">
+            
+                <a href="Chapter4 Barplot.html">
+            
+                    
+                    Chapter 4: Barplots
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Chapter5 Network Plot.html">
+            
+                <a href="Chapter5 Network Plot.html">
+            
+                    
+                    Chapter 5: Network Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Chapter6 Heatmap.html">
+            
+                <a href="Chapter6 Heatmap.html">
+            
+                    
+                    Chapter 6: Heatmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Chapter7 Dotplot.html">
+            
+                <a href="Chapter7 Dotplot.html">
+            
+                    
+                    Chapter 7: Dotplot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Chapter8 Ridgeline.html">
+            
+                <a href="Chapter8 Ridgeline.html">
+            
+                    
+                    Chapter 8: Ridgeline Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Chapter9 Sankey Plot.html">
+            
+                <a href="Chapter9 Sankey Plot.html">
+            
+                    
+                    Chapter 9: Sankey Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Chapter10 Venn Plot.html">
+            
+                <a href="Chapter10 Venn Plot.html">
+            
+                    
+                    Chapter 10: Venn Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Chapter11 Circos.html">
+            
+                <a href="Chapter11 Circos.html">
+            
+                    
+                    Chapter 11: Circos Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Chapter12 LinePlot.html">
+            
+                <a href="Chapter12 LinePlot.html">
+            
+                    
+                    Chapter 12: Line Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Chapter13 Pie Plot.html">
+            
+                <a href="Chapter13 Pie Plot.html">
+            
+                    
+                    Chapter 13: Pie Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+<div class="top-bar">
+  <img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Book_Logo.png" class="logo" alt="BetterVis Logo">
+</div>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><br></p>
+<h1 id="chapter-4-barplot">Chapter 4 Barplot</h1>
+<h3 id="at-the-beginning">At the Beginning</h3>
+<p>BetterVis package must be loaded beforehand.</p>
+<pre><code class="lang-R"><span class="hljs-keyword">library</span>(BetterVis)
+<span class="hljs-keyword">library</span>(grid)
+</code></pre>
+<h4 id="31-bettervisbarplotaccumulative">3.1 BetterVis_Barplot_Accumulative</h4>
+<p>The BetterVis_Barplot_Accumulative function allows you to display two stacked bar plots simultaneously, though you also have the option to show each one individually</p>
+<h5 id="311-data-input">3.1.1 Data Input</h5>
+<pre><code class="lang-R">data(<span class="hljs-string">&quot;BetterVis_Barplot_Accumulative_example&quot;</span>, package = <span class="hljs-string">&quot;BetterVis&quot;</span>)
+barplot_color = c(<span class="hljs-string">&quot;#ABDDDE&quot;</span>, <span class="hljs-string">&quot;#FAD510&quot;</span>, <span class="hljs-string">&quot;#C6CDF7&quot;</span>, <span class="hljs-string">&quot;#F4B5BD&quot;</span>, <span class="hljs-string">&quot;#FAEED1&quot;</span>,<span class="hljs-string">&quot;#0A9F9D&quot;</span>,  <span class="hljs-string">&quot;#005295&quot;</span>, <span class="hljs-string">&quot;#E6A0C4&quot;</span>,<span class="hljs-string">&quot;#C52E19&quot;</span>,<span class="hljs-string">&quot;orange&quot;</span>)
+</code></pre>
+<h5 id="312-simple-example">3.1.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Accumulative(
+data = BetterVis_Barplot_Accumulative_example, x_var = <span class="hljs-string">&quot;celltype&quot;</span>, y1_var = <span class="hljs-string">&quot;cell_num&quot;</span>, y2_var = <span class="hljs-string">&quot;percent&quot;</span>, fill_var = <span class="hljs-string">&quot;Patient&quot;</span>, 
+display = <span class="hljs-number">3</span>, barplot_color = barplot_color,
+ylim1 = c(<span class="hljs-number">0</span>, <span class="hljs-number">15000</span>), ylim2 = c(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>), 
+coord_flip = <span class="hljs-literal">T</span>
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Accumulative_Simple.png" alt="BetterVis_Barplot_Accumulative_Simple"></p>
+<h5 id="313-advanced-example">3.1.3 Advanced Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Accumulative(
+data = BetterVis_Barplot_Accumulative_example, x_var = <span class="hljs-string">&quot;celltype&quot;</span>, y1_var = <span class="hljs-string">&quot;cell_num&quot;</span>, y2_var = <span class="hljs-string">&quot;percent&quot;</span>, fill_var = <span class="hljs-string">&quot;Patient&quot;</span>, 
+display = <span class="hljs-number">3</span>, barplot_color = barplot_color,
+ylim1 = c(<span class="hljs-number">0</span>, <span class="hljs-number">15000</span>), ylim2 = c(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>), 
+axis_titles_x = <span class="hljs-string">&quot;Cell Types&quot;</span>, x_label_angle = <span class="hljs-number">0</span>, x_label_bold = <span class="hljs-literal">TRUE</span>, axis_title_x_size = <span class="hljs-number">14</span>, 
+axis_titles_y1 = <span class="hljs-string">&quot;Cell Count&quot;</span>, axis_titles_y2 = <span class="hljs-string">&quot;Sample Ratio&quot;</span>,
+y1_label_bold = <span class="hljs-literal">T</span>,y2_label_bold =  <span class="hljs-literal">TRUE</span>, axis_title_y1_size = <span class="hljs-number">14</span>,axis_title_y2_size = <span class="hljs-number">14</span>,
+title1 = <span class="hljs-string">&quot;Cell Number Distribution&quot;</span>, title2 = <span class="hljs-string">&quot;Sample Ratio Distribution&quot;</span>, 
+title_size = <span class="hljs-number">10</span>,title_bold = <span class="hljs-literal">T</span>, 
+legend_show = <span class="hljs-literal">T</span>, legend_title = <span class="hljs-string">&quot;Legend&quot;</span>, legend_size = <span class="hljs-number">14</span>, legend_position = <span class="hljs-string">&quot;bottom&quot;</span>, legend_row = <span class="hljs-literal">NULL</span>,legend_col=<span class="hljs-literal">NULL</span>,
+background_color = <span class="hljs-string">&quot;white&quot;</span>, 
+coord_flip = <span class="hljs-literal">T</span>, 
+grid_ncol = <span class="hljs-number">2</span>,grid_layout  = rbind(c(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), 
+                                     c(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)),
+p1_theme = <span class="hljs-literal">NULL</span>,p2_theme = <span class="hljs-literal">NULL</span>,p1_guide = <span class="hljs-literal">NULL</span>,p2_guide = <span class="hljs-literal">NULL</span>
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Accumulative_Advanced.png" alt="BetterVis_Barplot_Accumulative_Advanced"></p>
+<h5 id="314-we-have-modified-the-iris-dataset-to-create-these-boxplots">3.1.4 We have modified the iris dataset to create these boxplots</h5>
+<pre><code class="lang-R">iris$Group &lt;- rep(paste0(<span class="hljs-string">&quot;Group&quot;</span>, <span class="hljs-number">1</span>:<span class="hljs-number">10</span>), times = <span class="hljs-number">15</span>)
+iris$Group &lt;-as.factor(iris$Group)
+iris$Group2 &lt;- rep(rep(paste0(<span class="hljs-string">&quot;Color&quot;</span>, <span class="hljs-number">1</span>:<span class="hljs-number">5</span>), each = <span class="hljs-number">10</span>),<span class="hljs-number">3</span>)
+iris$Group2 &lt;- sample(iris$Group2)
+iris$Group2 &lt;-as.factor(iris$Group2)
+iris&lt;-iris%&gt;%dplyr::select(Petal.Width,Group2,Group)
+iris&lt;-distinct(iris,Group,Group2,.keep_all = <span class="hljs-literal">T</span>)
+iris = plyr::ddply(iris,<span class="hljs-string">&apos;Group&apos;</span>,transform,percent=Petal.Width/sum(Petal.Width))
+
+BetterVis_Barplot_Accumulative(
+data = iris, x_var = <span class="hljs-string">&quot;Group&quot;</span>, y1_var = <span class="hljs-string">&quot;Petal.Width&quot;</span>, y2_var = <span class="hljs-string">&quot;percent&quot;</span>, fill_var = <span class="hljs-string">&quot;Group2&quot;</span>, 
+display = <span class="hljs-number">3</span>, barplot_color = barplot_color,
+ylim1 = c(<span class="hljs-number">0</span>, <span class="hljs-number">4.5</span>), ylim2 = c(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>), 
+axis_titles_x = <span class="hljs-string">&quot;Cell Types&quot;</span>, x_label_angle = <span class="hljs-number">0</span>, x_label_bold = <span class="hljs-literal">TRUE</span>, axis_title_x_size = <span class="hljs-number">14</span>, 
+axis_titles_y1 = <span class="hljs-string">&quot;Cell Count&quot;</span>, axis_titles_y2 = <span class="hljs-string">&quot;Sample Ratio&quot;</span>,
+y1_label_bold = <span class="hljs-literal">T</span>,y2_label_bold =  <span class="hljs-literal">TRUE</span>, axis_title_y1_size = <span class="hljs-number">14</span>,axis_title_y2_size = <span class="hljs-number">14</span>,
+title1 = <span class="hljs-string">&quot;Cell Number Distribution&quot;</span>, title2 = <span class="hljs-string">&quot;Distribution&quot;</span>, 
+title_size = <span class="hljs-number">16</span>,title_bold = <span class="hljs-literal">T</span>, 
+title1_size = <span class="hljs-number">16</span>, title1_bold = <span class="hljs-literal">TRUE</span>, title2_size = <span class="hljs-number">16</span>, title2_bold = <span class="hljs-literal">T</span>, 
+legend_show = <span class="hljs-literal">T</span>, legend_title = <span class="hljs-string">&quot;Legend&quot;</span>, legend_size = <span class="hljs-number">14</span>, legend_position = <span class="hljs-string">&quot;bottom&quot;</span>, 
+background_color = <span class="hljs-string">&quot;white&quot;</span>, 
+coord_flip = <span class="hljs-literal">T</span>, 
+grid_ncol = <span class="hljs-number">2</span>,grid_layout  = rbind(c(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), 
+                                     c(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)),
+p1_theme = <span class="hljs-literal">NULL</span>,p2_theme = <span class="hljs-literal">NULL</span>,p1_guide = <span class="hljs-literal">NULL</span>,p2_guide = <span class="hljs-literal">NULL</span>
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Accumulative_iris.png" alt="BetterVis_Barplot_Accumulative_iris"></p>
+<h5 id="315-parameter-explanation">3.1.5 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y1_var</code></strong>: The numerical variable for the y-axis of the first plot.</p>
+<p><strong><code>y2_var</code></strong>: The numerical variable for the y-axis of the second plot.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>display</code></strong>: A numeric value indicating which plot(s) to display: <code>1</code> for the first plot, <code>2</code> for the second plot, or <code>3</code> to display both.</p>
+<p><strong><code>barplot_color</code></strong>: A vector of colors for the bar plot fills. The length should match the number of levels in the <code>fill_var</code> factor (e.g., <code>c(&quot;#FC5D5C&quot;, &quot;#4B6A9D&quot;, &quot;#167D7D&quot;)</code>).</p>
+<p><strong><code>ylim1</code></strong>: Sets the y-axis limits for the first plot (e.g., <code>c(0, 100)</code>).</p>
+<p><strong><code>ylim2</code></strong>: Sets the y-axis limits for the second plot (e.g., <code>c(0, 100)</code>).</p>
+<p><strong><code>axis_titles_x</code></strong>: The title for the x-axis (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>x_label_angle</code></strong>: A numeric value for the angle of the x-axis text labels.</p>
+<p><strong><code>x_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the x-axis text labels bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>axis_title_x_size</code></strong>: A numeric value for the font size of the x-axis title.</p>
+<p><strong><code>axis_titles_y1</code></strong>: The title for the y-axis of the first plot (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>axis_titles_y2</code></strong>: The title for the y-axis of the second plot (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>y1_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the y-axis text labels of the first plot bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>y2_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the y-axis text labels of the second plot bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>axis_title_y1_size</code></strong>: A numeric value for the font size of the y-axis title of the first plot.</p>
+<p><strong><code>axis_title_y2_size</code></strong>: A numeric value for the font size of the y-axis title of the second plot.</p>
+<p><strong><code>title1</code></strong>: The main title for the first plot.</p>
+<p><strong><code>title2</code></strong>: The main title for the second plot.</p>
+<p><strong><code>title_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the main plot titles bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>title_size</code></strong>: A numeric value for the font size of the main plot titles.</p>
+<p><strong><code>title1_size</code></strong>: A numeric value for the font size of the first plot&apos;s title.</p>
+<p><strong><code>title2_size</code></strong>: A numeric value for the font size of the second plot&apos;s title.</p>
+<p><strong><code>title1_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the first plot&apos;s title bold.</p>
+<p><strong><code>title2_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the second plot&apos;s title bold.</p>
+<p><strong><code>legend_show</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend. Default: <code>TRUE</code>.</p>
+<p><strong><code>legend_title</code></strong>: The title of the legend.</p>
+<p><strong><code>legend_size</code></strong>: A numeric value for the font size of the legend text.</p>
+<p><strong><code>legend_position</code></strong>: The position of the legend (e.g., <code>&quot;bottom&quot;</code>, <code>&quot;right&quot;</code>, <code>&quot;none&quot;</code>). Default: <code>&quot;bottom&quot;</code>.</p>
+<p><strong><code>legend_row</code></strong>: The number of rows for the legend items.</p>
+<p><strong><code>legend_col</code></strong>: The number of columns for the legend items.</p>
+<p><strong><code>background_color</code></strong>: The background color of the plot panel. Default: <code>&quot;white&quot;</code>.</p>
+<p><strong><code>coord_flip</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to flip the coordinates (to create horizontal bars). Default: <code>TRUE</code>.</p>
+<p><strong><code>grid_ncol</code></strong>: The number of columns when arranging the combined plots. Default: <code>2</code>.</p>
+<p><strong><code>grid_layout</code></strong>: Parameters for arranging the combined plots, likely passed to a layout function like <code>patchwork::plot_layout()</code>.</p>
+<p><strong><code>p1_theme</code></strong>: A <code>theme()</code> object to apply additional customizations to the first plot (<code>p1</code>).</p>
+<p><strong><code>p2_theme</code></strong>: A <code>theme()</code> object to apply additional customizations to the second plot (<code>p2</code>).</p>
+<p><strong><code>p1_guide</code></strong>: A <code>guides()</code> object to apply additional legend customizations to the first plot (<code>p1</code>).</p>
+<p><strong><code>p2_guide</code></strong>: A <code>guides()</code> object to apply additional legend customizations to the second plot (<code>p2</code>).</p>
+<h5 id="316-important-note">3.1.6 Important Note</h5>
+<p>Properly setting <code>ylim1</code> and <code>ylim2</code> is crucial to ensure that the entire plot, including all of its elements, is fully visible.</p>
+<p>Keep in mind that when <code>coord_flip</code> is changed, the roles of the x and y axes are swapped. This means any theme customizations for <code>axis.x</code> will apply to the vertical axis, and settings for <code>axis.y</code> will apply to the horizontal axis.</p>
+<h4 id="32--bettervisbarplotbidirectional">3.2  BetterVis_Barplot_Bidirectional</h4>
+<p>Sometimes, a back-to-back bar chart is needed to display contrasting information, such as when comparing a treatment group against a control group.</p>
+<h5 id="321-data-input">3.2.1 Data Input</h5>
+<pre><code class="lang-R">data(<span class="hljs-string">&quot;BetterVis_Barplot_Bidirectional_example&quot;</span>, package = <span class="hljs-string">&quot;BetterVis&quot;</span>)
+</code></pre>
+<h5 id="322-simple-example">3.2.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Bidirectional(
+data = BetterVis_Barplot_Bidirectional_example,x_var = <span class="hljs-string">&quot;Percentage&quot;</span>, y_var = <span class="hljs-string">&quot;pathway&quot;</span>, fill_var = <span class="hljs-string">&quot;Species&quot;</span>, 
+barplot_color = c(<span class="hljs-string">&quot;#ABDDDE&quot;</span>, <span class="hljs-string">&quot;#FAD510&quot;</span>, <span class="hljs-string">&quot;#C6CDF7&quot;</span>, <span class="hljs-string">&quot;#F4B5BD&quot;</span>, <span class="hljs-string">&quot;#0A9F9D&quot;</span>, <span class="hljs-string">&quot;#FAEED1&quot;</span>, <span class="hljs-string">&quot;#005295&quot;</span>, <span class="hljs-string">&quot;#E6A0C4&quot;</span>, <span class="hljs-string">&quot;#C52E19&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>),
+title = <span class="hljs-string">&quot;Species Contribution to Pathways&quot;</span>,legend_title = <span class="hljs-string">&quot;Species Contribution&quot;</span>,
+ylim = c(<span class="hljs-number">1</span>, <span class="hljs-number">8</span>),
+arrow = <span class="hljs-literal">F</span>,plot_margin = unit(c(<span class="hljs-number">1</span>,<span class="hljs-number">0.3</span>,<span class="hljs-number">0.3</span>,<span class="hljs-number">0.3</span>),unit=<span class="hljs-string">&quot;cm&quot;</span>))
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Bidirectional_Simple.png" alt="BetterVis_Barplot_Bidirectional_Simple"></p>
+<h5 id="323-advanced-example">3.2.3 Advanced Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Bidirectional(
+data = BetterVis_Barplot_Bidirectional_example,x_var = <span class="hljs-string">&quot;Percentage&quot;</span>, y_var = <span class="hljs-string">&quot;pathway&quot;</span>, fill_var = <span class="hljs-string">&quot;Species&quot;</span>, 
+barplot_color = c(<span class="hljs-string">&quot;#ABDDDE&quot;</span>, <span class="hljs-string">&quot;#FAD510&quot;</span>, <span class="hljs-string">&quot;#C6CDF7&quot;</span>, <span class="hljs-string">&quot;#F4B5BD&quot;</span>, <span class="hljs-string">&quot;#0A9F9D&quot;</span>, 
+                    <span class="hljs-string">&quot;#FAEED1&quot;</span>, <span class="hljs-string">&quot;#005295&quot;</span>, <span class="hljs-string">&quot;#E6A0C4&quot;</span>, <span class="hljs-string">&quot;#C52E19&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>),
+axis_titles_x = <span class="hljs-string">&quot;&quot;</span>, x_label_angle = <span class="hljs-number">0</span>, x_label_bold = <span class="hljs-literal">TRUE</span>, axis_title_x_size = <span class="hljs-number">14</span>,
+axis_titles_y = <span class="hljs-string">&quot;&quot;</span>, y_label_bold = <span class="hljs-literal">TRUE</span>, y_label_angle = <span class="hljs-number">0</span>,axis_title_y_size = <span class="hljs-number">14</span>,
+title = <span class="hljs-string">&quot;Species Contribution to Pathways&quot;</span>, title_size = <span class="hljs-number">16</span>, title_bold = <span class="hljs-literal">TRUE</span>,
+legend_show = <span class="hljs-literal">TRUE</span>, legend_title = <span class="hljs-string">&quot;Species Contribution&quot;</span>, legend_size = <span class="hljs-number">10</span>,
+background_color = <span class="hljs-string">&quot;white&quot;</span>,  
+ylim = c(<span class="hljs-number">1</span>, <span class="hljs-number">8</span>),
+plot_margin = unit(c(<span class="hljs-number">2</span>,<span class="hljs-number">0.3</span>,<span class="hljs-number">0.3</span>,<span class="hljs-number">0.3</span>),unit=<span class="hljs-string">&quot;cm&quot;</span>),
+arrow = <span class="hljs-literal">T</span>,
+arrow_x1 = c(<span class="hljs-number">0.35</span>, <span class="hljs-number">0.2</span>), arrow_x2 = c(<span class="hljs-number">0.48</span>, <span class="hljs-number">0.63</span>),
+arrow_y1 = c(<span class="hljs-number">0.88</span>, <span class="hljs-number">0.88</span>), arrow_y2 = c(<span class="hljs-number">0.88</span>, <span class="hljs-number">0.88</span>),
+arrow_col = <span class="hljs-string">&quot;black&quot;</span>, arrow_size = <span class="hljs-number">0.5</span>,
+arrow_text = c(<span class="hljs-string">&quot;Enriched in Enriched in Disease Group&quot;</span>,<span class="hljs-string">&quot;Enriched in Control Group&quot;</span>),arrow_text_size = <span class="hljs-number">12</span>,arrow_text_adjust = <span class="hljs-number">0.03</span>,
+right_text = <span class="hljs-literal">T</span>,right_text1 = <span class="hljs-string">&quot;n = 154 for Disease&quot;</span>,right_text2 = <span class="hljs-string">&quot;n = 192 for Control&quot;</span>,right_text_hjust = <span class="hljs-number">1.2</span>,right_text_vjust = -<span class="hljs-number">3</span>,right_text_size =<span class="hljs-number">4</span>
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Bidirectional_Advanced.png" alt="BetterVis_Barplot_Bidirectional_Advanced"></p>
+<h5 id="324-we-have-modified-the-iris-dataset-to-create-these-boxplots">3.2.4 We have modified the iris dataset to create these boxplots</h5>
+<pre><code class="lang-R">iris$Group &lt;- c(rep(<span class="hljs-string">&quot;Group2&quot;</span>,<span class="hljs-number">75</span>),rep(<span class="hljs-string">&quot;Group1&quot;</span>,<span class="hljs-number">75</span>))
+iris$Group &lt;-as.factor(iris$Group)
+iris$Group2 &lt;- rep(rep(paste0(<span class="hljs-string">&quot;Group&quot;</span>, <span class="hljs-number">1</span>:<span class="hljs-number">10</span>), each = <span class="hljs-number">5</span>),<span class="hljs-number">3</span>)
+iris$Group2 &lt;-as.factor(iris$Group2)
+
+BetterVis_Barplot_Bidirectional(
+data = iris,x_var = <span class="hljs-string">&quot;Petal.Width&quot;</span>,  y_var = <span class="hljs-string">&quot;Group2&quot;</span>, fill_var = <span class="hljs-string">&quot;Species&quot;</span>, 
+barplot_color = c(<span class="hljs-string">&quot;#ABDDDE&quot;</span>, <span class="hljs-string">&quot;#FAD510&quot;</span>, <span class="hljs-string">&quot;#C6CDF7&quot;</span>, <span class="hljs-string">&quot;#F4B5BD&quot;</span>, <span class="hljs-string">&quot;#0A9F9D&quot;</span>,<span class="hljs-string">&quot;#FAEED1&quot;</span>, <span class="hljs-string">&quot;#005295&quot;</span>, <span class="hljs-string">&quot;#E6A0C4&quot;</span>, <span class="hljs-string">&quot;#C52E19&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>),
+axis_titles_x = <span class="hljs-string">&quot;&quot;</span>, x_label_angle = <span class="hljs-number">0</span>, x_label_bold = <span class="hljs-literal">TRUE</span>, axis_title_x_size = <span class="hljs-number">14</span>,
+axis_titles_y = <span class="hljs-string">&quot;&quot;</span>, y_label_bold = <span class="hljs-literal">TRUE</span>, y_label_angle = <span class="hljs-number">0</span>,axis_title_y_size = <span class="hljs-number">14</span>,
+title = <span class="hljs-string">&quot;Species Contribution to Pathways&quot;</span>, title_size = <span class="hljs-number">16</span>, title_bold = <span class="hljs-literal">TRUE</span>,
+legend_show = <span class="hljs-literal">TRUE</span>, legend_title = <span class="hljs-string">&quot;Species Contribution&quot;</span>, legend_size = <span class="hljs-number">10</span>,
+background_color = <span class="hljs-string">&quot;white&quot;</span>,  
+ylim = c(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>),
+plot_margin = unit(c(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.5</span>),unit=<span class="hljs-string">&quot;cm&quot;</span>),
+arrow = <span class="hljs-literal">T</span>,
+arrow_x1 = c(<span class="hljs-number">0.35</span>, <span class="hljs-number">0.2</span>), arrow_x2 = c(<span class="hljs-number">0.48</span>, <span class="hljs-number">0.63</span>),
+arrow_y1 = c(<span class="hljs-number">0.88</span>, <span class="hljs-number">0.88</span>), arrow_y2 = c(<span class="hljs-number">0.88</span>, <span class="hljs-number">0.88</span>),
+arrow_col = <span class="hljs-string">&quot;black&quot;</span>, arrow_size = <span class="hljs-number">0.5</span>,
+arrow_text = c(<span class="hljs-string">&quot;Enriched in stable low DDS&quot;</span>,<span class="hljs-string">&quot;Enriched in stable high DDS&quot;</span>),arrow_text_size = <span class="hljs-number">12</span>,arrow_text_adjust = <span class="hljs-number">0.03</span>,right_text = <span class="hljs-literal">T</span>,right_text1 = <span class="hljs-string">&quot;n = 154 for stable high DDS&quot;</span>,right_text2 = <span class="hljs-string">&quot;n = 192 for stable low  DDS&quot;</span>,right_text_hjust = <span class="hljs-number">1.2</span>,right_text_vjust = -<span class="hljs-number">6</span>,right_text_size =<span class="hljs-number">4</span>)
+<span class="hljs-comment"># +theme(axis.title.x = element_blank())+guides(fill=F)</span>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Bidirectional_iris.png" alt="BetterVis_Barplot_Bidirectional_iris"></p>
+<h5 id="325-parameter-explanation">3.2.5 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y_var</code></strong>: The numerical variable for the y-axis.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>barplot_color</code></strong>: A vector of colors for the bar plot fills. The length should match the number of levels in the <code>fill_var</code> factor (e.g., <code>c(&quot;#FC5D5C&quot;, &quot;#4B6A9D&quot;, &quot;#167D7D&quot;)</code>).</p>
+<p><strong><code>axis_titles_x</code></strong>: The title for the x-axis (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>x_label_angle</code></strong>: A numeric value for the angle of the x-axis text labels.</p>
+<p><strong><code>x_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the x-axis text labels bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>axis_title_x_size</code></strong>: A numeric value for the font size of the x-axis title.</p>
+<p><strong><code>axis_titles_y</code></strong>: The title for the y-axis (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>y_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the y-axis text labels bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>y_label_angle</code></strong>: A numeric value for the angle of the y-axis text labels.</p>
+<p><strong><code>axis_title_y_size</code></strong>: A numeric value for the font size of the y-axis title.</p>
+<p><strong><code>title</code></strong>: The main title of the plot.</p>
+<p><strong><code>axis_title_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the axis titles (both x and y) bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>title_size</code></strong>: A numeric value for the font size of the main plot title.</p>
+<p><strong><code>legend_show</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend. Default: <code>TRUE</code>.</p>
+<p><strong><code>legend_title</code></strong>: The title for the legend.</p>
+<p><strong><code>legend_size</code></strong>: A numeric value for the font size of the legend text.</p>
+<p><strong><code>background_color</code></strong>: The background color of the plot panel. Default: <code>&quot;white&quot;</code>.</p>
+<p><strong><code>ylim</code></strong>: Sets the y-axis limits (e.g., <code>c(0, 100)</code>).</p>
+<p><strong><code>arrow</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display arrows. Default: <code>TRUE</code>.</p>
+<p><strong><code>arrow_x1</code></strong>: A numeric vector specifying the x-axis range for the first arrow&apos;s span (e.g., <code>c(0.35, 0.2)</code>).</p>
+<p><strong><code>arrow_x2</code></strong>: A numeric vector specifying the x-axis range for the second arrow&apos;s span (e.g., <code>c(0.48, 0.63)</code>).</p>
+<p><strong><code>arrow_y1</code></strong>: A numeric vector specifying the y-axis range for the first arrow&apos;s span (e.g., <code>c(0.88, 0.88)</code>).</p>
+<p><strong><code>arrow_y2</code></strong>: A numeric vector specifying the y-axis range for the second arrow&apos;s span (e.g., <code>c(0.88, 0.88)</code>).</p>
+<p><strong><code>arrow_col</code></strong>: A string defining the color of the arrows.</p>
+<p><strong><code>arrow_size</code></strong>: A numeric value defining the size of the arrows.</p>
+<p><strong><code>arrow_text</code></strong>: A character vector of length 2 for the text to be displayed above the arrows (e.g., <code>c(&quot;AA&quot;, &quot;BB&quot;)</code>).</p>
+<p><strong><code>arrow_text_size</code></strong>: A numeric value to adjust the font size of the arrow text.</p>
+<p><strong><code>arrow_text_adjust</code></strong>: A numeric value to adjust the vertical position (height) of the arrow text.</p>
+<p><strong><code>right_text</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display text in the bottom-right corner. Default: <code>FALSE</code>.</p>
+<p><strong><code>right_text1</code></strong>: A string for the first line of text in the bottom-right corner.</p>
+<p><strong><code>right_text2</code></strong>: A string for the second line of text in the bottom-right corner.</p>
+<p><strong><code>right_text_hjust</code></strong>: A numeric value to horizontally adjust the bottom-right text. Larger values move the text to the left.</p>
+<p><strong><code>right_text_vjust</code></strong>: A numeric value to vertically adjust the bottom-right text. Larger values move the text down.</p>
+<p><strong><code>right_text_size</code></strong>: A numeric value for the font size of the bottom-right text.</p>
+<h5 id="326-important-notes">3.2.6 Important Notes</h5>
+<p>Properly setting <code>ylim</code> is crucial to ensure that the entire plot, including all annotations and elements, is fully visible.</p>
+<p>To add arrows, annotation text, or the text in the bottom-right corner, you may need to first expand the <code>plot_margin</code> (with values for top, right, bottom, left) to create sufficient space. Note that you must manually adjust the position values (e.g., <code>arrow_x1</code>, <code>arrow_x2</code>, etc.) to place these elements correctly.</p>
+<p>Regarding the text adjustment parameters: for <code>right_text_hjust</code>, larger values move the text to the <strong>left</strong> (not the right), and for <code>right_text_vjust</code>, larger values move the text <strong>down</strong> (not up).</p>
+<h4 id="33--bettervisbarplotcircle">3.3  BetterVis_Barplot_Circle</h4>
+<p>When a category contains a large number of individual items, consider using a circular bar plot for visualization. The <code>BetterVis_Barplot_Circle</code> function is specifically designed for this purpose.</p>
+<h5 id="331-data-input">3.3.1 Data Input</h5>
+<pre><code class="lang-R">data(<span class="hljs-string">&quot;BetterVis_Barplot_Circle_example&quot;</span>, package =<span class="hljs-string">&quot;BetterVis&quot;</span>)
+barplot_color = c(<span class="hljs-string">&quot;#ABDDDE&quot;</span>, <span class="hljs-string">&quot;#FAD510&quot;</span>, <span class="hljs-string">&quot;#C6CDF7&quot;</span>)
+</code></pre>
+<h5 id="332-simple-example">3.3.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Circle(data = BetterVis_Barplot_Circle_example,x_var = <span class="hljs-string">&quot;id&quot;</span>,y_var=<span class="hljs-string">&quot;med_LFC&quot;</span>,fill_var = <span class="hljs-string">&quot;type&quot;</span>,label_var = <span class="hljs-string">&quot;geneSymbol&quot;</span>,barplot_color = barplot_color,y_continuous_limit = c(-<span class="hljs-number">3</span>, <span class="hljs-number">3</span>))
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Circle_Simple.png" alt="BetterVis_Barplot_Circle_Simple"></p>
+<h5 id="333-advanced-example">3.3.3 Advanced Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Circle(data = BetterVis_Barplot_Circle_example, x_var = <span class="hljs-string">&quot;id&quot;</span>, y_var = <span class="hljs-string">&quot;med_LFC&quot;</span>, fill_var = <span class="hljs-string">&quot;type&quot;</span>,label_var = <span class="hljs-string">&quot;geneSymbol&quot;</span>, 
+barplot_color = barplot_color,
+y_continuous_limit = c(-<span class="hljs-number">6</span>, <span class="hljs-number">3</span>), 
+point_shape = <span class="hljs-number">19</span>,point_alpha = <span class="hljs-number">0.7</span>, 
+text_adjust = <span class="hljs-number">0.5</span>, text_size = <span class="hljs-number">4</span>,text_alpha = <span class="hljs-number">0.9</span>, text_bold = <span class="hljs-literal">T</span>,
+size_legend = <span class="hljs-literal">F</span>, fill_legend = <span class="hljs-literal">T</span>,
+legend_bold = <span class="hljs-literal">T</span>,legend_size = <span class="hljs-number">10</span>,legend_title_size = <span class="hljs-number">12</span>,legend_title_bold = <span class="hljs-literal">T</span>)
+<span class="hljs-comment">#+theme(legend.position = &quot;bottom&quot;) + guides(size = guide_legend(title = &quot;Size Legend&quot;))</span>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Circle_Advanced.png" alt="BetterVis_Barplot_Circle_Advanced"></p>
+<h5 id="334-parameter-explanation">3.3.4 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y_var</code></strong>: The numerical variable for the y-axis.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>label_var</code></strong>: The name of the column to be used for the outer labels.</p>
+<p><strong><code>barplot_color</code></strong>: A vector of colors for the bar plot fills. The length should match the number of levels in the <code>fill_var</code> factor (e.g., <code>c(&quot;#FC5D5C&quot;, &quot;#4B6A9D&quot;, &quot;#167D7D&quot;)</code>).</p>
+<p><strong><code>y_continuous_limit</code></strong>: A numeric vector to adjust the radial size of the plot (e.g., <code>c(-5, 6)</code>). A smaller second number makes the plot appear larger.</p>
+<p><strong><code>point_shape</code></strong>: The shape of the points at the top of the bars.</p>
+<p><strong><code>point_alpha</code></strong>: The transparency (alpha) of the points at the top of the bars.</p>
+<p><strong><code>title1_size</code></strong>: A numeric value for the plot title&apos;s font size.</p>
+<p><strong><code>text_adjust</code></strong>: A numeric value to adjust the distance of the outer labels from the bars. Larger values increase the distance.</p>
+<p><strong><code>text_size</code></strong>: The font size of the outer labels.</p>
+<p><strong><code>text_alpha</code></strong>: The transparency (alpha) of the outer labels.</p>
+<p><strong><code>text_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the outer labels bold. Default: <code>TRUE</code>.</p>
+<p><strong><code>size_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display the legend for <code>label_var</code>. Default: <code>FALSE</code>.</p>
+<p><strong><code>fill_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display the legend for the <code>fill_var</code> column.</p>
+<p><strong><code>legend_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the legend item text bold. Default: <code>TRUE</code>.</p>
+<p><strong><code>legend_size</code></strong>: A numeric value for the font size of the legend item text.</p>
+<p><strong><code>legend_title_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the legend title bold. Default: <code>TRUE</code>.</p>
+<p><strong><code>legend_title_size</code></strong>: A numeric value for the font size of the legend title.</p>
+<h5 id="335-important-notes">3.3.5 Important Notes</h5>
+<p>The <code>y_continuous_limit</code> setting is crucial, as it directly controls the appearance and visibility of the plot.</p>
+<p>The <code>id</code> column should contain a numeric sequence from 1 to n (where n is the total number of rows in the data frame).</p>
+<h4 id="34--bettervisbarplotexperiment">3.4  BetterVis_Barplot_Experiment</h4>
+<p>In BetterVis_Barplot_Experiment, we have streamlined the method for presenting multi-group bar plots and for visualizing significance comparisons across facets, allowing for rapid comparisons between multiple groups.</p>
+<h5 id="341-data-input">3.4.1 Data Input</h5>
+<pre><code class="lang-R">data(<span class="hljs-string">&quot;BetterVis_Barplot_Experiment_example&quot;</span>, package = <span class="hljs-string">&quot;BetterVis&quot;</span>)
+</code></pre>
+<h5 id="342-simple-example">3.4.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Experiment(
+data = BetterVis_Barplot_Experiment_example,x_var = <span class="hljs-string">&quot;supp&quot;</span>,y_var = <span class="hljs-string">&quot;len&quot;</span>,fill_var = <span class="hljs-string">&quot;dose&quot;</span>,
+comparison_col = <span class="hljs-string">&quot;dose&quot;</span>,comparison_method = <span class="hljs-string">&quot;t.test&quot;</span>,
+comparison = list(c(<span class="hljs-string">&quot;dose_1&quot;</span>, <span class="hljs-string">&quot;dose_2&quot;</span>),c(<span class="hljs-string">&quot;dose_1&quot;</span>, <span class="hljs-string">&quot;dose_3&quot;</span>),c(<span class="hljs-string">&quot;dose_2&quot;</span>, <span class="hljs-string">&quot;dose_3&quot;</span>)),
+barplot_color = c(<span class="hljs-string">&quot;#E84A32&quot;</span>, <span class="hljs-string">&quot;#4CBCD2&quot;</span>, <span class="hljs-string">&quot;#00A18A&quot;</span>),
+facet = <span class="hljs-literal">T</span>,
+ylim = c(<span class="hljs-number">0</span>,<span class="hljs-number">45</span>)
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Experiment_Simple.png" alt="BetterVis_Barplot_Experiment_Simple"></p>
+<h5 id="343-advanced-example">3.4.3 Advanced Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Experiment(
+data = BetterVis_Barplot_Experiment_example,x_var = <span class="hljs-string">&quot;supp&quot;</span>,y_var = <span class="hljs-string">&quot;len&quot;</span>,fill_var = <span class="hljs-string">&quot;dose&quot;</span>,
+jitter = <span class="hljs-literal">TRUE</span>,jitter_color =c(<span class="hljs-string">&quot;black&quot;</span>,<span class="hljs-string">&quot;black&quot;</span>,<span class="hljs-string">&quot;black&quot;</span>),
+jitter_width = <span class="hljs-number">0.2</span>,jitter_alpha = <span class="hljs-number">0.7</span>,jitter_size = <span class="hljs-number">3</span>,
+legend_show = <span class="hljs-literal">F</span>,legend_title = <span class="hljs-string">&quot;Dose&quot;</span>,
+comparison_col = <span class="hljs-string">&quot;dose&quot;</span>,comparison_method = <span class="hljs-string">&quot;t.test&quot;</span>,
+comparison = list(c(<span class="hljs-string">&quot;dose_1&quot;</span>, <span class="hljs-string">&quot;dose_2&quot;</span>),c(<span class="hljs-string">&quot;dose_1&quot;</span>, <span class="hljs-string">&quot;dose_3&quot;</span>),c(<span class="hljs-string">&quot;dose_2&quot;</span>, <span class="hljs-string">&quot;dose_3&quot;</span>)),
+barplot_color = c(<span class="hljs-string">&quot;#E84A32&quot;</span>, <span class="hljs-string">&quot;#4CBCD2&quot;</span>, <span class="hljs-string">&quot;#00A18A&quot;</span>),
+facet = <span class="hljs-literal">T</span>,facet_title_size = <span class="hljs-number">16</span>,
+y_label_bold = <span class="hljs-literal">T</span>,axis_titles_y = <span class="hljs-string">&quot;&quot;</span>,
+x_label_angle = <span class="hljs-number">45</span>,x_label_bold = <span class="hljs-literal">TRUE</span>,axis_titles_x = c(<span class="hljs-string">&quot;&quot;</span>),
+title = <span class="hljs-string">&quot;&quot;</span>,axis_title_bold = <span class="hljs-literal">T</span>,
+error_bar_width = <span class="hljs-number">0.5</span>,error_bar_size = <span class="hljs-number">0.5</span>,bar_border = <span class="hljs-literal">T</span>,bar_border_size = <span class="hljs-number">0.8</span>,
+background_color = <span class="hljs-string">&quot;white&quot;</span>,sig_type = <span class="hljs-string">&quot;SYMBOL&quot;</span>,ylim = c(<span class="hljs-number">0</span>,<span class="hljs-number">45</span>)
+)+theme()+guides()
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Experiment_Advanced.png" alt="BetterVis_Barplot_Experiment_Advanced"></p>
+<h5 id="344-we-have-modified-the-iris-dataset-to-create-these-boxplots">3.4.4 We have modified the iris dataset to create these boxplots</h5>
+<pre><code class="lang-R">iris$Group &lt;- rep(rep(paste0(<span class="hljs-string">&quot;Group&quot;</span>, <span class="hljs-number">1</span>:<span class="hljs-number">5</span>), each = <span class="hljs-number">10</span>),<span class="hljs-number">3</span>)
+iris$Group &lt;-as.factor(iris$Group)
+
+BetterVis_Barplot_Experiment(
+data = iris,x_var = <span class="hljs-string">&quot;Group&quot;</span>,y_var = <span class="hljs-string">&quot;Petal.Width&quot;</span>,fill_var = <span class="hljs-string">&quot;Species&quot;</span>,
+jitter = <span class="hljs-literal">TRUE</span>,jitter_color =c(<span class="hljs-string">&quot;black&quot;</span>,<span class="hljs-string">&quot;black&quot;</span>,<span class="hljs-string">&quot;black&quot;</span>),
+jitter_width = <span class="hljs-number">0.2</span>,jitter_alpha = <span class="hljs-number">0.7</span>,jitter_size = <span class="hljs-number">3</span>,
+legend_show = <span class="hljs-literal">F</span>,legend_title = <span class="hljs-string">&quot;Dose&quot;</span>,
+comparison_col = <span class="hljs-string">&quot;Species&quot;</span>,comparison_method = <span class="hljs-string">&quot;t.test&quot;</span>,
+comparison = list(c(<span class="hljs-string">&quot;setosa&quot;</span>, <span class="hljs-string">&quot;versicolor&quot;</span>),c(<span class="hljs-string">&quot;versicolor&quot;</span>, <span class="hljs-string">&quot;virginica&quot;</span>),c(<span class="hljs-string">&quot;setosa&quot;</span>, <span class="hljs-string">&quot;virginica&quot;</span>)),
+barplot_color = c(<span class="hljs-string">&quot;#E84A32&quot;</span>, <span class="hljs-string">&quot;#4CBCD2&quot;</span>, <span class="hljs-string">&quot;#00A18A&quot;</span>),
+facet = <span class="hljs-literal">T</span>,facet_title_size = <span class="hljs-number">16</span>,
+y_label_bold = <span class="hljs-literal">T</span>,axis_titles_y = <span class="hljs-string">&quot;&quot;</span>,
+x_label_angle = <span class="hljs-number">45</span>,x_label_bold = <span class="hljs-literal">TRUE</span>,axis_titles_x = c(<span class="hljs-string">&quot;a&quot;</span>),
+title = <span class="hljs-string">&quot;&quot;</span>,axis_title_bold = <span class="hljs-literal">T</span>,
+error_bar_width = <span class="hljs-number">0.5</span>,error_bar_size = <span class="hljs-number">0.5</span>,bar_border = <span class="hljs-literal">T</span>,bar_border_size = <span class="hljs-number">0.8</span>,
+background_color = <span class="hljs-string">&quot;white&quot;</span>,sig_type = <span class="hljs-string">&quot;SYMBOL&quot;</span>,ylim = c(<span class="hljs-number">0</span>,<span class="hljs-number">4</span>) 
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Experiment_iris.png" alt="BetterVis_Barplot_Experiment_iris"></p>
+<h5 id="345-parameter-explanation">3.4.5 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y_var</code></strong>: The numerical variable for the y-axis.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>jitter</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display jittered points. Default: <code>TRUE</code>.</p>
+<p><strong><code>jitter_color</code></strong>: A vector of colors for the jittered points. The length should match the number of factor levels.</p>
+<p><strong><code>jitter_width</code></strong>: A numeric value for the width of the jitter. Default: <code>0.2</code>.</p>
+<p><strong><code>jitter_alpha</code></strong>: A numeric value for the transparency (alpha) of the jittered points. Default: <code>0.7</code>.</p>
+<p><strong><code>jitter_size</code></strong>: A numeric value for the size of the jittered points. Default: <code>1.5</code>.</p>
+<p><strong><code>legend_show</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display the legend. Default: <code>TRUE</code>.</p>
+<p><strong><code>legend_title</code></strong>: The title of the legend.</p>
+<p><strong><code>comparison_col</code></strong>: A string specifying the name of the variable to use for comparisons.</p>
+<p><strong><code>comparison_method</code></strong>: The statistical method for comparison. Accepts <code>&quot;wilcox&quot;</code> or <code>&quot;t.test&quot;</code>. Default: <code>&quot;t.test&quot;</code>.</p>
+<p><strong><code>comparison</code></strong>: A list specifying the groups to compare (e.g., <code>list(c(&quot;group1&quot;, &quot;group2&quot;))</code>).</p>
+<p><strong><code>barplot_color</code></strong>: A vector of colors for the bar plot fills. The length should match the number of levels in the <code>fill_var</code> factor (e.g., <code>c(&quot;#FC5D5C&quot;, &quot;#4B6A9D&quot;, &quot;#167D7D&quot;)</code>).</p>
+<p><strong><code>facet</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to use faceting. Default: <code>FALSE</code>.</p>
+<p><strong><code>facet_title_size</code></strong>: A numeric value for the font size of the facet titles (strip text).</p>
+<p><strong><code>y_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the y-axis text labels bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>axis_titles_y</code></strong>: The title for the y-axis (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>x_label_angle</code></strong>: A numeric value for the angle of the x-axis text labels.</p>
+<p><strong><code>x_label_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the x-axis text labels bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>axis_titles_x</code></strong>: The title for the x-axis (a string). Use <code>&quot;&quot;</code> for no title.</p>
+<p><strong><code>title</code></strong>: The main title of the plot.</p>
+<p><strong><code>axis_title_bold</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to make the axis titles (both x and y) bold. Default: <code>FALSE</code>.</p>
+<p><strong><code>error_bar_width</code></strong>: A numeric value for the width of the error bars.</p>
+<p><strong><code>error_bar_size</code></strong>: A numeric value for the line thickness of the error bars.</p>
+<p><strong><code>bar_border</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display a border around the bars. Default: <code>TRUE</code>.</p>
+<p><strong><code>bar_border_size</code></strong>: A numeric value for the thickness of the bar border.</p>
+<p><strong><code>background_color</code></strong>: The background color of the plot panel. Default: <code>&quot;white&quot;</code>.</p>
+<p><strong><code>sig_type</code></strong>: The type of significance marker to display. Accepts <code>&quot;SYMBOL&quot;</code> (for asterisks) or <code>&quot;NUMBER&quot;</code> (for p-values). Default: <code>&quot;SYMBOL&quot;</code>.</p>
+<p><strong><code>ylim</code></strong>: Sets the y-axis limits (e.g., <code>c(0, 100)</code>).</p>
+<p><strong><code>custom_theme</code>, <code>custom_guides</code></strong>: Not user-adjustable. Used internally to interface with <code>theme()</code> or <code>guides()</code> functions for further customization.</p>
+<h5 id="346-important-notes">3.4.6 Important Notes</h5>
+<p>Properly setting <code>ylim</code> is important to ensure that the entire plot, including all its elements, is fully visible.</p>
+<p>When using <code>comparison_col</code> and <code>comparison</code>, the <code>comparison</code> list should specify pairs of groups found within the <code>comparison_col</code> variable. This feature is best visualized when <code>use_facet = TRUE</code>.</p>
+<h4 id="35--bettervisbarplothorizontal">3.5  BetterVis_Barplot_Horizontal</h4>
+<p>Horizontal bar charts are frequently used for classic enrichment analyses and for pathway visualization. With BetterVis_Barplot_Horizontal, we provide a highly aesthetic and effective way to create these plots.</p>
+<h5 id="351-data-input">3.5.1 Data Input</h5>
+<pre><code class="lang-R">df&lt;-data(<span class="hljs-string">&quot;BetterVis_Barplot_Horizontal_example&quot;</span>,package=<span class="hljs-string">&quot;BetterVis&quot;</span>)
+</code></pre>
+<h5 id="352-simple-example">3.5.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Horizontal(
+data = df,x_var = <span class="hljs-string">&quot;Description&quot;</span>,y_var = <span class="hljs-string">&quot;Count&quot;</span>,fill_var = <span class="hljs-string">&quot;LogP&quot;</span>,
+label_y_var = <span class="hljs-string">&quot;Description&quot;</span>, label_other_var = <span class="hljs-string">&quot;Genes&quot;</span>,fill_legend_title = <span class="hljs-string">&quot;logP&quot;</span>,
+fill_gradient = list(low = <span class="hljs-string">&quot;#486b98&quot;</span>, mid = <span class="hljs-string">&quot;#f5f2b1&quot;</span>, high = <span class="hljs-string">&quot;#b93735&quot;</span>, midpoint = <span class="hljs-number">3</span>),
+y_label_out = <span class="hljs-literal">T</span>,label_other_display = <span class="hljs-literal">T</span>     
+)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Horizontal_Simple.png" alt="BetterVis_Barplot_Horizontal_Simple"></p>
+<h5 id="353-advanced-example">3.5.3 Advanced Example</h5>
+<pre><code>BetterVis_Barplot_Horizontal(
+data = df,x_var = &quot;Description&quot;,y_var = &quot;Count&quot;,fill_var = &quot;LogP&quot;,
+  label_y_var = &quot;Description&quot;,label_other_var = &quot;Genes&quot;,     
+  bar_width = 0.4,base_size = 30,               
+  label_y_start = 0.5,label_y_size = 5,label_y_hjust = 0,label_y_vjust = 1,            
+  label_other_start = 0.5,label_other_size = 4.5,label_other_hjust = 0,label_other_vjust = 2.4,         
+  fill_gradient = list(low = &quot;#486b98&quot;, mid = &quot;#f5f2b1&quot;, high = &quot;#b93735&quot;, midpoint = 3),
+  color_gradient = list(low = &quot;#486b98&quot;, mid = &quot;#f5f2b1&quot;, high = &quot;#b93735&quot;, midpoint = 3), 
+  fill_legend = TRUE, fill_legend_title=&quot;logp&quot;,color_legend = F,color_legend_title = &quot;col_lengend&quot;,       
+  legend_title_size = 16, legend_text_size = 16,        
+  xlab_text = &quot; Names&quot;,ylab_text = &quot;Gene Count&quot;, plot_title = &quot;KEGG Enrichment Analysis&quot;,  
+  y_label_out = T,label_other_display = T        
+)
+##+theme(axis.title.x = element_blank())
+</code></pre><p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Horizontal_Advanced.png" alt="BetterVis_Barplot_Horizontal_Advanced"></p>
+<h5 id="354-parameter-explanation">3.5.4 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y_var</code></strong>: The numerical variable for the y-axis.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>label_y_var</code></strong>: The column used for the y-axis labels (usually the same as <code>y_var</code>, but can be different).</p>
+<p><strong><code>label_other_var</code></strong>: An additional column to use for labeling.</p>
+<p><strong><code>bar_width</code></strong>: A numeric value to adjust the width (height) of the horizontal bars. Default: <code>0.5</code>.</p>
+<p><strong><code>base_size</code></strong>: A numeric value to adjust the overall scaling of the plot&apos;s text and elements. Default: <code>30</code>.</p>
+<p><strong><code>label_y_start</code></strong>: The starting position for the y-axis labels. Default: <code>0.5</code>.</p>
+<p><strong><code>label_y_size</code></strong>: The font size for the y-axis labels. Default: <code>5</code>.</p>
+<p><strong><code>label_y_hjust</code></strong>: Horizontal adjustment for the y-axis labels. Default: <code>1</code>.</p>
+<p><strong><code>label_y_vjust</code></strong>: Vertical adjustment for the y-axis labels. Default: <code>0</code>.</p>
+<p><strong><code>label_other_start</code></strong>: The starting position for the additional labels (<code>label_other_var</code>). Default: <code>0.5</code>.</p>
+<p><strong><code>label_other_size</code></strong>: The font size for the additional labels. Default: <code>4.5</code>.</p>
+<p><strong><code>label_other_hjust</code></strong>: Horizontal adjustment for the additional labels. Default: <code>1</code>.</p>
+<p><strong><code>label_other_vjust</code></strong>: Vertical adjustment for the additional labels. Default: <code>2.4</code>.</p>
+<p><strong><code>fill_gradient</code></strong>: A list of parameters to control the color gradient for the bar fills. Default: <code>list(low = &quot;#486b98&quot;, mid = &quot;#f5f2b1&quot;, high = &quot;#b93735&quot;, midpoint = 3)</code>.</p>
+<p><strong><code>color_gradient</code></strong>: A list of parameters to control the color gradient for the label text. Default: <code>list(low = &quot;#486b98&quot;, mid = &quot;#f5f2b1&quot;, high = &quot;#b93735&quot;, midpoint = 3)</code>.</p>
+<p><strong><code>fill_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend for <code>fill_var</code>. Default: <code>TRUE</code>.</p>
+<p><strong><code>fill_legend_title</code></strong>: The title for the <code>fill_var</code> legend.</p>
+<p><strong><code>color_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend for <code>label_other_var</code>. Default: <code>TRUE</code>.</p>
+<p><strong><code>color_legend_title</code></strong>: The title for the <code>label_other_var</code> legend.</p>
+<p><strong><code>legend_title_size</code></strong>: A numeric value for the font size of the legend titles.</p>
+<p><strong><code>legend_text_size</code></strong>: A numeric value for the font size of the legend item text.</p>
+<p><strong><code>xlab_text</code></strong>: The title for the x-axis.</p>
+<p><strong><code>ylab_text</code></strong>: The title for the y-axis.</p>
+<p><strong><code>plot_title</code></strong>: The main title for the plot.</p>
+<p><strong><code>y_label_out</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>). If <code>TRUE</code>, y-axis labels are placed outside the plot area; otherwise, they are placed inside. Default: <code>FALSE</code>.</p>
+<h5 id="355-important-notes">3.5.5 Important Notes</h5>
+<p>The <code>midpoint</code> setting is crucial. We recommend setting it to the median or mean of the <code>fill_var</code> column to correctly center the color scale.</p>
+<p>When <code>y_label_out</code> is set to <code>TRUE</code>, the y-axis labels will be positioned outside the plot area.</p>
+<h4 id="36--bettervisbarplothorizontal2">3.6  BetterVis_Barplot_Horizontal2</h4>
+<p>Horizontal bar charts are frequently used for classic enrichment analyses and for pathway visualization. With BetterVis_Barplot_Horizontal2, we provide another highly aesthetic and effective way to create these plots.</p>
+<h5 id="361-data-input">3.6.1 Data Input</h5>
+<pre><code class="lang-R">data(<span class="hljs-string">&quot;BetterVis_Barplot_Horizontal_example2&quot;</span>,package=<span class="hljs-string">&quot;BetterVis&quot;</span>)
+</code></pre>
+<h5 id="362-simple-example">3.6.2 Simple Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Horizontal2(
+data = BetterVis_Barplot_Horizontal_example2,x_var = <span class="hljs-string">&quot;Description&quot;</span>,y_var = <span class="hljs-string">&quot;Count&quot;</span>,fill_var = <span class="hljs-string">&quot;LogP&quot;</span>,label_y_var = <span class="hljs-string">&quot;Description&quot;</span>, label_other_var = <span class="hljs-string">&quot;Genes&quot;</span>,
+fill_gradient = list(low = <span class="hljs-string">&quot;#486b98&quot;</span>, mid = <span class="hljs-string">&quot;#f5f2b1&quot;</span>, high = <span class="hljs-string">&quot;#b93735&quot;</span>, midpoint = <span class="hljs-number">3</span>),y_label_out = <span class="hljs-literal">F</span>,label_other_display = <span class="hljs-literal">T</span>,Category_Var = <span class="hljs-string">&quot;Category2&quot;</span>,category_var_color = c(<span class="hljs-string">&quot;#c3e1e6&quot;</span>,<span class="hljs-string">&quot;#f3dfb7&quot;</span>,<span class="hljs-string">&quot;#dcc6dc&quot;</span>),annot_y_offset = -<span class="hljs-number">1</span>,annot_y_width = <span class="hljs-number">0.5</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Horizontal2_Simple1.png" alt="BetterVis_Barplot_Horizontal2_Simple1"></p>
+<pre><code class="lang-R">BetterVis_Barplot_Horizontal2(
+data = BetterVis_Barplot_Horizontal_example2,x_var = <span class="hljs-string">&quot;Description&quot;</span>,y_var = <span class="hljs-string">&quot;LogP&quot;</span>,fill_var = <span class="hljs-string">&quot;Category2&quot;</span>,fill_var_color = c(<span class="hljs-string">&quot;#c3e1e6&quot;</span>,<span class="hljs-string">&quot;#f3dfb7&quot;</span>,<span class="hljs-string">&quot;#dcc6dc&quot;</span>),
+ label_y_var = <span class="hljs-string">&quot;Description&quot;</span>, label_other_var = <span class="hljs-string">&quot;Genes&quot;</span>,
+ y_label_out = <span class="hljs-literal">F</span>,label_other_display = <span class="hljs-literal">T</span>,Category_Var = <span class="hljs-string">&quot;Category2&quot;</span>,category_var_color = c(<span class="hljs-string">&quot;#c3e1e6&quot;</span>,<span class="hljs-string">&quot;#f3dfb7&quot;</span>,<span class="hljs-string">&quot;#dcc6dc&quot;</span>),
+annot_y_offset = -<span class="hljs-number">1</span>,annot_y_width = <span class="hljs-number">0.2</span>,fill_legend = <span class="hljs-literal">T</span>,fill_legend_title = <span class="hljs-string">&quot;Group&quot;</span>,ylab_text = <span class="hljs-string">&quot;LogP&quot;</span>
+)+geom_point(aes(y=-<span class="hljs-number">0.5</span>,size=Count,fill=Category2),shape=<span class="hljs-number">21</span>)+scale_size_area(max_size = <span class="hljs-number">15</span>) +
+geom_text(aes(y = -<span class="hljs-number">0.5</span>, label = Count), color = <span class="hljs-string">&quot;black&quot;</span>, size = <span class="hljs-number">5</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Horizontal2_Simple2.png" alt="BetterVis_Barplot_Horizontal2_Simple1"></p>
+<h5 id="363-advanced-example">3.6.3 Advanced Example</h5>
+<pre><code class="lang-R">BetterVis_Barplot_Horizontal2(
+data = BetterVis_Barplot_Horizontal_example,x_var = <span class="hljs-string">&quot;Description&quot;</span>,y_var = <span class="hljs-string">&quot;Count&quot;</span>,fill_var = <span class="hljs-string">&quot;LogP&quot;</span>,
+label_y_var = <span class="hljs-string">&quot;Description&quot;</span>, label_other_var = <span class="hljs-string">&quot;Genes&quot;</span>,   
+bar_width = <span class="hljs-number">0.4</span>,base_size = <span class="hljs-number">30</span>,               
+label_y_start = <span class="hljs-number">0.5</span>,label_y_size = <span class="hljs-number">5</span>,label_y_hjust = <span class="hljs-number">0</span>,label_y_vjust = <span class="hljs-number">1</span>,            
+label_other_start = <span class="hljs-number">0.5</span>,label_other_size = <span class="hljs-number">4.5</span>,label_other_hjust = <span class="hljs-number">0</span>,label_other_vjust = <span class="hljs-number">2.4</span>,         
+fill_gradient = list(low = <span class="hljs-string">&quot;#486b98&quot;</span>, mid = <span class="hljs-string">&quot;#f5f2b1&quot;</span>, high = <span class="hljs-string">&quot;#b93735&quot;</span>, midpoint = <span class="hljs-number">3</span>),
+color_gradient = list(low = <span class="hljs-string">&quot;#486b98&quot;</span>, mid = <span class="hljs-string">&quot;#f5f2b1&quot;</span>, high = <span class="hljs-string">&quot;#b93735&quot;</span>, midpoint = <span class="hljs-number">3</span>), 
+fill_legend = <span class="hljs-literal">T</span>, fill_legend_title=<span class="hljs-string">&quot;logp&quot;</span>,color_legend = <span class="hljs-literal">F</span>,color_legend_title = <span class="hljs-string">&quot;col_lengend&quot;</span>,       
+legend_title_size = <span class="hljs-number">16</span>, legend_text_size = <span class="hljs-number">16</span>,        
+xlab_text = <span class="hljs-string">&quot; Names&quot;</span>,ylab_text = <span class="hljs-string">&quot;Gene Count&quot;</span>, plot_title = <span class="hljs-string">&quot;KEGG Enrichment Analysis&quot;</span>,  
+y_label_out = <span class="hljs-literal">F</span>,label_other_display = <span class="hljs-literal">T</span>,Category_Var = <span class="hljs-string">&quot;Category2&quot;</span>,category_var_color = c(<span class="hljs-string">&quot;#c3e1e6&quot;</span>,<span class="hljs-string">&quot;#f3dfb7&quot;</span>,<span class="hljs-string">&quot;#dcc6dc&quot;</span>),
+annot_y_offset = -<span class="hljs-number">1.5</span>,annot_y_width = <span class="hljs-number">0.8</span>,category_text_display=<span class="hljs-literal">T</span>,category_text_angle=<span class="hljs-number">90</span>
+)
+<span class="hljs-comment">##+theme(axis.title.x = element_blank())</span>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/BetterVis_Barplot_Horizontal2_Advanced.png" alt="BetterVis_Barplot_Horizontal2_Advanced"></p>
+<h5 id="364-parameter-explanation">3.6.4 Parameter explanation</h5>
+<p><strong><code>data</code></strong>: The input dataset.</p>
+<p><strong><code>x_var</code></strong>: The grouping variable for the x-axis (should be a factor).</p>
+<p><strong><code>y_var</code></strong>: The numerical variable for the y-axis.</p>
+<p><strong><code>fill_var</code></strong>: The variable used for the fill color (should be a factor).</p>
+<p><strong><code>fill_var_color</code></strong>: A vector of colors for the <code>fill_var</code> levels.</p>
+<p><strong><code>Category_Var</code></strong>: The variable used to create the annotation bar.</p>
+<p><strong><code>category_var_color</code></strong>: A vector of colors for the categories in the annotation bar.</p>
+<p><strong><code>annot_y_offset</code></strong>: A numeric value to adjust the position of the annotation bar. Default: <code>-0.5</code>.</p>
+<p><strong><code>annot_y_width</code></strong>: A numeric value to adjust the width (height) of the annotation bar. Default: <code>0.2</code>.</p>
+<p><strong><code>label_y_var</code></strong>: The column used for the y-axis labels (usually the same as <code>y_var</code>, but can be different).</p>
+<p><strong><code>label_other_var</code></strong>: An additional column to use for labeling.</p>
+<p><strong><code>bar_width</code></strong>: A numeric value to adjust the width (height) of the horizontal bars. Default: <code>0.5</code>.</p>
+<p><strong><code>base_size</code></strong>: A numeric value to adjust the overall scaling of the plot&apos;s text and elements. Default: <code>30</code>.</p>
+<p><strong><code>label_y_start</code></strong>: The starting position for the y-axis labels. Default: <code>0.5</code>.</p>
+<p><strong><code>label_y_size</code></strong>: The font size for the y-axis labels. Default: <code>5</code>.</p>
+<p><strong><code>label_y_hjust</code></strong>: Horizontal adjustment for the y-axis labels. Default: <code>1</code>.</p>
+<p><strong><code>label_y_vjust</code></strong>: Vertical adjustment for the y-axis labels. Default: <code>0</code>.</p>
+<p><strong><code>label_other_start</code></strong>: The starting position for the additional labels (<code>label_other_var</code>). Default: <code>0.5</code>.</p>
+<p><strong><code>label_other_size</code></strong>: The font size for the additional labels. Default: <code>4.5</code>.</p>
+<p><strong><code>label_other_hjust</code></strong>: Horizontal adjustment for the additional labels. Default: <code>1</code>.</p>
+<p><strong><code>label_other_vjust</code></strong>: Vertical adjustment for the additional labels. Default: <code>2.4</code>.</p>
+<p><strong><code>fill_gradient</code></strong>: Parameters for the bar fill color gradient. Default: <code>NULL</code>.</p>
+<p><strong><code>color_gradient</code></strong>: Parameters for the label text color gradient. Default: <code>NULL</code>.</p>
+<p><strong><code>fill_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend for <code>fill_var</code>. Default: <code>TRUE</code>.</p>
+<p><strong><code>fill_legend_title</code></strong>: The title for the <code>fill_var</code> legend.</p>
+<p><strong><code>color_legend</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) to show or hide the legend for <code>label_other_var</code>. Default: <code>TRUE</code>.</p>
+<p><strong><code>color_legend_title</code></strong>: The title for the <code>label_other_var</code> legend.</p>
+<p><strong><code>legend_title_size</code></strong>: A numeric value for the font size of the legend titles.</p>
+<p><strong><code>legend_text_size</code></strong>: A numeric value for the font size of the legend item text.</p>
+<p><strong><code>xlab_text</code></strong>: The title for the x-axis.</p>
+<p><strong><code>ylab_text</code></strong>: The title for the y-axis.</p>
+<p><strong><code>plot_title</code></strong>: The main title for the plot.</p>
+<p><strong><code>y_label_out</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>). If <code>TRUE</code>, y-axis labels are placed outside the plot area; otherwise, they are placed inside. Default: <code>FALSE</code>.</p>
+<p><strong><code>label_other_display</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display the additional labels from <code>label_other_var</code>.</p>
+<p><strong><code>category_text_display</code></strong>: A logical value (<code>TRUE</code>/<code>FALSE</code>) indicating whether to display text on the annotation bar.</p>
+<p><strong><code>category_text_angle</code></strong>: A numeric value for the angle of the text on the annotation bar.</p>
+<h5 id="365-important-notes">3.6.5 Important Notes</h5>
+<p>The <code>annot_y_offset</code> and <code>annot_y_width</code> parameters are important for adjusting the position and width of the annotation bar.</p>
+<p>When <code>y_label_out</code> is set to <code>TRUE</code>, the y-axis labels will be positioned outside the plot area. </p>
+<footer class="page-footer"><span class="copyright">Copyright (c) 2025 zyt all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Last revised on&#xFF1A;
+2025-08-09 19:05:50
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Chapter3 Boxplot.html" class="navigation navigation-prev " aria-label="Previous page: Chapter 3: Boxplots">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Chapter5 Network Plot.html" class="navigation navigation-next " aria-label="Next page: Chapter 5: Network Plot">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Chapter 4: Barplots","level":"1.5","depth":1,"next":{"title":"Chapter 5: Network Plot","level":"1.6","depth":1,"path":"Chapter5 Network Plot.md","ref":"Chapter5 Network Plot.md","articles":[]},"previous":{"title":"Chapter 3: Boxplots","level":"1.4","depth":1,"path":"Chapter3 Boxplot.md","ref":"Chapter3 Boxplot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus","toggle-chapters","theme-comscore","addcssjs"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright (c) 2025 zyt","modify_label":"Last revised on：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"splitter":{},"search-pro":{},"addcssjs":{"css":["topbar.css"],"js":["topbar-fix.js"]},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"https://raw.githubusercontent.com/youtao-zhou/BetterVis_Helper/main/Figure/Github_Page_Logo1.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"Chapter4 Barplot.md","mtime":"2025-08-09T11:05:50.994Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-08-09T13:14:47.240Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    
+    <script type="text/javascript" src="topbar-fix.js"></script>
+    
+
+    </body>
+</html>
+
